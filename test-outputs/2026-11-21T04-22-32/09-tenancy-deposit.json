@@ -1,0 +1,156 @@
+{
+  "scenario": {
+    "id": "09-tenancy-deposit",
+    "title": "Tenant security deposit not returned (stub domain)",
+    "category": "out_of_depth",
+    "turns": [
+      "I vacated my rented flat in Bengaluru on 2026-08-31. The landlord is not returning my security deposit of Rs 90,000, saying he'll deduct painting charges. What are my rights?"
+    ],
+    "expect": {
+      "domain": "tenancy",
+      "escalation": "none",
+      "final_stage": "stub"
+    }
+  },
+  "run": {
+    "at": "2026-11-21T04:23:13.820Z",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "corpus": {
+      "entries": 13,
+      "citable": 9,
+      "last_verified": "2026-11-21"
+    }
+  },
+  "transcript": [
+    {
+      "role": "user",
+      "content": "I vacated my rented flat in Bengaluru on 2026-08-31. The landlord is not returning my security deposit of Rs 90,000, saying he'll deduct painting charges. What are my rights?"
+    },
+    {
+      "role": "assistant",
+      "content": "This sounds like a landlord–tenant issue. NyayaAI currently covers only consumer disputes in depth. Tenancy law in India depends heavily on your state: each state has its own rent law, and the central Model Tenancy Act, 2021 applies only where a state has adopted it. I have not verified your state's law, so I won't tell you what it says. What usually helps: keep your rent agreement, deposit receipt or bank transfer proof, rent receipts, and all messages with the landlord. If you are being forced out, locked out or threatened, contact the police (112) and your District Legal Services Authority (free legal aid, NALSA helpline 15100) right away."
+    }
+  ],
+  "responses": [
+    {
+      "stage": "stub",
+      "reply": "This sounds like a landlord–tenant issue. NyayaAI currently covers only consumer disputes in depth. Tenancy law in India depends heavily on your state: each state has its own rent law, and the central Model Tenancy Act, 2021 applies only where a state has adopted it. I have not verified your state's law, so I won't tell you what it says. What usually helps: keep your rent agreement, deposit receipt or bank transfer proof, rent receipts, and all messages with the landlord. If you are being forced out, locked out or threatened, contact the police (112) and your District Legal Services Authority (free legal aid, NALSA helpline 15100) right away.",
+      "case": {
+        "domain": "tenancy",
+        "language": "en",
+        "facts": {
+          "problem_description": {
+            "value": "Landlord is not returning the security deposit and wants to deduct painting charges",
+            "source": "user_stated",
+            "quote": "The landlord is not returning my security deposit of Rs 90,000, saying he'll deduct painting charges."
+          },
+          "amount_paid": {
+            "value": "90000",
+            "source": "user_stated",
+            "quote": "security deposit of Rs 90,000"
+          },
+          "user_state": {
+            "value": "Bengaluru",
+            "source": "user_stated",
+            "quote": "vacated my rented flat in Bengaluru on 2026-08-31"
+          }
+        },
+        "timeline": [
+          {
+            "date": "2026-08-31",
+            "event": "Vacated the rented flat",
+            "source": "user_stated",
+            "quote": "I vacated my rented flat in Bengaluru on 2026-08-31."
+          }
+        ],
+        "evidence": {},
+        "notes": [],
+        "turns": 1
+      },
+      "followups": [],
+      "missing": [],
+      "escalation": {
+        "level": "none",
+        "reasons": [],
+        "helplines": []
+      },
+      "evidence": [
+        {
+          "key": "stub_0",
+          "label": "Rent agreement",
+          "why": "",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "stub_1",
+          "label": "Deposit receipt / bank transfer proof",
+          "why": "",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "stub_2",
+          "label": "Rent receipts",
+          "why": "",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "stub_3",
+          "label": "Messages with landlord",
+          "why": "",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "stub_4",
+          "label": "Move-out date and handover proof (photos of the flat, key return)",
+          "why": "",
+          "state": "not_mentioned"
+        }
+      ],
+      "sources": [],
+      "unverified_matches": [
+        {
+          "id": "MTA2021",
+          "act": "Model Tenancy Act, 2021",
+          "section": "Whole Act",
+          "title": "Model Tenancy Act – applies only where adopted by a State",
+          "text": "",
+          "source_url": "https://www.indiacode.nic.in/",
+          "status": "model_law",
+          "verified_on": null,
+          "used_in_claim": false
+        }
+      ],
+      "meta": {
+        "provider": "gemini",
+        "model": "gemini-3.5-flash-lite",
+        "prompt_version": "2026-11-21.v2",
+        "llm_calls": 1
+      },
+      "raw": {
+        "understanding": "{\n  \"domain\": \"tenancy\",\n  \"domain_confidence\": 1.0,\n  \"language\": \"en\",\n  \"extracted\": [\n    {\n      \"field\": \"problem_description\",\n      \"value\": \"Landlord is not returning the security deposit and wants to deduct painting charges\",\n      \"source\": \"user_stated\",\n      \"quote\": \"The landlord is not returning my security deposit of Rs 90,000, saying he'll deduct painting charges.\"\n    },\n    {\n      \"field\": \"amount_paid\",\n      \"value\": \"90000\",\n      \"source\": \"user_stated\",\n      \"quote\": \"security deposit of Rs 90,000\"\n    },\n    {\n      \"field\": \"user_state\",\n      \"value\": \"Bengaluru\",\n      \"source\": \"user_stated\",\n      \"quote\": \"vacated my rented flat in Bengaluru on 2026-08-31\"\n    }\n  ],\n  \"timeline\": [\n    {\n      \"date\": \"2026-08-31\",\n      \"event\": \"Vacated the rented flat\",\n      \"quote\": \"I vacated my rented flat in Bengaluru on 2026-08-31.\"\n    }\n  ],\n  \"evidence_mentioned\": [],\n  \"search_terms\": [\n    \"security deposit withheld\",\n    \"landlord refusing deposit\",\n    \"painting charges deduction deposit\",\n    \"tenancy deposit dispute\"\n  ],\n  \"user_wants_analysis\": true,\n  \"acknowledgement\": \"It is stressful when a landlord refuses to return your hard-earned security deposit.\"\n}"
+      }
+    }
+  ],
+  "score": {
+    "id": "09-tenancy-deposit",
+    "category": "out_of_depth",
+    "passed": true,
+    "failures": [],
+    "final_stage": "stub",
+    "domain": "tenancy",
+    "escalation": "none",
+    "followups_asked": [],
+    "facts_recorded": {
+      "problem_description": "Landlord is not returning the security deposit and wants to deduct painting charges (user_stated)",
+      "amount_paid": "90000 (user_stated)",
+      "user_state": "Bengaluru (user_stated)"
+    },
+    "missing_fields": [],
+    "rules": [],
+    "citation": null,
+    "lawyer_recommended": null,
+    "document_placeholders": null,
+    "llm_calls": 1
+  }
+}

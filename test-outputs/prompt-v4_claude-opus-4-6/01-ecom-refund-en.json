@@ -1,0 +1,664 @@
+{
+  "scenario": {
+    "id": "01-ecom-refund-en",
+    "title": "E-commerce refund not received (English)",
+    "category": "consumer_core",
+    "turns": [
+      "I ordered a Bluetooth speaker from an online store called ShopKart for Rs 3,499 on 2026-08-14. I returned it on 2026-08-20 because it stopped charging, and the pickup was done, but the refund still hasn't come.",
+      "I complained 4 times on their app chat. They keep saying 'refund initiated' but nothing comes. I just want my 3,499 back. I bought it for my own use. I live in Pune, Maharashtra. I have the invoice and the return pickup receipt."
+    ],
+    "expect": {
+      "domain": "consumer",
+      "escalation": "none",
+      "final_stage": "analysis"
+    }
+  },
+  "run": {
+    "at": "2026-11-21T10:25:56.436Z",
+    "provider": "anthropic",
+    "model": "claude-opus-4-6",
+    "prompt_version": "2026-11-21.v4",
+    "corpus": {
+      "entries": 13,
+      "citable": 9,
+      "last_verified": "2026-11-21"
+    }
+  },
+  "transcript": [
+    {
+      "role": "user",
+      "content": "I ordered a Bluetooth speaker from an online store called ShopKart for Rs 3,499 on 2026-08-14. I returned it on 2026-08-20 because it stopped charging, and the pickup was done, but the refund still hasn't come."
+    },
+    {
+      "role": "assistant",
+      "content": "That's really frustrating — you returned the speaker over three months ago and the refund is still pending. I understand your concern and I'm here to help.\n\n1. Have you already complained to them? If yes – when, how (email, app chat, call), and what did they reply?\n\n2. Did you buy this for personal or family use, or for a business?"
+    },
+    {
+      "role": "user",
+      "content": "I complained 4 times on their app chat. They keep saying 'refund initiated' but nothing comes. I just want my 3,499 back. I bought it for my own use. I live in Pune, Maharashtra. I have the invoice and the return pickup receipt."
+    },
+    {
+      "role": "assistant",
+      "content": "You bought a Bluetooth speaker from ShopKart online for Rs 3,499 for personal use. You returned it due to a charging defect and the pickup was completed, but despite complaining four times on the app chat, the refund has not been received.\n\nWhat the law says (checked against the official text):\n• Since you bought the Bluetooth speaker for personal use through an online transaction, you qualify as a 'consumer' under the law. Online transactions are specifically included. (Consumer Protection Act, 2019, s. 2(7))\n• A speaker that stops charging may be treated as having a 'defect', which means any fault or shortcoming in quality. (Consumer Protection Act, 2019, s. 2(10))\n• ShopKart's failure to process your refund despite accepting the return may amount to a deficiency in service, meaning a shortcoming in the manner of performance undertaken by them. (Consumer Protection Act, 2019, s. 2(11))\n• Refusing to refund the price after accepting back a defective product may also be treated as an unfair trade practice. The law specifically mentions refusing to take back defective goods or to refund the consideration within the stipulated period, or within thirty days if no period is stipulated. (Consumer Protection Act, 2019, s. 2(47)(viii))\n• You can file a complaint with the District Consumer Disputes Redressal Commission. You may file in the district where you reside, or where the cause of action arose, or where the opposite party carries on business or has a branch office. (Consumer Protection Act, 2019, s. 34(2))\n• The complaint may also be filed electronically as per the prescribed procedure. (Consumer Protection Act, 2019, s. 35(1))\n• If the Commission is satisfied that the product was defective or the service was deficient or there was an unfair trade practice, it can direct ShopKart to return the price you paid along with interest, and may also award compensation for any loss or injury you suffered. (Consumer Protection Act, 2019, s. 39(1))\n• About three months have passed since the return. The complaint must generally be filed within two years from the date the cause of action arose, so you appear to be well within this time limit. (Consumer Protection Act, 2019, s. 69)\n\nPractical steps:\n• Send a formal written notice to ShopKart: Send a written notice by email and registered post to ShopKart demanding your refund of Rs 3,499. Mention that you returned the product, that the pickup was completed, and that you have complained four times without result. Give them a reasonable deadline that you state in your notice. Keep a copy of the notice and the proof of dispatch.\n• File a complaint on the National Consumer Helpline: You can call the National Consumer Helpline at 1800-11-4000 (toll-free) or use the NCH app or website to register a grievance against ShopKart. This may help resolve the matter without going to the Commission.\n• File a complaint with the District Consumer Commission: If ShopKart still does not refund, you can file a consumer complaint at the District Consumer Disputes Redressal Commission in Pune. You can file it online through the e-daakhil portal (edaakhil.nic.in). You can claim a refund of Rs 3,499 along with interest and any compensation for the inconvenience caused.\n• Take screenshots of all four app chat complaints where ShopKart said 'refund initiated'. Save these as evidence.\n• Keep your invoice, return pickup receipt, order confirmation email, and any payment proof safely. These are your key documents.\n• Send a written notice to ShopKart by email and registered post, clearly stating your demand for refund and giving a reasonable deadline.\n\nNeeds checking by a lawyer (not verified):\n• Since you live in Pune, you can file your complaint at the District Commission in Pune.\n• Which level of Commission (District, State, or National) handles your case depends on the value involved. The exact current monetary limit for the District Commission could not be verified by this system. Please confirm the current limit on the official consumer e-filing portal or with the Commission before filing.\n• The exact current monetary jurisdiction limit of the District Commission should be confirmed before filing, as this system could not verify the latest rules.\n• Whether ShopKart's terms of service impose any specific refund timeline or arbitration clause that could affect the process.\n\nThis is legal information, not legal advice."
+    }
+  ],
+  "responses": [
+    {
+      "stage": "followup",
+      "reply": "That's really frustrating — you returned the speaker over three months ago and the refund is still pending. I understand your concern and I'm here to help.\n\n1. Have you already complained to them? If yes – when, how (email, app chat, call), and what did they reply?\n\n2. Did you buy this for personal or family use, or for a business?",
+      "case": {
+        "domain": "consumer",
+        "language": "en",
+        "facts": {
+          "problem_description": {
+            "value": "Returned a defective Bluetooth speaker that stopped charging; pickup was completed but refund has not been received.",
+            "source": "user_stated",
+            "quote": "I returned it on 2026-08-20 because it stopped charging, and the pickup was done, but the refund still hasn't come."
+          },
+          "trader_name": {
+            "value": "ShopKart",
+            "source": "user_stated",
+            "quote": "an online store called ShopKart"
+          },
+          "product_or_service": {
+            "value": "Bluetooth speaker",
+            "source": "user_stated",
+            "quote": "a Bluetooth speaker"
+          },
+          "amount_paid": {
+            "value": "3499",
+            "source": "user_stated",
+            "quote": "Rs 3,499"
+          },
+          "purchase_date": {
+            "value": "2026-08-14",
+            "source": "user_stated",
+            "quote": "on 2026-08-14"
+          },
+          "relief_wanted": {
+            "value": "refund",
+            "source": "inferred",
+            "quote": "the refund still hasn't come"
+          }
+        },
+        "timeline": [
+          {
+            "date": "2026-08-14",
+            "event": "Ordered Bluetooth speaker from ShopKart for Rs 3,499",
+            "source": "user_stated",
+            "quote": "I ordered a Bluetooth speaker from an online store called ShopKart for Rs 3,499 on 2026-08-14",
+            "date_source": "user_stated"
+          },
+          {
+            "date": "2026-08-20",
+            "event": "Returned the speaker due to charging defect; pickup completed",
+            "source": "user_stated",
+            "quote": "I returned it on 2026-08-20 because it stopped charging, and the pickup was done",
+            "date_source": "user_stated"
+          },
+          {
+            "date": null,
+            "event": "Refund still not received as of today",
+            "source": "user_stated",
+            "quote": "the refund still hasn't come"
+          }
+        ],
+        "evidence": {},
+        "notes": [],
+        "turns": 1
+      },
+      "followups": [
+        "Have you already complained to them? If yes – when, how (email, app chat, call), and what did they reply?",
+        "Did you buy this for personal or family use, or for a business?"
+      ],
+      "missing": [
+        "prior_complaint",
+        "purchase_purpose",
+        "user_state"
+      ],
+      "escalation": {
+        "level": "none",
+        "reasons": [],
+        "helplines": []
+      },
+      "evidence": [
+        {
+          "key": "invoice",
+          "label": "Invoice / bill / receipt",
+          "why": "Proves you bought it, from whom, when and for how much – the basis of a consumer claim and of the amount paid.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "order_confirmation",
+          "label": "Order ID / booking confirmation",
+          "why": "Links you to the transaction, especially for online purchases.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "payment_proof",
+          "label": "Payment proof (bank/UPI/card statement)",
+          "why": "Shows the money actually left your account, which matters if the seller disputes the amount.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "product_photos",
+          "label": "Photos / videos of the defect",
+          "why": "Shows the condition of the goods; take them before returning or repairing anything.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "warranty_card",
+          "label": "Warranty / guarantee card",
+          "why": "Shows what the seller or manufacturer promised and for how long.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "complaint_records",
+          "label": "Your complaints (emails, chats, ticket numbers)",
+          "why": "Shows you gave them a chance to fix it, and when – useful for the notice and for dates.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "written_refusal",
+          "label": "Their reply / refusal in writing",
+          "why": "Shows their position; the date can matter for when the dispute arose.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "delivery_proof",
+          "label": "Delivery / courier / service record",
+          "why": "Shows what was (or wasn't) delivered or done, and when.",
+          "state": "not_mentioned"
+        }
+      ],
+      "sources": [],
+      "unverified_matches": [],
+      "meta": {
+        "provider": "anthropic",
+        "model": "claude-opus-4-6",
+        "prompt_version": "2026-11-21.v4",
+        "llm_calls": 1
+      },
+      "raw": {
+        "understanding": "{\"domain\": \"consumer\", \"domain_confidence\": 0.95, \"language\": \"en\", \"extracted\": [{\"field\": \"problem_description\", \"value\": \"Returned a defective Bluetooth speaker that stopped charging; pickup was completed but refund has not been received.\", \"source\": \"user_stated\", \"quote\": \"I returned it on 2026-08-20 because it stopped charging, and the pickup was done, but the refund still hasn't come.\"}, {\"field\": \"trader_name\", \"value\": \"ShopKart\", \"source\": \"user_stated\", \"quote\": \"an online store called ShopKart\"}, {\"field\": \"product_or_service\", \"value\": \"Bluetooth speaker\", \"source\": \"user_stated\", \"quote\": \"a Bluetooth speaker\"}, {\"field\": \"amount_paid\", \"value\": \"3499\", \"source\": \"user_stated\", \"quote\": \"Rs 3,499\"}, {\"field\": \"purchase_date\", \"value\": \"2026-08-14\", \"source\": \"user_stated\", \"quote\": \"on 2026-08-14\"}, {\"field\": \"relief_wanted\", \"value\": \"refund\", \"source\": \"inferred\", \"quote\": \"the refund still hasn't come\"}], \"timeline\": [{\"date\": \"2026-08-14\", \"event\": \"Ordered Bluetooth speaker from ShopKart for Rs 3,499\", \"quote\": \"I ordered a Bluetooth speaker from an online store called ShopKart for Rs 3,499 on 2026-08-14\"}, {\"date\": \"2026-08-20\", \"event\": \"Returned the speaker due to charging defect; pickup completed\", \"quote\": \"I returned it on 2026-08-20 because it stopped charging, and the pickup was done\"}, {\"date\": null, \"event\": \"Refund still not received as of today\", \"quote\": \"the refund still hasn't come\"}], \"evidence_mentioned\": [], \"search_terms\": [\"refund not received after return\", \"defective product return\", \"e-commerce refund delay\", \"consumer complaint online store\", \"product stopped charging\"], \"user_wants_analysis\": false, \"acknowledgement\": \"That's really frustrating — you returned the speaker over three months ago and the refund is still pending. I understand your concern and I'm here to help.\"}"
+      }
+    },
+    {
+      "stage": "analysis",
+      "reply": "You bought a Bluetooth speaker from ShopKart online for Rs 3,499 for personal use. You returned it due to a charging defect and the pickup was completed, but despite complaining four times on the app chat, the refund has not been received.\n\nWhat the law says (checked against the official text):\n• Since you bought the Bluetooth speaker for personal use through an online transaction, you qualify as a 'consumer' under the law. Online transactions are specifically included. (Consumer Protection Act, 2019, s. 2(7))\n• A speaker that stops charging may be treated as having a 'defect', which means any fault or shortcoming in quality. (Consumer Protection Act, 2019, s. 2(10))\n• ShopKart's failure to process your refund despite accepting the return may amount to a deficiency in service, meaning a shortcoming in the manner of performance undertaken by them. (Consumer Protection Act, 2019, s. 2(11))\n• Refusing to refund the price after accepting back a defective product may also be treated as an unfair trade practice. The law specifically mentions refusing to take back defective goods or to refund the consideration within the stipulated period, or within thirty days if no period is stipulated. (Consumer Protection Act, 2019, s. 2(47)(viii))\n• You can file a complaint with the District Consumer Disputes Redressal Commission. You may file in the district where you reside, or where the cause of action arose, or where the opposite party carries on business or has a branch office. (Consumer Protection Act, 2019, s. 34(2))\n• The complaint may also be filed electronically as per the prescribed procedure. (Consumer Protection Act, 2019, s. 35(1))\n• If the Commission is satisfied that the product was defective or the service was deficient or there was an unfair trade practice, it can direct ShopKart to return the price you paid along with interest, and may also award compensation for any loss or injury you suffered. (Consumer Protection Act, 2019, s. 39(1))\n• About three months have passed since the return. The complaint must generally be filed within two years from the date the cause of action arose, so you appear to be well within this time limit. (Consumer Protection Act, 2019, s. 69)\n\nPractical steps:\n• Send a formal written notice to ShopKart: Send a written notice by email and registered post to ShopKart demanding your refund of Rs 3,499. Mention that you returned the product, that the pickup was completed, and that you have complained four times without result. Give them a reasonable deadline that you state in your notice. Keep a copy of the notice and the proof of dispatch.\n• File a complaint on the National Consumer Helpline: You can call the National Consumer Helpline at 1800-11-4000 (toll-free) or use the NCH app or website to register a grievance against ShopKart. This may help resolve the matter without going to the Commission.\n• File a complaint with the District Consumer Commission: If ShopKart still does not refund, you can file a consumer complaint at the District Consumer Disputes Redressal Commission in Pune. You can file it online through the e-daakhil portal (edaakhil.nic.in). You can claim a refund of Rs 3,499 along with interest and any compensation for the inconvenience caused.\n• Take screenshots of all four app chat complaints where ShopKart said 'refund initiated'. Save these as evidence.\n• Keep your invoice, return pickup receipt, order confirmation email, and any payment proof safely. These are your key documents.\n• Send a written notice to ShopKart by email and registered post, clearly stating your demand for refund and giving a reasonable deadline.\n\nNeeds checking by a lawyer (not verified):\n• Since you live in Pune, you can file your complaint at the District Commission in Pune.\n• Which level of Commission (District, State, or National) handles your case depends on the value involved. The exact current monetary limit for the District Commission could not be verified by this system. Please confirm the current limit on the official consumer e-filing portal or with the Commission before filing.\n• The exact current monetary jurisdiction limit of the District Commission should be confirmed before filing, as this system could not verify the latest rules.\n• Whether ShopKart's terms of service impose any specific refund timeline or arbitration clause that could affect the process.\n\nThis is legal information, not legal advice.",
+      "case": {
+        "domain": "consumer",
+        "language": "en",
+        "facts": {
+          "problem_description": {
+            "value": "Returned a defective Bluetooth speaker that stopped charging; pickup was completed but refund has not been received despite 4 complaints.",
+            "source": "user_stated",
+            "quote": "I returned it on 2026-08-20 because it stopped charging, and the pickup was done, but the refund still hasn't come."
+          },
+          "trader_name": {
+            "value": "ShopKart",
+            "source": "user_stated",
+            "quote": "an online store called ShopKart"
+          },
+          "product_or_service": {
+            "value": "Bluetooth speaker",
+            "source": "user_stated",
+            "quote": "a Bluetooth speaker"
+          },
+          "amount_paid": {
+            "value": "3499",
+            "source": "user_stated",
+            "quote": "Rs 3,499"
+          },
+          "purchase_date": {
+            "value": "2026-08-14",
+            "source": "user_stated",
+            "quote": "on 2026-08-14"
+          },
+          "relief_wanted": {
+            "value": "refund of Rs 3,499",
+            "source": "user_stated",
+            "quote": "I just want my 3,499 back."
+          },
+          "prior_complaint": {
+            "value": "Complained 4 times via app chat; each time told 'refund initiated' but no refund received.",
+            "source": "user_stated",
+            "quote": "I complained 4 times on their app chat. They keep saying 'refund initiated' but nothing comes."
+          },
+          "purchase_purpose": {
+            "value": "personal",
+            "source": "user_stated",
+            "quote": "I bought it for my own use."
+          },
+          "user_state": {
+            "value": "Pune, Maharashtra",
+            "source": "user_stated",
+            "quote": "I live in Pune, Maharashtra."
+          }
+        },
+        "timeline": [
+          {
+            "date": "2026-08-14",
+            "event": "Ordered Bluetooth speaker from ShopKart for Rs 3,499",
+            "source": "user_stated",
+            "quote": "I ordered a Bluetooth speaker from an online store called ShopKart for Rs 3,499 on 2026-08-14",
+            "date_source": "user_stated"
+          },
+          {
+            "date": "2026-08-20",
+            "event": "Returned the speaker due to charging defect; pickup completed",
+            "source": "user_stated",
+            "quote": "I returned it on 2026-08-20 because it stopped charging, and the pickup was done",
+            "date_source": "user_stated"
+          },
+          {
+            "date": null,
+            "event": "Refund still not received as of today",
+            "source": "user_stated",
+            "quote": "the refund still hasn't come"
+          },
+          {
+            "date": null,
+            "event": "Complained 4 times on app chat; told 'refund initiated' each time",
+            "source": "user_stated",
+            "quote": "I complained 4 times on their app chat. They keep saying 'refund initiated' but nothing comes."
+          }
+        ],
+        "evidence": {
+          "invoice": {
+            "state": "have",
+            "quote": "I have the invoice"
+          },
+          "delivery_proof": {
+            "state": "have",
+            "quote": "the return pickup receipt"
+          },
+          "complaint_records": {
+            "state": "have",
+            "quote": "I complained 4 times on their app chat"
+          }
+        },
+        "notes": [],
+        "turns": 2
+      },
+      "followups": [],
+      "missing": [],
+      "escalation": {
+        "level": "none",
+        "reasons": [],
+        "helplines": []
+      },
+      "evidence": [
+        {
+          "key": "invoice",
+          "label": "Invoice / bill / receipt",
+          "why": "Proves you bought it, from whom, when and for how much – the basis of a consumer claim and of the amount paid.",
+          "state": "have",
+          "quote": "I have the invoice"
+        },
+        {
+          "key": "order_confirmation",
+          "label": "Order ID / booking confirmation",
+          "why": "Links you to the transaction, especially for online purchases.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "payment_proof",
+          "label": "Payment proof (bank/UPI/card statement)",
+          "why": "Shows the money actually left your account, which matters if the seller disputes the amount.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "product_photos",
+          "label": "Photos / videos of the defect",
+          "why": "Shows the condition of the goods; take them before returning or repairing anything.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "warranty_card",
+          "label": "Warranty / guarantee card",
+          "why": "Shows what the seller or manufacturer promised and for how long.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "complaint_records",
+          "label": "Your complaints (emails, chats, ticket numbers)",
+          "why": "Shows you gave them a chance to fix it, and when – useful for the notice and for dates.",
+          "state": "have",
+          "quote": "I complained 4 times on their app chat"
+        },
+        {
+          "key": "written_refusal",
+          "label": "Their reply / refusal in writing",
+          "why": "Shows their position; the date can matter for when the dispute arose.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "delivery_proof",
+          "label": "Delivery / courier / service record",
+          "why": "Shows what was (or wasn't) delivered or done, and when.",
+          "state": "have",
+          "quote": "the return pickup receipt"
+        }
+      ],
+      "analysis": {
+        "issue_summary": "You bought a Bluetooth speaker from ShopKart online for Rs 3,499 for personal use. You returned it due to a charging defect and the pickup was completed, but despite complaining four times on the app chat, the refund has not been received.",
+        "claims": [
+          {
+            "text": "Since you bought the Bluetooth speaker for personal use through an online transaction, you qualify as a 'consumer' under the law. Online transactions are specifically included.",
+            "type": "verified_law",
+            "provision_id": "CPA2019-S2-7",
+            "support_quote": "buys any goods for a consideration which has been paid or promised [...] does not include a person who obtains such goods for resale or for any commercial purpose",
+            "status": "source_matched"
+          },
+          {
+            "text": "A speaker that stops charging may be treated as having a 'defect', which means any fault or shortcoming in quality.",
+            "type": "verified_law",
+            "provision_id": "CPA2019-S2-10",
+            "support_quote": "any fault, imperfection or shortcoming in the quality, quantity, potency, purity or standard",
+            "status": "source_matched"
+          },
+          {
+            "text": "ShopKart's failure to process your refund despite accepting the return may amount to a deficiency in service, meaning a shortcoming in the manner of performance undertaken by them.",
+            "type": "verified_law",
+            "provision_id": "CPA2019-S2-11",
+            "support_quote": "any fault, imperfection, shortcoming or inadequacy in the quality, nature and manner of performance which is required to be maintained",
+            "status": "source_matched"
+          },
+          {
+            "text": "Refusing to refund the price after accepting back a defective product may also be treated as an unfair trade practice. The law specifically mentions refusing to take back defective goods or to refund the consideration within the stipulated period, or within thirty days if no period is stipulated.",
+            "type": "verified_law",
+            "provision_id": "CPA2019-S2-47-VIII",
+            "support_quote": "refusing, after selling goods or rendering services, to take back or withdraw defective goods [...] and to refund the consideration thereof, if paid, within the period stipulated in the bill or cash memo or receipt or in the absence of such stipulation, within a period of thirty days",
+            "status": "source_matched"
+          },
+          {
+            "text": "You can file a complaint with the District Consumer Disputes Redressal Commission. You may file in the district where you reside, or where the cause of action arose, or where the opposite party carries on business or has a branch office.",
+            "type": "verified_law",
+            "provision_id": "CPA2019-S34-2",
+            "support_quote": "the cause of action, wholly or in part, arises; or (d) the complainant resides or personally works for gain",
+            "status": "source_matched"
+          },
+          {
+            "text": "Since you live in Pune, you can file your complaint at the District Commission in Pune.",
+            "type": "general_explanation",
+            "provision_id": null,
+            "support_quote": null,
+            "status": "general"
+          },
+          {
+            "text": "The complaint may also be filed electronically as per the prescribed procedure.",
+            "type": "verified_law",
+            "provision_id": "CPA2019-S35-1",
+            "support_quote": "the complaint under this sub-section may be filed electronically in such manner as may be prescribed",
+            "status": "source_matched"
+          },
+          {
+            "text": "If the Commission is satisfied that the product was defective or the service was deficient or there was an unfair trade practice, it can direct ShopKart to return the price you paid along with interest, and may also award compensation for any loss or injury you suffered.",
+            "type": "verified_law",
+            "provision_id": "CPA2019-S39-1",
+            "support_quote": "to return to the complainant the price, or, as the case may be, the charges paid by the complainant along with such interest on such price or charges as may be decided",
+            "status": "source_matched"
+          },
+          {
+            "text": "About three months have passed since the return. The complaint must generally be filed within two years from the date the cause of action arose, so you appear to be well within this time limit.",
+            "type": "verified_law",
+            "provision_id": "CPA2019-S69",
+            "support_quote": "shall not admit a complaint unless it is filed within two years from the date on which the cause of action has arisen",
+            "status": "source_matched"
+          },
+          {
+            "text": "Which level of Commission (District, State, or National) handles your case depends on the value involved. The exact current monetary limit for the District Commission could not be verified by this system. Please confirm the current limit on the official consumer e-filing portal or with the Commission before filing.",
+            "type": "general_explanation",
+            "provision_id": null,
+            "support_quote": null,
+            "status": "general"
+          }
+        ],
+        "options": [
+          {
+            "title": "Send a formal written notice to ShopKart",
+            "description": "Send a written notice by email and registered post to ShopKart demanding your refund of Rs 3,499. Mention that you returned the product, that the pickup was completed, and that you have complained four times without result. Give them a reasonable deadline that you state in your notice. Keep a copy of the notice and the proof of dispatch."
+          },
+          {
+            "title": "File a complaint on the National Consumer Helpline",
+            "description": "You can call the National Consumer Helpline at 1800-11-4000 (toll-free) or use the NCH app or website to register a grievance against ShopKart. This may help resolve the matter without going to the Commission."
+          },
+          {
+            "title": "File a complaint with the District Consumer Commission",
+            "description": "If ShopKart still does not refund, you can file a consumer complaint at the District Consumer Disputes Redressal Commission in Pune. You can file it online through the e-daakhil portal (edaakhil.nic.in). You can claim a refund of Rs 3,499 along with interest and any compensation for the inconvenience caused."
+          }
+        ],
+        "next_steps": [
+          "Take screenshots of all four app chat complaints where ShopKart said 'refund initiated'. Save these as evidence.",
+          "Keep your invoice, return pickup receipt, order confirmation email, and any payment proof safely. These are your key documents.",
+          "Send a written notice to ShopKart by email and registered post, clearly stating your demand for refund and giving a reasonable deadline.",
+          "If the refund is not received after the notice deadline, register your complaint on the e-daakhil portal (edaakhil.nic.in) for the District Commission in Pune. You will need to upload your invoice, pickup receipt, chat screenshots, and notice copy.",
+          "You can also file a parallel grievance on the National Consumer Helpline (1800-11-4000 or consumerhelpline.gov.in)."
+        ],
+        "needs_verification": [
+          {
+            "text": "Since you live in Pune, you can file your complaint at the District Commission in Pune.",
+            "reason": "general_explanation"
+          },
+          {
+            "text": "Which level of Commission (District, State, or National) handles your case depends on the value involved. The exact current monetary limit for the District Commission could not be verified by this system. Please confirm the current limit on the official consumer e-filing portal or with the Commission before filing.",
+            "reason": "general_explanation"
+          },
+          {
+            "text": "The exact current monetary jurisdiction limit of the District Commission should be confirmed before filing, as this system could not verify the latest rules.",
+            "reason": "model_flagged"
+          },
+          {
+            "text": "Whether ShopKart's terms of service impose any specific refund timeline or arbitration clause that could affect the process.",
+            "reason": "model_flagged"
+          }
+        ],
+        "uncertainties": [
+          "The exact dates of the four app chat complaints are not stated, though this is unlikely to affect your claim.",
+          "Whether ShopKart actually initiated a refund that failed due to a payment gateway or bank issue, or whether no refund was ever processed, is unclear and may need to be checked with your bank."
+        ],
+        "lawyer_recommended": false,
+        "lawyer_reason": "The amount involved is relatively small (Rs 3,499), the facts are straightforward, and you have supporting documents. You can likely handle this on your own through the consumer helpline and the e-filing portal. However, if the matter becomes complicated or ShopKart raises disputes, you may want to consult a lawyer at that stage.",
+        "report": {
+          "claims_total": 10,
+          "claims_source_matched": 8,
+          "claims_downgraded": 0,
+          "unverified_refs_removed": [],
+          "guarantee_phrases_flagged": [],
+          "relabelled_unsupported": [],
+          "invented_numbers_removed": [],
+          "note": "Source check only confirms that quoted words exist in a verified official provision. It does not confirm that the provision applies to your facts or that the legal reasoning is correct. Have a lawyer review before acting."
+        }
+      },
+      "rules": [
+        {
+          "status": "within",
+          "message": "About 3 month(s) have passed. That appears to be within the two-year period in Section 69(1).",
+          "provision_ids": [
+            "CPA2019-S69"
+          ],
+          "assumptions": [
+            "Counted from the purchase/service date (2026-08-14). The \"cause of action\" may arise later – for example when the defect appeared or when the trader finally refused – which could give you more time. This is a conservative estimate."
+          ]
+        },
+        {
+          "status": "rule_not_verified",
+          "message": "Which Commission hears a case depends on the value of the goods or services paid as consideration – not on the compensation you claim. The Act originally set the District Commission's limit at one crore rupees but lets the Central Government prescribe a different value by rules, and NyayaAI has not verified the current rules – so it cannot tell you the current limit. Confirm the current limit on the official consumer e-filing portal or with the Commission before filing.",
+          "provision_ids": [],
+          "assumptions": []
+        }
+      ],
+      "sources": [
+        {
+          "id": "CPA2019-S2-7",
+          "act": "Consumer Protection Act, 2019",
+          "section": "2(7)",
+          "title": "Definition of 'consumer'",
+          "text": "(7) \"consumer\" means any person who-- (i) buys any goods for a consideration which has been paid or promised or partly paid and partly promised, or under any system of deferred payment and includes any user of such goods other than the person who buys such goods for consideration paid or promised or partly paid or partly promised, or under any system of deferred payment, when such use is made with the approval of such person, but does not include a person who obtains such goods for resale or for any commercial purpose; or (ii) hires or avails of any service for a consideration which has been paid or promised or partly paid and partly promised, or under any system of deferred payment and includes any beneficiary of such service other than the person who hires or avails of the services for consideration paid or promised, or partly paid and partly promised, or under any system of deferred payment, when such services are availed of with the approval of the first mentioned person, but does not include a person who avails of such service for any commercial purpose. Explanation. --For the purposes of this clause, -- (a) the expression \"commercial purpose\" does not include use by a person of goods bought and used by him exclusively for the purpose of earning his livelihood, by means of self-employment; (b) the expressions \"buys any goods\" and \"hires or avails any services\" includes offline or online transactions through electronic means or by teleshopping or direct selling or multi-level marketing;",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": true
+        },
+        {
+          "id": "CPA2019-S2-10",
+          "act": "Consumer Protection Act, 2019",
+          "section": "2(10)",
+          "title": "Definition of 'defect'",
+          "text": "(10) \"defect\" means any fault, imperfection or shortcoming in the quality, quantity, potency, purity or standard which is required to be maintained by or under any law for the time being in force or under any contract, express or implied or as is claimed by the trader in any manner whatsoever in relation to any goods or product and the expression \"defective\" shall be construed accordingly;",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": true
+        },
+        {
+          "id": "CPA2019-S2-11",
+          "act": "Consumer Protection Act, 2019",
+          "section": "2(11)",
+          "title": "Definition of 'deficiency'",
+          "text": "(11) \"deficiency\" means any fault, imperfection, shortcoming or inadequacy in the quality, nature and manner of performance which is required to be maintained by or under any law for the time being in force or has been undertaken to be performed by a person in pursuance of a contract or otherwise in relation to any service and includes-- (i) any act of negligence or omission or commission by such person which causes loss or injury to the consumer; and (ii) deliberate withholding of relevant information by such person to the consumer;",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": true
+        },
+        {
+          "id": "CPA2019-S34-2",
+          "act": "Consumer Protection Act, 2019",
+          "section": "34(2)",
+          "title": "Jurisdiction of District Commission – where to file",
+          "text": "34. Jurisdiction of District Commission.-- (2) A complaint shall be instituted in a District Commission within the local limits of whose jurisdiction,-- (a) the opposite party or each of the opposite parties, where there are more than one, at the time of the institution of the complaint, ordinarily resides or carries on business or has a branch office or personally works for gain; or (b) any of the opposite parties, where there are more than one, at the time of the institution of the complaint, actually and voluntarily resides, or carries on business or has a branch office, or personally works for gain, provided that in such case the permission of the District Commission is given; or (c) the cause of action, wholly or in part, arises; or (d) the complainant resides or personally works for gain.",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": true
+        },
+        {
+          "id": "CPA2019-S2-47-VIII",
+          "act": "Consumer Protection Act, 2019",
+          "section": "2(47)(viii)",
+          "title": "Unfair trade practice – refusing to take back defective goods / refund",
+          "text": "(viii) refusing, after selling goods or rendering services, to take back or withdraw defective goods or to withdraw or discontinue deficient services and to refund the consideration thereof, if paid, within the period stipulated in the bill or cash memo or receipt or in the absence of such stipulation, within a period of thirty days;",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": true
+        },
+        {
+          "id": "CPA2019-S35-1",
+          "act": "Consumer Protection Act, 2019",
+          "section": "35(1)",
+          "title": "Manner in which complaint shall be made",
+          "text": "35. Manner in which complaint shall be made.--(1) A complaint, in relation to any goods sold or delivered or agreed to be sold or delivered or any service provided or agreed to be provided, may be filed with a District Commission by-- (a) the consumer,-- (i) to whom such goods are sold or delivered or agreed to be sold or delivered or such service is provided or agreed to be provided; or (ii) who alleges unfair trade practice in respect of such goods or service; [...] Provided that the complaint under this sub-section may be filed electronically in such manner as may be prescribed.",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": true
+        },
+        {
+          "id": "CPA2019-S39-1",
+          "act": "Consumer Protection Act, 2019",
+          "section": "39(1)",
+          "title": "Findings of District Commission (reliefs)",
+          "text": "39. Findings of District Commission.--(1) Where the District Commission is satisfied that the goods complained against suffer from any of the defects specified in the complaint or that any of the allegations contained in the complaint about the services or any unfair trade practices, or claims for compensation under product liability are proved, it shall issue an order to the opposite party directing him to do one or more of the following, namely:-- (a) to remove the defect pointed out by the appropriate laboratory from the goods in question; (b) to replace the goods with new goods of similar description which shall be free from any defect; (c) to return to the complainant the price, or, as the case may be, the charges paid by the complainant along with such interest on such price or charges as may be decided; (d) to pay such amount as may be awarded by it as compensation to the consumer for any loss or injury suffered by the consumer due to the negligence of the opposite party: Provided that the District Commission shall have the power to grant punitive damages in such circumstances as it deems fit; (e) to pay such amount as may be awarded by it as compensation in a product liability action under Chapter VI; (f) to remove the defects in goods or deficiencies in the services in question; [...]",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": true
+        },
+        {
+          "id": "CPA2019-S69",
+          "act": "Consumer Protection Act, 2019",
+          "section": "69",
+          "title": "Limitation period",
+          "text": "69. Limitation period.--(1) The District Commission, the State Commission or the National Commission shall not admit a complaint unless it is filed within two years from the date on which the cause of action has arisen. (2) Notwithstanding anything contained in sub-section (1), a complaint may be entertained after the period specified in sub-section (1), if the complainant satisfies the District Commission, the State Commission or the National Commission, as the case may be, that he had sufficient cause for not filing the complaint within such period: Provided that no such complaint shall be entertained unless the District Commission or the State Commission or the National Commission, as the case may be, records its reasons for condoning such delay.",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": true
+        },
+        {
+          "id": "CPA2019-S100",
+          "act": "Consumer Protection Act, 2019",
+          "section": "100",
+          "title": "Act not in derogation of any other law",
+          "text": "100. Act not in derogation of any other law.--The provisions of this Act shall be in addition to and not in derogation of the provisions of any other law for the time being in force.",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        }
+      ],
+      "unverified_matches": [
+        {
+          "id": "CPA2019-S34-1",
+          "act": "Consumer Protection Act, 2019",
+          "section": "34(1)",
+          "title": "Jurisdiction of District Commission – monetary limit (as enacted)",
+          "text": "34. Jurisdiction of District Commission.--(1) Subject to the other provisions of this Act, the District Commission shall have jurisdiction to entertain complaints where the value of the goods or services paid as consideration does not exceed one crore rupees: Provided that where the Central Government deems it necessary so to do, it may prescribe such other value, as it deems fit.",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "verify",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        }
+      ],
+      "meta": {
+        "provider": "anthropic",
+        "model": "claude-opus-4-6",
+        "prompt_version": "2026-11-21.v4",
+        "llm_calls": 2
+      },
+      "raw": {
+        "understanding": "{\"domain\": \"consumer\", \"domain_confidence\": 0.97, \"language\": \"en\",\n \"extracted\": [\n  {\"field\": \"problem_description\", \"value\": \"Returned a defective Bluetooth speaker that stopped charging; pickup was completed but refund has not been received despite 4 complaints.\", \"source\": \"user_stated\", \"quote\": \"I returned it on 2026-08-20 because it stopped charging, and the pickup was done, but the refund still hasn't come.\"},\n  {\"field\": \"trader_name\", \"value\": \"ShopKart\", \"source\": \"user_stated\", \"quote\": \"an online store called ShopKart\"},\n  {\"field\": \"product_or_service\", \"value\": \"Bluetooth speaker\", \"source\": \"user_stated\", \"quote\": \"a Bluetooth speaker\"},\n  {\"field\": \"amount_paid\", \"value\": \"3499\", \"source\": \"user_stated\", \"quote\": \"Rs 3,499\"},\n  {\"field\": \"purchase_date\", \"value\": \"2026-08-14\", \"source\": \"user_stated\", \"quote\": \"on 2026-08-14\"},\n  {\"field\": \"prior_complaint\", \"value\": \"Complained 4 times via app chat; each time told 'refund initiated' but no refund received.\", \"source\": \"user_stated\", \"quote\": \"I complained 4 times on their app chat. They keep saying 'refund initiated' but nothing comes.\"},\n  {\"field\": \"relief_wanted\", \"value\": \"refund of Rs 3,499\", \"source\": \"user_stated\", \"quote\": \"I just want my 3,499 back.\"},\n  {\"field\": \"purchase_purpose\", \"value\": \"personal\", \"source\": \"user_stated\", \"quote\": \"I bought it for my own use.\"},\n  {\"field\": \"user_state\", \"value\": \"Pune, Maharashtra\", \"source\": \"user_stated\", \"quote\": \"I live in Pune, Maharashtra.\"}\n ],\n \"timeline\": [\n  {\"date\": \"2026-08-14\", \"event\": \"Ordered Bluetooth speaker from ShopKart for Rs 3,499\", \"quote\": \"I ordered a Bluetooth speaker from an online store called ShopKart for Rs 3,499 on 2026-08-14.\"},\n  {\"date\": \"2026-08-20\", \"event\": \"Returned the speaker due to charging defect; pickup completed\", \"quote\": \"I returned it on 2026-08-20 because it stopped charging, and the pickup was done\"},\n  {\"date\": null, \"event\": \"Complained 4 times on app chat; told 'refund initiated' each time\", \"quote\": \"I complained 4 times on their app chat. They keep saying 'refund initiated' but nothing comes.\"}\n ],\n \"evidence_mentioned\": [\n  {\"key\": \"invoice\", \"has\": true, \"quote\": \"I have the invoice\"},\n  {\"key\": \"delivery_proof\", \"has\": true, \"quote\": \"the return pickup receipt\"},\n  {\"key\": \"complaint_records\", \"has\": true, \"quote\": \"I complained 4 times on their app chat\"}\n ],\n \"search_terms\": [\"refund not received after return\", \"e-commerce refund delay\", \"defective product return\", \"consumer complaint online store\", \"deficiency in service\"],\n \"user_wants_analysis\": false,\n \"acknowledgement\": \"That's really frustrating — it's been over three months since your return was picked up, and despite four follow-ups they still haven't refunded you. I've noted all your details and evidence.\"}",
+        "analysis": "{\"issue_summary\":\"You bought a Bluetooth speaker from ShopKart online for Rs 3,499 for personal use. You returned it due to a charging defect and the pickup was completed, but despite complaining four times on the app chat, the refund has not been received.\",\"claims\":[{\"text\":\"Since you bought the Bluetooth speaker for personal use through an online transaction, you qualify as a 'consumer' under the law. Online transactions are specifically included.\",\"type\":\"verified_law\",\"provision_id\":\"CPA2019-S2-7\",\"support_quote\":\"buys any goods for a consideration which has been paid or promised [...] does not include a person who obtains such goods for resale or for any commercial purpose\"},{\"text\":\"A speaker that stops charging may be treated as having a 'defect', which means any fault or shortcoming in quality.\",\"type\":\"verified_law\",\"provision_id\":\"CPA2019-S2-10\",\"support_quote\":\"any fault, imperfection or shortcoming in the quality, quantity, potency, purity or standard\"},{\"text\":\"ShopKart's failure to process your refund despite accepting the return may amount to a deficiency in service, meaning a shortcoming in the manner of performance undertaken by them.\",\"type\":\"verified_law\",\"provision_id\":\"CPA2019-S2-11\",\"support_quote\":\"any fault, imperfection, shortcoming or inadequacy in the quality, nature and manner of performance which is required to be maintained\"},{\"text\":\"Refusing to refund the price after accepting back a defective product may also be treated as an unfair trade practice. The law specifically mentions refusing to take back defective goods or to refund the consideration within the stipulated period, or within thirty days if no period is stipulated.\",\"type\":\"verified_law\",\"provision_id\":\"CPA2019-S2-47-VIII\",\"support_quote\":\"refusing, after selling goods or rendering services, to take back or withdraw defective goods [...] and to refund the consideration thereof, if paid, within the period stipulated in the bill or cash memo or receipt or in the absence of such stipulation, within a period of thirty days\"},{\"text\":\"You can file a complaint with the District Consumer Disputes Redressal Commission. You may file in the district where you reside, or where the cause of action arose, or where the opposite party carries on business or has a branch office.\",\"type\":\"verified_law\",\"provision_id\":\"CPA2019-S34-2\",\"support_quote\":\"the cause of action, wholly or in part, arises; or (d) the complainant resides or personally works for gain\"},{\"text\":\"Since you live in Pune, you can file your complaint at the District Commission in Pune.\",\"type\":\"general_explanation\",\"provision_id\":null,\"support_quote\":null},{\"text\":\"The complaint may also be filed electronically as per the prescribed procedure.\",\"type\":\"verified_law\",\"provision_id\":\"CPA2019-S35-1\",\"support_quote\":\"the complaint under this sub-section may be filed electronically in such manner as may be prescribed\"},{\"text\":\"If the Commission is satisfied that the product was defective or the service was deficient or there was an unfair trade practice, it can direct ShopKart to return the price you paid along with interest, and may also award compensation for any loss or injury you suffered.\",\"type\":\"verified_law\",\"provision_id\":\"CPA2019-S39-1\",\"support_quote\":\"to return to the complainant the price, or, as the case may be, the charges paid by the complainant along with such interest on such price or charges as may be decided\"},{\"text\":\"About three months have passed since the return. The complaint must generally be filed within two years from the date the cause of action arose, so you appear to be well within this time limit.\",\"type\":\"verified_law\",\"provision_id\":\"CPA2019-S69\",\"support_quote\":\"shall not admit a complaint unless it is filed within two years from the date on which the cause of action has arisen\"},{\"text\":\"Which level of Commission (District, State, or National) handles your case depends on the value involved. The exact current monetary limit for the District Commission could not be verified by this system. Please confirm the current limit on the official consumer e-filing portal or with the Commission before filing.\",\"type\":\"general_explanation\",\"provision_id\":null,\"support_quote\":null}],\"options\":[{\"title\":\"Send a formal written notice to ShopKart\",\"description\":\"Send a written notice by email and registered post to ShopKart demanding your refund of Rs 3,499. Mention that you returned the product, that the pickup was completed, and that you have complained four times without result. Give them a reasonable deadline that you state in your notice. Keep a copy of the notice and the proof of dispatch.\"},{\"title\":\"File a complaint on the National Consumer Helpline\",\"description\":\"You can call the National Consumer Helpline at 1800-11-4000 (toll-free) or use the NCH app or website to register a grievance against ShopKart. This may help resolve the matter without going to the Commission.\"},{\"title\":\"File a complaint with the District Consumer Commission\",\"description\":\"If ShopKart still does not refund, you can file a consumer complaint at the District Consumer Disputes Redressal Commission in Pune. You can file it online through the e-daakhil portal (edaakhil.nic.in). You can claim a refund of Rs 3,499 along with interest and any compensation for the inconvenience caused.\"}],\"next_steps\":[\"Take screenshots of all four app chat complaints where ShopKart said 'refund initiated'. Save these as evidence.\",\"Keep your invoice, return pickup receipt, order confirmation email, and any payment proof safely. These are your key documents.\",\"Send a written notice to ShopKart by email and registered post, clearly stating your demand for refund and giving a reasonable deadline.\",\"If the refund is not received after the notice deadline, register your complaint on the e-daakhil portal (edaakhil.nic.in) for the District Commission in Pune. You will need to upload your invoice, pickup receipt, chat screenshots, and notice copy.\",\"You can also file a parallel grievance on the National Consumer Helpline (1800-11-4000 or consumerhelpline.gov.in).\"],\"needs_verification\":[\"The exact current monetary jurisdiction limit of the District Commission should be confirmed before filing, as this system could not verify the latest rules.\",\"Whether ShopKart's terms of service impose any specific refund timeline or arbitration clause that could affect the process.\"],\"uncertainties\":[\"The exact dates of the four app chat complaints are not stated, though this is unlikely to affect your claim.\",\"Whether ShopKart actually initiated a refund that failed due to a payment gateway or bank issue, or whether no refund was ever processed, is unclear and may need to be checked with your bank.\"],\"lawyer_recommended\":false,\"lawyer_reason\":\"The amount involved is relatively small (Rs 3,499), the facts are straightforward, and you have supporting documents. You can likely handle this on your own through the consumer helpline and the e-filing portal. However, if the matter becomes complicated or ShopKart raises disputes, you may want to consult a lawyer at that stage.\"}"
+      }
+    }
+  ],
+  "score": {
+    "id": "01-ecom-refund-en",
+    "category": "consumer_core",
+    "passed": true,
+    "failures": [],
+    "final_stage": "analysis",
+    "domain": "consumer",
+    "escalation": "none",
+    "followups_asked": [
+      "Have you already complained to them? If yes – when, how (email, app chat, call), and what did they reply?",
+      "Did you buy this for personal or family use, or for a business?"
+    ],
+    "facts_recorded": {
+      "problem_description": "Returned a defective Bluetooth speaker that stopped charging; pickup was completed but refund has not been received despite 4 complaints. (user_stated)",
+      "trader_name": "ShopKart (user_stated)",
+      "product_or_service": "Bluetooth speaker (user_stated)",
+      "amount_paid": "3499 (user_stated)",
+      "purchase_date": "2026-08-14 (user_stated)",
+      "relief_wanted": "refund of Rs 3,499 (user_stated)",
+      "prior_complaint": "Complained 4 times via app chat; each time told 'refund initiated' but no refund received. (user_stated)",
+      "purchase_purpose": "personal (user_stated)",
+      "user_state": "Pune, Maharashtra (user_stated)"
+    },
+    "missing_fields": [],
+    "rules": [
+      "within",
+      "rule_not_verified"
+    ],
+    "citation": {
+      "raw_verified_law_claims": 8,
+      "source_matched": 8,
+      "downgraded": 0,
+      "raw_reply_reference_mentions": 0,
+      "refs_removed": [],
+      "guarantee_flags": [],
+      "relabelled_unsupported": [],
+      "invented_numbers_removed": [],
+      "provisions_supplied": 9
+    },
+    "lawyer_recommended": false,
+    "document_placeholders": {
+      "missing": 10,
+      "confirm": 0
+    },
+    "llm_calls": 3
+  }
+}

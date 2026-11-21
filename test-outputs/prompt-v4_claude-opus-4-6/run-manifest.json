@@ -1,0 +1,11 @@
+{
+  "model": "claude-opus-4-6",
+  "provider": "anthropic",
+  "prompt_version": "2026-11-21.v4",
+  "corpus": {
+    "entries": 13,
+    "citable": 9,
+    "last_verified": "2026-11-21"
+  },
+  "started_at": "2026-11-21T10:24:43.983Z"
+}

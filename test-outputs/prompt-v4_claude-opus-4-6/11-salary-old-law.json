@@ -1,0 +1,61 @@
+{
+  "scenario": {
+    "id": "11-salary-old-law",
+    "title": "Unpaid salary citing Payment of Wages Act (stub + Labour Codes)",
+    "category": "out_of_depth",
+    "turns": [
+      "Meri company ne 3 mahine se salary nahi di, 45,000 per month hai. Main Payment of Wages Act 1936 ke under case karna chahta hoon. Kaise karun?"
+    ],
+    "expect": {
+      "domain": "employment",
+      "escalation": "none",
+      "final_stage": "stub"
+    }
+  },
+  "run": {
+    "at": "2026-11-21T10:32:40.297Z",
+    "provider": "anthropic",
+    "model": "claude-opus-4-6",
+    "prompt_version": "2026-11-21.v4",
+    "corpus": {
+      "entries": 13,
+      "citable": 9,
+      "last_verified": "2026-11-21"
+    }
+  },
+  "transcript": [
+    {
+      "role": "user",
+      "content": "Meri company ne 3 mahine se salary nahi di, 45,000 per month hai. Main Payment of Wages Act 1936 ke under case karna chahta hoon. Kaise karun?"
+    }
+  ],
+  "responses": [
+    {
+      "error": "Error: Anthropic HTTP 400: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011ChFvNxS7pJUVVF2sG638x\"}",
+      "escalation": {
+        "level": "none",
+        "reasons": [],
+        "helplines": []
+      }
+    }
+  ],
+  "score": {
+    "id": "11-salary-old-law",
+    "category": "out_of_depth",
+    "passed": false,
+    "failures": [
+      "1 turn(s) errored",
+      "domain=undefined, expected employment"
+    ],
+    "final_stage": null,
+    "escalation": "none",
+    "followups_asked": [],
+    "facts_recorded": {},
+    "missing_fields": [],
+    "rules": [],
+    "citation": null,
+    "lawyer_recommended": null,
+    "document_placeholders": null,
+    "llm_calls": 0
+  }
+}

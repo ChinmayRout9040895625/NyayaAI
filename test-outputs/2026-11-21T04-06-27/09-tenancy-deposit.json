@@ -1,0 +1,55 @@
+{
+  "scenario": {
+    "id": "09-tenancy-deposit",
+    "title": "Tenant security deposit not returned (stub domain)",
+    "category": "out_of_depth",
+    "turns": [
+      "I vacated my rented flat in Bengaluru on 2026-08-31. The landlord is not returning my security deposit of Rs 90,000, saying he'll deduct painting charges. What are my rights?"
+    ],
+    "expect": {
+      "domain": "tenancy",
+      "escalation": "none",
+      "final_stage": "stub"
+    }
+  },
+  "run": {
+    "at": "2026-11-21T04:11:58.875Z",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "corpus": {
+      "entries": 13,
+      "citable": 9,
+      "last_verified": "2026-11-21"
+    }
+  },
+  "transcript": [
+    {
+      "role": "user",
+      "content": "I vacated my rented flat in Bengaluru on 2026-08-31. The landlord is not returning my security deposit of Rs 90,000, saying he'll deduct painting charges. What are my rights?"
+    }
+  ],
+  "responses": [
+    {
+      "error": "Error: Gemini HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 3h48m2.423774379s."
+    }
+  ],
+  "score": {
+    "id": "09-tenancy-deposit",
+    "category": "out_of_depth",
+    "passed": false,
+    "failures": [
+      "1 turn(s) errored",
+      "domain=undefined, expected tenancy"
+    ],
+    "final_stage": null,
+    "escalation": "none",
+    "followups_asked": [],
+    "facts_recorded": {},
+    "missing_fields": [],
+    "rules": [],
+    "citation": null,
+    "lawyer_recommended": null,
+    "document_placeholders": null,
+    "llm_calls": 0
+  }
+}

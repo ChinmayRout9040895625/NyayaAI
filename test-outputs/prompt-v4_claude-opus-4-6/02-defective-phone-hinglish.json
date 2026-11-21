@@ -1,0 +1,224 @@
+{
+  "scenario": {
+    "id": "02-defective-phone-hinglish",
+    "title": "Defective phone, warranty refused (Hinglish)",
+    "category": "consumer_core",
+    "turns": [
+      "Bhai maine 2026-06-02 ko ek phone liya tha 18,999 ka, local shop 'Mobile World' se. 2 mahine mein display mein green line aa gayi. Service center bol raha hai warranty mein cover nahi hai, liquid damage hai, par phone kabhi geela hua hi nahi.",
+      "Shop wale ne bola company se baat karo. Maine service center ko email kiya tha, unhone written mein mana kar diya. Mujhe replacement ya refund chahiye. Personal use ke liye liya tha, Lucknow mein rehta hoon. Bill aur warranty card dono hai."
+    ],
+    "expect": {
+      "domain": "consumer",
+      "escalation": "none",
+      "final_stage": "analysis"
+    }
+  },
+  "run": {
+    "at": "2026-11-21T10:29:11.511Z",
+    "provider": "anthropic",
+    "model": "claude-opus-4-6",
+    "prompt_version": "2026-11-21.v4",
+    "corpus": {
+      "entries": 13,
+      "citable": 9,
+      "last_verified": "2026-11-21"
+    }
+  },
+  "transcript": [
+    {
+      "role": "user",
+      "content": "Bhai maine 2026-06-02 ko ek phone liya tha 18,999 ka, local shop 'Mobile World' se. 2 mahine mein display mein green line aa gayi. Service center bol raha hai warranty mein cover nahi hai, liquid damage hai, par phone kabhi geela hua hi nahi."
+    },
+    {
+      "role": "assistant",
+      "content": "Yeh toh sach mein frustrating hai bhai — naya phone liya aur bina galti ke warranty se mana kar diya. Aapki problem samajh aa gayi hai.\n\n1. Kya aapne unse pehle complaint ki hai? Kab, kaise (email, app chat, call), aur unhone kya reply diya?\n\n2. Aap kya chahte ho – refund, replacement, repair, ya compensation bhi?"
+    },
+    {
+      "role": "user",
+      "content": "Shop wale ne bola company se baat karo. Maine service center ko email kiya tha, unhone written mein mana kar diya. Mujhe replacement ya refund chahiye. Personal use ke liye liya tha, Lucknow mein rehta hoon. Bill aur warranty card dono hai."
+    }
+  ],
+  "responses": [
+    {
+      "stage": "followup",
+      "reply": "Yeh toh sach mein frustrating hai bhai — naya phone liya aur bina galti ke warranty se mana kar diya. Aapki problem samajh aa gayi hai.\n\n1. Kya aapne unse pehle complaint ki hai? Kab, kaise (email, app chat, call), aur unhone kya reply diya?\n\n2. Aap kya chahte ho – refund, replacement, repair, ya compensation bhi?",
+      "case": {
+        "domain": "consumer",
+        "language": "hinglish",
+        "facts": {
+          "problem_description": {
+            "value": "Phone display developed green line after 2 months; service center refusing warranty claiming liquid damage, but user says phone was never wet",
+            "source": "inferred",
+            "quote": "2 mahine mein display mein green line aa gayi. Service center bol raha hai warranty mein cover nahi hai, liquid damage hai, par phone kabhi geela hua hi nahi"
+          },
+          "trader_name": {
+            "value": "Mobile World",
+            "source": "user_stated",
+            "quote": "local shop 'Mobile World' se"
+          },
+          "product_or_service": {
+            "value": "Mobile phone",
+            "source": "inferred",
+            "quote": "ek phone liya tha"
+          },
+          "amount_paid": {
+            "value": "18999",
+            "source": "user_stated",
+            "quote": "18,999 ka"
+          },
+          "purchase_date": {
+            "value": "2026-06-02",
+            "source": "user_stated",
+            "quote": "2026-06-02 ko"
+          }
+        },
+        "timeline": [
+          {
+            "date": "2026-06-02",
+            "event": "Purchased phone from Mobile World for ₹18,999",
+            "source": "user_stated",
+            "quote": "2026-06-02 ko ek phone liya tha 18,999 ka, local shop 'Mobile World' se",
+            "date_source": "user_stated"
+          },
+          {
+            "date": "2026-08-02",
+            "event": "Display developed green line after ~2 months",
+            "source": "user_stated",
+            "quote": "2 mahine mein display mein green line aa gayi",
+            "date_source": "inferred"
+          },
+          {
+            "date": null,
+            "event": "Service center refused warranty repair citing liquid damage",
+            "source": "user_stated",
+            "quote": "Service center bol raha hai warranty mein cover nahi hai, liquid damage hai"
+          }
+        ],
+        "evidence": {},
+        "notes": [],
+        "turns": 1
+      },
+      "followups": [
+        "Kya aapne unse pehle complaint ki hai? Kab, kaise (email, app chat, call), aur unhone kya reply diya?",
+        "Aap kya chahte ho – refund, replacement, repair, ya compensation bhi?"
+      ],
+      "missing": [
+        "prior_complaint",
+        "relief_wanted",
+        "purchase_purpose",
+        "user_state"
+      ],
+      "escalation": {
+        "level": "none",
+        "reasons": [],
+        "helplines": []
+      },
+      "evidence": [
+        {
+          "key": "invoice",
+          "label": "Invoice / bill / receipt",
+          "why": "Proves you bought it, from whom, when and for how much – the basis of a consumer claim and of the amount paid.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "order_confirmation",
+          "label": "Order ID / booking confirmation",
+          "why": "Links you to the transaction, especially for online purchases.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "payment_proof",
+          "label": "Payment proof (bank/UPI/card statement)",
+          "why": "Shows the money actually left your account, which matters if the seller disputes the amount.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "product_photos",
+          "label": "Photos / videos of the defect",
+          "why": "Shows the condition of the goods; take them before returning or repairing anything.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "warranty_card",
+          "label": "Warranty / guarantee card",
+          "why": "Shows what the seller or manufacturer promised and for how long.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "complaint_records",
+          "label": "Your complaints (emails, chats, ticket numbers)",
+          "why": "Shows you gave them a chance to fix it, and when – useful for the notice and for dates.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "written_refusal",
+          "label": "Their reply / refusal in writing",
+          "why": "Shows their position; the date can matter for when the dispute arose.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "delivery_proof",
+          "label": "Delivery / courier / service record",
+          "why": "Shows what was (or wasn't) delivered or done, and when.",
+          "state": "not_mentioned"
+        }
+      ],
+      "sources": [],
+      "unverified_matches": [],
+      "meta": {
+        "provider": "anthropic",
+        "model": "claude-opus-4-6",
+        "prompt_version": "2026-11-21.v4",
+        "llm_calls": 1
+      },
+      "raw": {
+        "understanding": "{\"domain\": \"consumer\", \"domain_confidence\": 0.95, \"language\": \"hinglish\", \"extracted\": [{\"field\": \"problem_description\", \"value\": \"Phone display developed green line after 2 months; service center refusing warranty claiming liquid damage, but user says phone was never wet\", \"source\": \"inferred\", \"quote\": \"2 mahine mein display mein green line aa gayi. Service center bol raha hai warranty mein cover nahi hai, liquid damage hai, par phone kabhi geela hua hi nahi\"}, {\"field\": \"trader_name\", \"value\": \"Mobile World\", \"source\": \"user_stated\", \"quote\": \"local shop 'Mobile World' se\"}, {\"field\": \"product_or_service\", \"value\": \"Mobile phone\", \"source\": \"inferred\", \"quote\": \"ek phone liya tha\"}, {\"field\": \"amount_paid\", \"value\": \"18999\", \"source\": \"user_stated\", \"quote\": \"18,999 ka\"}, {\"field\": \"purchase_date\", \"value\": \"2026-06-02\", \"source\": \"user_stated\", \"quote\": \"2026-06-02 ko\"}], \"timeline\": [{\"date\": \"2026-06-02\", \"event\": \"Purchased phone from Mobile World for ₹18,999\", \"quote\": \"2026-06-02 ko ek phone liya tha 18,999 ka, local shop 'Mobile World' se\"}, {\"date\": \"2026-08-02\", \"event\": \"Display developed green line after ~2 months\", \"quote\": \"2 mahine mein display mein green line aa gayi\"}, {\"date\": null, \"event\": \"Service center refused warranty repair citing liquid damage\", \"quote\": \"Service center bol raha hai warranty mein cover nahi hai, liquid damage hai\"}], \"evidence_mentioned\": [], \"search_terms\": [\"defective mobile phone green line display\", \"warranty claim rejected liquid damage\", \"manufacturing defect smartphone\", \"consumer complaint defective product\", \"false liquid damage claim service center\"], \"user_wants_analysis\": false, \"acknowledgement\": \"Yeh toh sach mein frustrating hai bhai — naya phone liya aur bina galti ke warranty se mana kar diya. Aapki problem samajh aa gayi hai.\"}"
+      }
+    },
+    {
+      "error": "AbortError: Anthropic request aborted (timeout)",
+      "escalation": {
+        "level": "none",
+        "reasons": [],
+        "helplines": []
+      }
+    }
+  ],
+  "score": {
+    "id": "02-defective-phone-hinglish",
+    "category": "consumer_core",
+    "passed": false,
+    "failures": [
+      "1 turn(s) errored",
+      "stage=followup, expected analysis"
+    ],
+    "final_stage": "followup",
+    "domain": "consumer",
+    "escalation": "none",
+    "followups_asked": [
+      "Kya aapne unse pehle complaint ki hai? Kab, kaise (email, app chat, call), aur unhone kya reply diya?",
+      "Aap kya chahte ho – refund, replacement, repair, ya compensation bhi?"
+    ],
+    "facts_recorded": {
+      "problem_description": "Phone display developed green line after 2 months; service center refusing warranty claiming liquid damage, but user says phone was never wet (inferred)",
+      "trader_name": "Mobile World (user_stated)",
+      "product_or_service": "Mobile phone (inferred)",
+      "amount_paid": "18999 (user_stated)",
+      "purchase_date": "2026-06-02 (user_stated)"
+    },
+    "missing_fields": [
+      "prior_complaint",
+      "relief_wanted",
+      "purchase_purpose",
+      "user_state"
+    ],
+    "rules": [],
+    "citation": null,
+    "lawyer_recommended": null,
+    "document_placeholders": {
+      "missing": 14,
+      "confirm": 3
+    },
+    "llm_calls": 1
+  }
+}

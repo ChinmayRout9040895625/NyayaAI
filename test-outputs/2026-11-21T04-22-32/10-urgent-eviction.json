@@ -1,0 +1,157 @@
+{
+  "scenario": {
+    "id": "10-urgent-eviction",
+    "title": "Forced eviction tonight with threats (urgent)",
+    "category": "urgent",
+    "turns": [
+      "My landlord changed the locks while I was at work and his men threatened me when I came back. All my things are inside and I have nowhere to sleep tonight. What do I do?"
+    ],
+    "expect": {
+      "domain": "tenancy",
+      "escalation": "urgent",
+      "final_stage": "stub"
+    }
+  },
+  "run": {
+    "at": "2026-11-21T04:23:19.141Z",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "corpus": {
+      "entries": 13,
+      "citable": 9,
+      "last_verified": "2026-11-21"
+    }
+  },
+  "transcript": [
+    {
+      "role": "user",
+      "content": "My landlord changed the locks while I was at work and his men threatened me when I came back. All my things are inside and I have nowhere to sleep tonight. What do I do?"
+    },
+    {
+      "role": "assistant",
+      "content": "This sounds like a landlord–tenant issue. NyayaAI currently covers only consumer disputes in depth. Tenancy law in India depends heavily on your state: each state has its own rent law, and the central Model Tenancy Act, 2021 applies only where a state has adopted it. I have not verified your state's law, so I won't tell you what it says. What usually helps: keep your rent agreement, deposit receipt or bank transfer proof, rent receipts, and all messages with the landlord. If you are being forced out, locked out or threatened, contact the police (112) and your District Legal Services Authority (free legal aid, NALSA helpline 15100) right away."
+    }
+  ],
+  "responses": [
+    {
+      "stage": "stub",
+      "reply": "This sounds like a landlord–tenant issue. NyayaAI currently covers only consumer disputes in depth. Tenancy law in India depends heavily on your state: each state has its own rent law, and the central Model Tenancy Act, 2021 applies only where a state has adopted it. I have not verified your state's law, so I won't tell you what it says. What usually helps: keep your rent agreement, deposit receipt or bank transfer proof, rent receipts, and all messages with the landlord. If you are being forced out, locked out or threatened, contact the police (112) and your District Legal Services Authority (free legal aid, NALSA helpline 15100) right away.",
+      "case": {
+        "domain": "tenancy",
+        "language": "en",
+        "facts": {
+          "problem_description": {
+            "value": "Landlord changed the locks while at work and threatened the user upon return, keeping all belongings inside",
+            "source": "user_stated",
+            "quote": "My landlord changed the locks while I was at work and his men threatened me when I came back. All my things are inside and I have nowhere to sleep tonight."
+          }
+        },
+        "timeline": [
+          {
+            "date": null,
+            "event": "Landlord changed locks and user was threatened upon return",
+            "source": "user_stated",
+            "quote": "My landlord changed the locks while I was at work and his men threatened me when I came back."
+          }
+        ],
+        "evidence": {},
+        "notes": [],
+        "turns": 1
+      },
+      "followups": [],
+      "missing": [],
+      "escalation": {
+        "level": "urgent",
+        "reasons": [
+          "Threats or violence mentioned",
+          "Forced eviction / lock-out happening or imminent"
+        ],
+        "helplines": [
+          {
+            "name": "Emergency (police / ambulance)",
+            "number": "112"
+          },
+          {
+            "name": "Free legal aid – NALSA / District Legal Services Authority",
+            "number": "15100",
+            "url": "https://nalsa.gov.in"
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "key": "stub_0",
+          "label": "Rent agreement",
+          "why": "",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "stub_1",
+          "label": "Deposit receipt / bank transfer proof",
+          "why": "",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "stub_2",
+          "label": "Rent receipts",
+          "why": "",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "stub_3",
+          "label": "Messages with landlord",
+          "why": "",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "stub_4",
+          "label": "Move-out date and handover proof (photos of the flat, key return)",
+          "why": "",
+          "state": "not_mentioned"
+        }
+      ],
+      "sources": [],
+      "unverified_matches": [
+        {
+          "id": "MTA2021",
+          "act": "Model Tenancy Act, 2021",
+          "section": "Whole Act",
+          "title": "Model Tenancy Act – applies only where adopted by a State",
+          "text": "",
+          "source_url": "https://www.indiacode.nic.in/",
+          "status": "model_law",
+          "verified_on": null,
+          "used_in_claim": false
+        }
+      ],
+      "meta": {
+        "provider": "gemini",
+        "model": "gemini-3.5-flash-lite",
+        "prompt_version": "2026-11-21.v2",
+        "llm_calls": 1
+      },
+      "raw": {
+        "understanding": "{\n  \"domain\": \"tenancy\",\n  \"domain_confidence\": 1.0,\n  \"language\": \"en\",\n  \"extracted\": [\n    {\n      \"field\": \"problem_description\",\n      \"value\": \"Landlord changed the locks while at work and threatened the user upon return, keeping all belongings inside\",\n      \"source\": \"user_stated\",\n      \"quote\": \"My landlord changed the locks while I was at work and his men threatened me when I came back. All my things are inside and I have nowhere to sleep tonight.\"\n    }\n  ],\n  \"timeline\": [\n    {\n      \"date\": null,\n      \"event\": \"Landlord changed locks and user was threatened upon return\",\n      \"quote\": \"My landlord changed the locks while I was at work and his men threatened me when I came back.\"\n    }\n  ],\n  \"evidence_mentioned\": [],\n  \"search_terms\": [\n    \"illegal eviction\",\n    \"landlord changed locks\",\n    \"tenancy dispute\",\n    \"harassment by landlord\"\n  ],\n  \"user_wants_analysis\": true,\n  \"acknowledgement\": \"I am so sorry you are going through this frightening situation. Let's record the details so we can help you figure out your next steps.\"\n}"
+      }
+    }
+  ],
+  "score": {
+    "id": "10-urgent-eviction",
+    "category": "urgent",
+    "passed": true,
+    "failures": [],
+    "final_stage": "stub",
+    "domain": "tenancy",
+    "escalation": "urgent",
+    "followups_asked": [],
+    "facts_recorded": {
+      "problem_description": "Landlord changed the locks while at work and threatened the user upon return, keeping all belongings inside (user_stated)"
+    },
+    "missing_fields": [],
+    "rules": [],
+    "citation": null,
+    "lawyer_recommended": null,
+    "document_placeholders": null,
+    "llm_calls": 1
+  }
+}

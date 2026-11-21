@@ -1,0 +1,54 @@
+{
+  "model": "gemini-3.5-flash",
+  "corpus": {
+    "entries": 13,
+    "citable": 9,
+    "last_verified": "2026-11-21"
+  },
+  "results": [
+    {
+      "id": "01-ecom-refund-en",
+      "category": "consumer_core",
+      "passed": true,
+      "failures": [],
+      "final_stage": "analysis",
+      "domain": "consumer",
+      "escalation": "none",
+      "followups_asked": [
+        "Have you already complained to them? If yes – when, how (email, app chat, call), and what did they reply?",
+        "Did you buy this for personal or family use, or for a business?"
+      ],
+      "facts_recorded": {
+        "product_or_service": "Bluetooth speaker (user_stated)",
+        "trader_name": "ShopKart (user_stated)",
+        "amount_paid": "3499 (user_stated)",
+        "purchase_date": "2026-08-14 (user_stated)",
+        "problem_description": "The Bluetooth speaker stopped charging, was returned and picked up, but the refund has not been issued. (user_stated)",
+        "relief_wanted": "Refund of Rs 3,499 (user_stated)",
+        "prior_complaint": "Complained 4 times via app chat. Trader responds 'refund initiated' but no money received. (user_stated)",
+        "purchase_purpose": "personal (user_stated)",
+        "user_state": "Pune, Maharashtra (user_stated)"
+      },
+      "missing_fields": [],
+      "rules": [
+        "within",
+        "rule_not_verified"
+      ],
+      "citation": {
+        "raw_verified_law_claims": 3,
+        "source_matched": 2,
+        "downgraded": 1,
+        "raw_reply_reference_mentions": 0,
+        "refs_removed": [],
+        "guarantee_flags": [],
+        "provisions_supplied": 9
+      },
+      "lawyer_recommended": false,
+      "document_placeholders": {
+        "missing": 8,
+        "confirm": 0
+      },
+      "llm_calls": 3
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "scenario": {
+    "id": "11-salary-old-law",
+    "title": "Unpaid salary citing Payment of Wages Act (stub + Labour Codes)",
+    "category": "out_of_depth",
+    "turns": [
+      "Meri company ne 3 mahine se salary nahi di, 45,000 per month hai. Main Payment of Wages Act 1936 ke under case karna chahta hoon. Kaise karun?"
+    ],
+    "expect": {
+      "domain": "employment",
+      "escalation": "none",
+      "final_stage": "stub"
+    }
+  },
+  "run": {
+    "at": "2026-11-21T04:18:49.244Z",
+    "provider": "gemini",
+    "model": "gemini-3.7-flash",
+    "corpus": {
+      "entries": 13,
+      "citable": 9,
+      "last_verified": "2026-11-21"
+    }
+  },
+  "transcript": [
+    {
+      "role": "user",
+      "content": "Meri company ne 3 mahine se salary nahi di, 45,000 per month hai. Main Payment of Wages Act 1936 ke under case karna chahta hoon. Kaise karun?"
+    }
+  ],
+  "responses": [
+    {
+      "error": "AbortError: This operation was aborted"
+    }
+  ],
+  "score": {
+    "id": "11-salary-old-law",
+    "category": "out_of_depth",
+    "passed": false,
+    "failures": [
+      "1 turn(s) errored",
+      "domain=undefined, expected employment"
+    ],
+    "final_stage": null,
+    "escalation": "none",
+    "followups_asked": [],
+    "facts_recorded": {},
+    "missing_fields": [],
+    "rules": [],
+    "citation": null,
+    "lawyer_recommended": null,
+    "document_placeholders": null,
+    "llm_calls": 0
+  }
+}

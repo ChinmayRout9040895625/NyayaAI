@@ -1,0 +1,439 @@
+{
+  "scenario": {
+    "id": "05-limitation-old",
+    "title": "Old purchase – possible limitation issue",
+    "category": "consumer_core",
+    "turns": [
+      "I bought a refrigerator from CoolHome Appliances on 2024-03-10 for Rs 32,000. It stopped cooling within a month. They sent technicians twice but never fixed it, and in 2024 they stopped replying to my emails. Can I still complain now? I want a refund. I bought it for home use, I live in Chennai, Tamil Nadu. I have the bill and the emails."
+    ],
+    "expect": {
+      "domain": "consumer",
+      "escalation": "none",
+      "final_stage": "analysis",
+      "lawyer_recommended": true
+    }
+  },
+  "run": {
+    "at": "2026-11-21T04:10:55.681Z",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "corpus": {
+      "entries": 13,
+      "citable": 9,
+      "last_verified": "2026-11-21"
+    }
+  },
+  "transcript": [
+    {
+      "role": "user",
+      "content": "I bought a refrigerator from CoolHome Appliances on 2024-03-10 for Rs 32,000. It stopped cooling within a month. They sent technicians twice but never fixed it, and in 2024 they stopped replying to my emails. Can I still complain now? I want a refund. I bought it for home use, I live in Chennai, Tamil Nadu. I have the bill and the emails."
+    },
+    {
+      "role": "assistant",
+      "content": "You have a right to seek relief for a defective product bought for personal use. Since the refrigerator stopped working and repairs failed, you can demand a full refund from the seller.\n\nBecause time has passed since your March 2024 purchase, whether your two-year filing period is counted from the purchase date or your last email exchange should be carefully evaluated. If there is any delay, you can request the Commission to condone it by providing valid reasons.\n\nHere are your primary options:\n1. Send a final written legal notice to CoolHome Appliances requesting a refund within a reasonable deadline (for example, the number of days you state in your notice).\n2. File a formal complaint with the District Commission in Chennai, either online or in person.\n\nImmediate next steps:\n- Organize your bill of Rs 32,000, technician service slips, and email threads.\n- Draft a clear timeline of events.\n- Send a formal notice before initiating legal proceedings.\n\nConsult a lawyer or consumer advocate to ensure your complaint and limitation timeline are properly presented. This is legal information, not legal advice."
+    }
+  ],
+  "responses": [
+    {
+      "stage": "analysis",
+      "reply": "You have a right to seek relief for a defective product bought for personal use. Since the refrigerator stopped working and repairs failed, you can demand a full refund from the seller.\n\nBecause time has passed since your March 2024 purchase, whether your two-year filing period is counted from the purchase date or your last email exchange should be carefully evaluated. If there is any delay, you can request the Commission to condone it by providing valid reasons.\n\nHere are your primary options:\n1. Send a final written legal notice to CoolHome Appliances requesting a refund within a reasonable deadline (for example, the number of days you state in your notice).\n2. File a formal complaint with the District Commission in Chennai, either online or in person.\n\nImmediate next steps:\n- Organize your bill of Rs 32,000, technician service slips, and email threads.\n- Draft a clear timeline of events.\n- Send a formal notice before initiating legal proceedings.\n\nConsult a lawyer or consumer advocate to ensure your complaint and limitation timeline are properly presented. This is legal information, not legal advice.",
+      "case": {
+        "domain": "consumer",
+        "language": "en",
+        "facts": {
+          "product_or_service": {
+            "value": "refrigerator",
+            "source": "user_stated",
+            "quote": "refrigerator"
+          },
+          "trader_name": {
+            "value": "CoolHome Appliances",
+            "source": "user_stated",
+            "quote": "CoolHome Appliances"
+          },
+          "purchase_date": {
+            "value": "2024-03-10",
+            "source": "user_stated",
+            "quote": "2024-03-10"
+          },
+          "amount_paid": {
+            "value": "32000",
+            "source": "user_stated",
+            "quote": "Rs 32,000"
+          },
+          "problem_description": {
+            "value": "It stopped cooling within a month. They sent technicians twice but never fixed it, and in 2024 they stopped replying to my emails.",
+            "source": "user_stated",
+            "quote": "It stopped cooling within a month. They sent technicians twice but never fixed it, and in 2024 they stopped replying to my emails."
+          },
+          "relief_wanted": {
+            "value": "refund",
+            "source": "user_stated",
+            "quote": "refund"
+          },
+          "purchase_purpose": {
+            "value": "personal",
+            "source": "user_stated",
+            "quote": "home use"
+          },
+          "user_state": {
+            "value": "Chennai, Tamil Nadu",
+            "source": "user_stated",
+            "quote": "Chennai, Tamil Nadu"
+          },
+          "prior_complaint": {
+            "value": "Complained via emails and technicians were sent twice, but trader stopped replying in 2024.",
+            "source": "user_stated",
+            "quote": "They sent technicians twice but never fixed it, and in 2024 they stopped replying to my emails."
+          }
+        },
+        "timeline": [
+          {
+            "date": "2024-03-10",
+            "event": "Purchased refrigerator for Rs 32,000",
+            "source": "user_stated",
+            "quote": "bought a refrigerator from CoolHome Appliances on 2024-03-10 for Rs 32,000"
+          },
+          {
+            "date": "2024-12-31",
+            "event": "Trader stopped responding to emails",
+            "source": "user_stated",
+            "quote": "in 2024 they stopped replying to my emails"
+          },
+          {
+            "date": null,
+            "event": "Refrigerator stopped cooling and technicians visited twice without fixing the issue",
+            "source": "user_stated",
+            "quote": "It stopped cooling within a month. They sent technicians twice but never fixed it"
+          }
+        ],
+        "evidence": {
+          "invoice": {
+            "state": "have",
+            "quote": "I have the bill"
+          },
+          "complaint_records": {
+            "state": "have",
+            "quote": "and the emails"
+          }
+        },
+        "notes": [],
+        "turns": 1
+      },
+      "followups": [],
+      "missing": [],
+      "escalation": {
+        "level": "none",
+        "reasons": [],
+        "helplines": []
+      },
+      "evidence": [
+        {
+          "key": "invoice",
+          "label": "Invoice / bill / receipt",
+          "why": "Proves you bought it, from whom, when and for how much – the basis of a consumer claim and of the amount paid.",
+          "state": "have",
+          "quote": "I have the bill"
+        },
+        {
+          "key": "order_confirmation",
+          "label": "Order ID / booking confirmation",
+          "why": "Links you to the transaction, especially for online purchases.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "payment_proof",
+          "label": "Payment proof (bank/UPI/card statement)",
+          "why": "Shows the money actually left your account, which matters if the seller disputes the amount.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "product_photos",
+          "label": "Photos / videos of the defect",
+          "why": "Shows the condition of the goods; take them before returning or repairing anything.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "warranty_card",
+          "label": "Warranty / guarantee card",
+          "why": "Shows what the seller or manufacturer promised and for how long.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "complaint_records",
+          "label": "Your complaints (emails, chats, ticket numbers)",
+          "why": "Shows you gave them a chance to fix it, and when – useful for the notice and for dates.",
+          "state": "have",
+          "quote": "and the emails"
+        },
+        {
+          "key": "written_refusal",
+          "label": "Their reply / refusal in writing",
+          "why": "Shows their position; the date can matter for when the dispute arose.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "delivery_proof",
+          "label": "Delivery / courier / service record",
+          "why": "Shows what was (or wasn't) delivered or done, and when.",
+          "state": "not_mentioned"
+        }
+      ],
+      "analysis": {
+        "issue_summary": "You purchased a refrigerator for home use for Rs 32,000 in March 2024, which stopped cooling shortly after. Despite two technician visits and written complaints, the seller failed to fix it and stopped responding.",
+        "claims": [
+          {
+            "text": "A person who buys goods for personal use qualifies as a consumer.",
+            "type": "verified_law",
+            "provision_id": "CPA2019-S2-7",
+            "support_quote": "\"consumer\" means any person who-- (i) buys any goods for a consideration which has been paid or promised or partly paid and partly promised",
+            "status": "source_matched"
+          },
+          {
+            "text": "Faults or shortcomings in the quality or performance of goods are considered defects.",
+            "type": "verified_law",
+            "provision_id": "CPA2019-S2-10",
+            "support_quote": "\"defect\" means any fault, imperfection or shortcoming in the quality, quantity, potency, purity or standard which is required to be maintained",
+            "status": "source_matched"
+          },
+          {
+            "text": "Consumer complaints generally need to be filed within two years from the date the cause of action arises, though delay can be condoned if sufficient cause is shown.",
+            "type": "verified_law",
+            "provision_id": "CPA2019-S69",
+            "support_quote": "The District Commission, the State Commission or the National Commission shall not admit a complaint unless it is filed within two years from the date on which the cause of action has arisen.",
+            "status": "source_matched"
+          },
+          {
+            "text": "A complaint can be filed in the District Commission where the complainant resides.",
+            "type": "verified_law",
+            "provision_id": "CPA2019-S34-2",
+            "support_quote": "A complaint shall be instituted in a District Commission within the local limits of whose jurisdiction,-- [...] (d) the complainant resides or personally works for gain.",
+            "status": "source_matched"
+          }
+        ],
+        "options": [
+          {
+            "title": "Send a Formal Legal Notice",
+            "description": "Draft and send a final written legal notice to CoolHome Appliances stating the defect, detailing past emails/visits, and demanding a full refund within a reasonable deadline (for example, the number of days you state in your notice)."
+          },
+          {
+            "title": "File an e-Complaint on the Consumer Portal",
+            "description": "Submit a formal consumer complaint online via the official consumer e-filing portal (edaakhil.nic.in) or directly at your local District Commission in Chennai."
+          }
+        ],
+        "next_steps": [
+          "Gather all purchase documents, including the invoice for Rs 32,000 and copies of your email communications.",
+          "Prepare a clear timeline showing when the issue started and when the seller stopped replying.",
+          "Draft a formal notice demanding a refund and give a reasonable deadline for their response."
+        ],
+        "uncertainties": [
+          "The exact date when the cause of action arose (whether from the purchase date or the last communication) needs to be clarified to assess the limitation period."
+        ],
+        "lawyer_recommended": true,
+        "lawyer_reason": "Because significant time has passed since the purchase date, a lawyer can help ensure your complaint is filed properly within the allowable limitation period or present grounds for condonation of delay.",
+        "report": {
+          "claims_total": 4,
+          "claims_source_matched": 4,
+          "claims_downgraded": 0,
+          "unverified_refs_removed": [],
+          "guarantee_phrases_flagged": [],
+          "note": "Source check only confirms that quoted words exist in a verified official provision. It does not confirm that the provision applies to your facts or that the legal reasoning is correct. Have a lawyer review before acting."
+        }
+      },
+      "rules": [
+        {
+          "status": "possibly_outside",
+          "message": "About 32 month(s) have passed, which may be beyond the two-year period in Section 69(1) if the cause of action arose on the purchase date. This is not a final conclusion. Section 69(2) lets the Commission admit a complaint filed after this period if you satisfy it that you had sufficient cause for the delay; the Commission must record its reasons. Whether a delay will be condoned cannot be predicted – explain the reasons for delay and get legal advice.",
+          "provision_ids": [
+            "CPA2019-S69"
+          ],
+          "assumptions": [
+            "Counted from the purchase/service date (2024-03-10). The \"cause of action\" may arise later – for example when the defect appeared or when the trader finally refused – which could give you more time. This is a conservative estimate."
+          ]
+        },
+        {
+          "status": "rule_not_verified",
+          "message": "Which Commission hears a case depends on the value of the goods or services paid as consideration – not on the compensation you claim. The Act originally set the District Commission's limit at one crore rupees but lets the Central Government prescribe a different value by rules, and NyayaAI has not verified the current rules – so it cannot tell you the current limit. Confirm the current limit on the official consumer e-filing portal or with the Commission before filing.",
+          "provision_ids": [],
+          "assumptions": []
+        }
+      ],
+      "sources": [
+        {
+          "id": "CPA2019-S2-7",
+          "act": "Consumer Protection Act, 2019",
+          "section": "2(7)",
+          "title": "Definition of 'consumer'",
+          "text": "(7) \"consumer\" means any person who-- (i) buys any goods for a consideration which has been paid or promised or partly paid and partly promised, or under any system of deferred payment and includes any user of such goods other than the person who buys such goods for consideration paid or promised or partly paid or partly promised, or under any system of deferred payment, when such use is made with the approval of such person, but does not include a person who obtains such goods for resale or for any commercial purpose; or (ii) hires or avails of any service for a consideration which has been paid or promised or partly paid and partly promised, or under any system of deferred payment and includes any beneficiary of such service other than the person who hires or avails of the services for consideration paid or promised, or partly paid and partly promised, or under any system of deferred payment, when such services are availed of with the approval of the first mentioned person, but does not include a person who avails of such service for any commercial purpose. Explanation. --For the purposes of this clause, -- (a) the expression \"commercial purpose\" does not include use by a person of goods bought and used by him exclusively for the purpose of earning his livelihood, by means of self-employment; (b) the expressions \"buys any goods\" and \"hires or avails any services\" includes offline or online transactions through electronic means or by teleshopping or direct selling or multi-level marketing;",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": true
+        },
+        {
+          "id": "CPA2019-S2-10",
+          "act": "Consumer Protection Act, 2019",
+          "section": "2(10)",
+          "title": "Definition of 'defect'",
+          "text": "(10) \"defect\" means any fault, imperfection or shortcoming in the quality, quantity, potency, purity or standard which is required to be maintained by or under any law for the time being in force or under any contract, express or implied or as is claimed by the trader in any manner whatsoever in relation to any goods or product and the expression \"defective\" shall be construed accordingly;",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": true
+        },
+        {
+          "id": "CPA2019-S2-11",
+          "act": "Consumer Protection Act, 2019",
+          "section": "2(11)",
+          "title": "Definition of 'deficiency'",
+          "text": "(11) \"deficiency\" means any fault, imperfection, shortcoming or inadequacy in the quality, nature and manner of performance which is required to be maintained by or under any law for the time being in force or has been undertaken to be performed by a person in pursuance of a contract or otherwise in relation to any service and includes-- (i) any act of negligence or omission or commission by such person which causes loss or injury to the consumer; and (ii) deliberate withholding of relevant information by such person to the consumer;",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        },
+        {
+          "id": "CPA2019-S34-2",
+          "act": "Consumer Protection Act, 2019",
+          "section": "34(2)",
+          "title": "Jurisdiction of District Commission – where to file",
+          "text": "34. Jurisdiction of District Commission.-- (2) A complaint shall be instituted in a District Commission within the local limits of whose jurisdiction,-- (a) the opposite party or each of the opposite parties, where there are more than one, at the time of the institution of the complaint, ordinarily resides or carries on business or has a branch office or personally works for gain; or (b) any of the opposite parties, where there are more than one, at the time of the institution of the complaint, actually and voluntarily resides, or carries on business or has a branch office, or personally works for gain, provided that in such case the permission of the District Commission is given; or (c) the cause of action, wholly or in part, arises; or (d) the complainant resides or personally works for gain.",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": true
+        },
+        {
+          "id": "CPA2019-S2-47-VIII",
+          "act": "Consumer Protection Act, 2019",
+          "section": "2(47)(viii)",
+          "title": "Unfair trade practice – refusing to take back defective goods / refund",
+          "text": "(viii) refusing, after selling goods or rendering services, to take back or withdraw defective goods or to withdraw or discontinue deficient services and to refund the consideration thereof, if paid, within the period stipulated in the bill or cash memo or receipt or in the absence of such stipulation, within a period of thirty days;",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        },
+        {
+          "id": "CPA2019-S35-1",
+          "act": "Consumer Protection Act, 2019",
+          "section": "35(1)",
+          "title": "Manner in which complaint shall be made",
+          "text": "35. Manner in which complaint shall be made.--(1) A complaint, in relation to any goods sold or delivered or agreed to be sold or delivered or any service provided or agreed to be provided, may be filed with a District Commission by-- (a) the consumer,-- (i) to whom such goods are sold or delivered or agreed to be sold or delivered or such service is provided or agreed to be provided; or (ii) who alleges unfair trade practice in respect of such goods or service; [...] Provided that the complaint under this sub-section may be filed electronically in such manner as may be prescribed.",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        },
+        {
+          "id": "CPA2019-S39-1",
+          "act": "Consumer Protection Act, 2019",
+          "section": "39(1)",
+          "title": "Findings of District Commission (reliefs)",
+          "text": "39. Findings of District Commission.--(1) Where the District Commission is satisfied that the goods complained against suffer from any of the defects specified in the complaint or that any of the allegations contained in the complaint about the services or any unfair trade practices, or claims for compensation under product liability are proved, it shall issue an order to the opposite party directing him to do one or more of the following, namely:-- (a) to remove the defect pointed out by the appropriate laboratory from the goods in question; (b) to replace the goods with new goods of similar description which shall be free from any defect; (c) to return to the complainant the price, or, as the case may be, the charges paid by the complainant along with such interest on such price or charges as may be decided; (d) to pay such amount as may be awarded by it as compensation to the consumer for any loss or injury suffered by the consumer due to the negligence of the opposite party: Provided that the District Commission shall have the power to grant punitive damages in such circumstances as it deems fit; (e) to pay such amount as may be awarded by it as compensation in a product liability action under Chapter VI; (f) to remove the defects in goods or deficiencies in the services in question; [...]",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        },
+        {
+          "id": "CPA2019-S69",
+          "act": "Consumer Protection Act, 2019",
+          "section": "69",
+          "title": "Limitation period",
+          "text": "69. Limitation period.--(1) The District Commission, the State Commission or the National Commission shall not admit a complaint unless it is filed within two years from the date on which the cause of action has arisen. (2) Notwithstanding anything contained in sub-section (1), a complaint may be entertained after the period specified in sub-section (1), if the complainant satisfies the District Commission, the State Commission or the National Commission, as the case may be, that he had sufficient cause for not filing the complaint within such period: Provided that no such complaint shall be entertained unless the District Commission or the State Commission or the National Commission, as the case may be, records its reasons for condoning such delay.",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": true
+        },
+        {
+          "id": "CPA2019-S100",
+          "act": "Consumer Protection Act, 2019",
+          "section": "100",
+          "title": "Act not in derogation of any other law",
+          "text": "100. Act not in derogation of any other law.--The provisions of this Act shall be in addition to and not in derogation of the provisions of any other law for the time being in force.",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        }
+      ],
+      "unverified_matches": [
+        {
+          "id": "CPA2019-S34-1",
+          "act": "Consumer Protection Act, 2019",
+          "section": "34(1)",
+          "title": "Jurisdiction of District Commission – monetary limit (as enacted)",
+          "text": "34. Jurisdiction of District Commission.--(1) Subject to the other provisions of this Act, the District Commission shall have jurisdiction to entertain complaints where the value of the goods or services paid as consideration does not exceed one crore rupees: Provided that where the Central Government deems it necessary so to do, it may prescribe such other value, as it deems fit.",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "verify",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        },
+        {
+          "id": "JR2021-R3",
+          "act": "Consumer Protection (Jurisdiction of the District Commission, the State Commission and the National Commission) Rules, 2021",
+          "section": "Rule 3",
+          "title": "Pecuniary jurisdiction of the District Commission",
+          "text": "",
+          "source_url": "https://consumeraffairs.nic.in/acts-and-rules/consumer-protection",
+          "status": "verify",
+          "verified_on": null,
+          "used_in_claim": false
+        }
+      ],
+      "meta": {
+        "provider": "gemini",
+        "model": "gemini-3.5-flash",
+        "prompt_version": "2026-11-21.v2",
+        "llm_calls": 2
+      },
+      "raw": {
+        "understanding": "{\n  \"domain\": \"consumer\",\n  \"domain_confidence\": 1.0,\n  \"language\": \"en\",\n  \"extracted\": [\n    {\n      \"field\": \"product_or_service\",\n      \"value\": \"refrigerator\",\n      \"source\": \"user_stated\",\n      \"quote\": \"refrigerator\"\n    },\n    {\n      \"field\": \"trader_name\",\n      \"value\": \"CoolHome Appliances\",\n      \"source\": \"user_stated\",\n      \"quote\": \"CoolHome Appliances\"\n    },\n    {\n      \"field\": \"purchase_date\",\n      \"value\": \"2024-03-10\",\n      \"source\": \"user_stated\",\n      \"quote\": \"2024-03-10\"\n    },\n    {\n      \"field\": \"amount_paid\",\n      \"value\": \"32000\",\n      \"source\": \"user_stated\",\n      \"quote\": \"Rs 32,000\"\n    },\n    {\n      \"field\": \"problem_description\",\n      \"value\": \"It stopped cooling within a month. They sent technicians twice but never fixed it, and in 2024 they stopped replying to my emails.\",\n      \"source\": \"user_stated\",\n      \"quote\": \"It stopped cooling within a month. They sent technicians twice but never fixed it, and in 2024 they stopped replying to my emails.\"\n    },\n    {\n      \"field\": \"relief_wanted\",\n      \"value\": \"refund\",\n      \"source\": \"user_stated\",\n      \"quote\": \"refund\"\n    },\n    {\n      \"field\": \"purchase_purpose\",\n      \"value\": \"personal\",\n      \"source\": \"user_stated\",\n      \"quote\": \"home use\"\n    },\n    {\n      \"field\": \"user_state\",\n      \"value\": \"Chennai, Tamil Nadu\",\n      \"source\": \"user_stated\",\n      \"quote\": \"Chennai, Tamil Nadu\"\n    },\n    {\n      \"field\": \"prior_complaint\",\n      \"value\": \"Complained via emails and technicians were sent twice, but trader stopped replying in 2024.\",\n      \"source\": \"user_stated\",\n      \"quote\": \"They sent technicians twice but never fixed it, and in 2024 they stopped replying to my emails.\"\n    }\n  ],\n  \"timeline\": [\n    {\n      \"date\": \"2024-03-10\",\n      \"event\": \"Purchased refrigerator for Rs 32,000\",\n      \"quote\": \"bought a refrigerator from CoolHome Appliances on 2024-03-10 for Rs 32,000\"\n    },\n    {\n      \"date\": null,\n      \"event\": \"Refrigerator stopped cooling and technicians visited twice without fixing the issue\",\n      \"quote\": \"It stopped cooling within a month. They sent technicians twice but never fixed it\"\n    },\n    {\n      \"date\": \"2024-12-31\",\n      \"event\": \"Trader stopped responding to emails\",\n      \"quote\": \"in 2024 they stopped replying to my emails\"\n    }\n  ],\n  \"evidence_mentioned\": [\n    {\n      \"key\": \"invoice\",\n      \"has\": true,\n      \"quote\": \"I have the bill\"\n    },\n    {\n      \"key\": \"complaint_records\",\n      \"has\": true,\n      \"quote\": \"and the emails\"\n    }\n  ],\n  \"search_terms\": [\n    \"defective refrigerator\",\n    \"cooling issue not repaired\",\n    \"deficiency in service\",\n    \"refund for defective appliance\",\n    \"unresponsive customer service\"\n  ],\n  \"user_wants_analysis\": true,\n  \"acknowledgement\": \"I am sorry to hear about the ongoing trouble with your refrigerator and the lack of response from the seller. I understand how frustrating it is to deal with an unaddressed defect.\"\n}",
+        "analysis": "{\n \"issue_summary\": \"You purchased a refrigerator for home use for Rs 32,000 in March 2024, which stopped cooling shortly after. Despite two technician visits and written complaints, the seller failed to fix it and stopped responding.\",\n \"claims\": [\n  {\n   \"text\": \"A person who buys goods for personal use qualifies as a consumer.\",\n   \"type\": \"verified_law\",\n   \"provision_id\": \"CPA2019-S2-7\",\n   \"support_quote\": \"\\\"consumer\\\" means any person who-- (i) buys any goods for a consideration which has been paid or promised or partly paid and partly promised\"\n  },\n  {\n   \"text\": \"Faults or shortcomings in the quality or performance of goods are considered defects.\",\n   \"type\": \"verified_law\",\n   \"provision_id\": \"CPA2019-S2-10\",\n   \"support_quote\": \"\\\"defect\\\" means any fault, imperfection or shortcoming in the quality, quantity, potency, purity or standard which is required to be maintained\"\n  },\n  {\n   \"text\": \"Consumer complaints generally need to be filed within two years from the date the cause of action arises, though delay can be condoned if sufficient cause is shown.\",\n   \"type\": \"verified_law\",\n   \"provision_id\": \"CPA2019-S69\",\n   \"support_quote\": \"The District Commission, the State Commission or the National Commission shall not admit a complaint unless it is filed within two years from the date on which the cause of action has arisen.\"\n  },\n  {\n   \"text\": \"A complaint can be filed in the District Commission where the complainant resides.\",\n   \"type\": \"verified_law\",\n   \"provision_id\": \"CPA2019-S34-2\",\n   \"support_quote\": \"A complaint shall be instituted in a District Commission within the local limits of whose jurisdiction,-- [...] (d) the complainant resides or personally works for gain.\"\n  }\n ],\n \"options\": [\n  {\n   \"title\": \"Send a Formal Legal Notice\",\n   \"description\": \"Draft and send a final written legal notice to CoolHome Appliances stating the defect, detailing past emails/visits, and demanding a full refund within a reasonable deadline (for example, the number of days you state in your notice).\"\n  },\n  {\n   \"title\": \"File an e-Complaint on the Consumer Portal\",\n   \"description\": \"Submit a formal consumer complaint online via the official consumer e-filing portal (edaakhil.nic.in) or directly at your local District Commission in Chennai.\"\n  }\n ],\n \"next_steps\": [\n  \"Gather all purchase documents, including the invoice for Rs 32,000 and copies of your email communications.\",\n  \"Prepare a clear timeline showing when the issue started and when the seller stopped replying.\",\n  \"Draft a formal notice demanding a refund and give a reasonable deadline for their response.\"\n ],\n \"uncertainties\": [\n  \"The exact date when the cause of action arose (whether from the purchase date or the last communication) needs to be clarified to assess the limitation period.\"\n ],\n \"lawyer_recommended\": true,\n \"lawyer_reason\": \"Because significant time has passed since the purchase date, a lawyer can help ensure your complaint is filed properly within the allowable limitation period or present grounds for condonation of delay.\",\n \"reply\": \"You have a right to seek relief for a defective product bought for personal use. Since the refrigerator stopped working and repairs failed, you can demand a full refund from the seller.\\n\\nBecause time has passed since your March 2024 purchase, whether your two-year filing period is counted from the purchase date or your last email exchange should be carefully evaluated. If there is any delay, you can request the Commission to condone it by providing valid reasons.\\n\\nHere are your primary options:\\n1. Send a final written legal notice to CoolHome Appliances requesting a refund within a reasonable deadline (for example, the number of days you state in your notice).\\n2. File a formal complaint with the District Commission in Chennai, either online or in person.\\n\\nImmediate next steps:\\n- Organize your bill of Rs 32,000, technician service slips, and email threads.\\n- Draft a clear timeline of events.\\n- Send a formal notice before initiating legal proceedings.\\n\\nConsult a lawyer or consumer advocate to ensure your complaint and limitation timeline are properly presented. This is legal information, not legal advice.\"\n}"
+      }
+    }
+  ],
+  "score": {
+    "id": "05-limitation-old",
+    "category": "consumer_core",
+    "passed": true,
+    "failures": [],
+    "final_stage": "analysis",
+    "domain": "consumer",
+    "escalation": "none",
+    "followups_asked": [],
+    "facts_recorded": {
+      "product_or_service": "refrigerator (user_stated)",
+      "trader_name": "CoolHome Appliances (user_stated)",
+      "purchase_date": "2024-03-10 (user_stated)",
+      "amount_paid": "32000 (user_stated)",
+      "problem_description": "It stopped cooling within a month. They sent technicians twice but never fixed it, and in 2024 they stopped replying to my emails. (user_stated)",
+      "relief_wanted": "refund (user_stated)",
+      "purchase_purpose": "personal (user_stated)",
+      "user_state": "Chennai, Tamil Nadu (user_stated)",
+      "prior_complaint": "Complained via emails and technicians were sent twice, but trader stopped replying in 2024. (user_stated)"
+    },
+    "missing_fields": [],
+    "rules": [
+      "possibly_outside",
+      "rule_not_verified"
+    ],
+    "citation": {
+      "raw_verified_law_claims": 4,
+      "source_matched": 4,
+      "downgraded": 0,
+      "raw_reply_reference_mentions": 0,
+      "refs_removed": [],
+      "guarantee_flags": [],
+      "provisions_supplied": 9
+    },
+    "lawyer_recommended": true,
+    "document_placeholders": {
+      "missing": 9,
+      "confirm": 0
+    },
+    "llm_calls": 2
+  }
+}

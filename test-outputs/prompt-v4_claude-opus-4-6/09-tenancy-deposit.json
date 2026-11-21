@@ -1,0 +1,61 @@
+{
+  "scenario": {
+    "id": "09-tenancy-deposit",
+    "title": "Tenant security deposit not returned (stub domain)",
+    "category": "out_of_depth",
+    "turns": [
+      "I vacated my rented flat in Bengaluru on 2026-08-31. The landlord is not returning my security deposit of Rs 90,000, saying he'll deduct painting charges. What are my rights?"
+    ],
+    "expect": {
+      "domain": "tenancy",
+      "escalation": "none",
+      "final_stage": "stub"
+    }
+  },
+  "run": {
+    "at": "2026-11-21T10:32:39.256Z",
+    "provider": "anthropic",
+    "model": "claude-opus-4-6",
+    "prompt_version": "2026-11-21.v4",
+    "corpus": {
+      "entries": 13,
+      "citable": 9,
+      "last_verified": "2026-11-21"
+    }
+  },
+  "transcript": [
+    {
+      "role": "user",
+      "content": "I vacated my rented flat in Bengaluru on 2026-08-31. The landlord is not returning my security deposit of Rs 90,000, saying he'll deduct painting charges. What are my rights?"
+    }
+  ],
+  "responses": [
+    {
+      "error": "Error: Anthropic HTTP 400: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011ChFvNtB8dsvothy7jL1BU\"}",
+      "escalation": {
+        "level": "none",
+        "reasons": [],
+        "helplines": []
+      }
+    }
+  ],
+  "score": {
+    "id": "09-tenancy-deposit",
+    "category": "out_of_depth",
+    "passed": false,
+    "failures": [
+      "1 turn(s) errored",
+      "domain=undefined, expected tenancy"
+    ],
+    "final_stage": null,
+    "escalation": "none",
+    "followups_asked": [],
+    "facts_recorded": {},
+    "missing_fields": [],
+    "rules": [],
+    "citation": null,
+    "lawyer_recommended": null,
+    "document_placeholders": null,
+    "llm_calls": 0
+  }
+}

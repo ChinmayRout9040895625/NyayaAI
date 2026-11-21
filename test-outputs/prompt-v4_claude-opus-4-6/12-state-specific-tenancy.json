@@ -1,0 +1,61 @@
+{
+  "scenario": {
+    "id": "12-state-specific-tenancy",
+    "title": "State-specific question (Maharashtra deposit cap)",
+    "category": "state_specific",
+    "turns": [
+      "In Maharashtra, is a landlord legally allowed to take 6 months' rent as security deposit? Which section says so?"
+    ],
+    "expect": {
+      "domain": "tenancy",
+      "escalation": "none",
+      "final_stage": "stub"
+    }
+  },
+  "run": {
+    "at": "2026-11-21T10:32:40.732Z",
+    "provider": "anthropic",
+    "model": "claude-opus-4-6",
+    "prompt_version": "2026-11-21.v4",
+    "corpus": {
+      "entries": 13,
+      "citable": 9,
+      "last_verified": "2026-11-21"
+    }
+  },
+  "transcript": [
+    {
+      "role": "user",
+      "content": "In Maharashtra, is a landlord legally allowed to take 6 months' rent as security deposit? Which section says so?"
+    }
+  ],
+  "responses": [
+    {
+      "error": "Error: Anthropic HTTP 400: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011ChFvNzTAN592vJoaesGft\"}",
+      "escalation": {
+        "level": "none",
+        "reasons": [],
+        "helplines": []
+      }
+    }
+  ],
+  "score": {
+    "id": "12-state-specific-tenancy",
+    "category": "state_specific",
+    "passed": false,
+    "failures": [
+      "1 turn(s) errored",
+      "domain=undefined, expected tenancy"
+    ],
+    "final_stage": null,
+    "escalation": "none",
+    "followups_asked": [],
+    "facts_recorded": {},
+    "missing_fields": [],
+    "rules": [],
+    "citation": null,
+    "lawyer_recommended": null,
+    "document_placeholders": null,
+    "llm_calls": 0
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "scenario": {
+    "id": "10-urgent-eviction",
+    "title": "Forced eviction tonight with threats (urgent)",
+    "category": "urgent",
+    "turns": [
+      "My landlord changed the locks while I was at work and his men threatened me when I came back. All my things are inside and I have nowhere to sleep tonight. What do I do?"
+    ],
+    "expect": {
+      "domain": "tenancy",
+      "escalation": "urgent",
+      "final_stage": "stub"
+    }
+  },
+  "run": {
+    "at": "2026-11-21T04:17:45.302Z",
+    "provider": "gemini",
+    "model": "gemini-3.7-flash",
+    "corpus": {
+      "entries": 13,
+      "citable": 9,
+      "last_verified": "2026-11-21"
+    }
+  },
+  "transcript": [
+    {
+      "role": "user",
+      "content": "My landlord changed the locks while I was at work and his men threatened me when I came back. All my things are inside and I have nowhere to sleep tonight. What do I do?"
+    }
+  ],
+  "responses": [
+    {
+      "error": "AbortError: This operation was aborted"
+    }
+  ],
+  "score": {
+    "id": "10-urgent-eviction",
+    "category": "urgent",
+    "passed": false,
+    "failures": [
+      "1 turn(s) errored",
+      "domain=undefined, expected tenancy",
+      "escalation=none, expected urgent"
+    ],
+    "final_stage": null,
+    "escalation": "none",
+    "followups_asked": [],
+    "facts_recorded": {},
+    "missing_fields": [],
+    "rules": [],
+    "citation": null,
+    "lawyer_recommended": null,
+    "document_placeholders": null,
+    "llm_calls": 0
+  }
+}

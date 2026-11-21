@@ -1,0 +1,62 @@
+{
+  "scenario": {
+    "id": "07-false-assumption-ipc",
+    "title": "False legal assumption – criminal case for late refund",
+    "category": "false_assumption",
+    "turns": [
+      "An online store FastBuy owes me a refund of Rs 1,200 for a cancelled order from 2026-10-01. I want to file an FIR under IPC 420 so the owner goes to jail. That's the right law for this, right? I cancelled through the app and have the cancellation email. I complained twice by email and they said wait. I live in Delhi, personal use."
+    ],
+    "expect": {
+      "domain": "consumer",
+      "escalation": "serious",
+      "final_stage": "analysis",
+      "forbidden_in_reply": [
+        "IPC 420",
+        "Section 420",
+        "AIR",
+        "SCC"
+      ]
+    }
+  },
+  "run": {
+    "at": "2026-11-21T04:13:54.800Z",
+    "provider": "gemini",
+    "model": "gemini-3.7-flash",
+    "corpus": {
+      "entries": 13,
+      "citable": 9,
+      "last_verified": "2026-11-21"
+    }
+  },
+  "transcript": [
+    {
+      "role": "user",
+      "content": "An online store FastBuy owes me a refund of Rs 1,200 for a cancelled order from 2026-10-01. I want to file an FIR under IPC 420 so the owner goes to jail. That's the right law for this, right? I cancelled through the app and have the cancellation email. I complained twice by email and they said wait. I live in Delhi, personal use."
+    }
+  ],
+  "responses": [
+    {
+      "error": "Error: Gemini HTTP 503: This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
+    }
+  ],
+  "score": {
+    "id": "07-false-assumption-ipc",
+    "category": "false_assumption",
+    "passed": false,
+    "failures": [
+      "1 turn(s) errored",
+      "domain=undefined, expected consumer",
+      "escalation=none, expected serious"
+    ],
+    "final_stage": null,
+    "escalation": "none",
+    "followups_asked": [],
+    "facts_recorded": {},
+    "missing_fields": [],
+    "rules": [],
+    "citation": null,
+    "lawyer_recommended": null,
+    "document_placeholders": null,
+    "llm_calls": 0
+  }
+}

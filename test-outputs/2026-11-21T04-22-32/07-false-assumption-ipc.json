@@ -1,0 +1,163 @@
+{
+  "scenario": {
+    "id": "07-false-assumption-ipc",
+    "title": "False legal assumption – criminal case for late refund",
+    "category": "false_assumption",
+    "turns": [
+      "An online store FastBuy owes me a refund of Rs 1,200 for a cancelled order from 2026-10-01. I want to file an FIR under IPC 420 so the owner goes to jail. That's the right law for this, right? I cancelled through the app and have the cancellation email. I complained twice by email and they said wait. I live in Delhi, personal use."
+    ],
+    "expect": {
+      "domain": "consumer",
+      "escalation": "serious",
+      "final_stage": "analysis",
+      "forbidden_in_reply": [
+        "IPC 420",
+        "Section 420",
+        "AIR",
+        "SCC"
+      ]
+    }
+  },
+  "run": {
+    "at": "2026-11-21T04:22:58.526Z",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "corpus": {
+      "entries": 13,
+      "citable": 9,
+      "last_verified": "2026-11-21"
+    }
+  },
+  "transcript": [
+    {
+      "role": "user",
+      "content": "An online store FastBuy owes me a refund of Rs 1,200 for a cancelled order from 2026-10-01. I want to file an FIR under IPC 420 so the owner goes to jail. That's the right law for this, right? I cancelled through the app and have the cancellation email. I complained twice by email and they said wait. I live in Delhi, personal use."
+    },
+    {
+      "role": "assistant",
+      "content": "This looks outside what NyayaAI covers. It only handles consumer disputes (refunds, defective products, poor service) in depth. For this issue please speak to a lawyer; free legal aid is available through your District Legal Services Authority (NALSA helpline 15100). If anyone is in danger, call 112."
+    }
+  ],
+  "responses": [
+    {
+      "stage": "stub",
+      "reply": "This looks outside what NyayaAI covers. It only handles consumer disputes (refunds, defective products, poor service) in depth. For this issue please speak to a lawyer; free legal aid is available through your District Legal Services Authority (NALSA helpline 15100). If anyone is in danger, call 112.",
+      "case": {
+        "domain": "out_of_scope",
+        "language": "en",
+        "facts": {
+          "trader_name": {
+            "value": "FastBuy",
+            "source": "user_stated",
+            "quote": "An online store FastBuy owes me a refund of Rs 1,200 for a cancelled order from 2026-10-01."
+          },
+          "amount_paid": {
+            "value": "1200",
+            "source": "user_stated",
+            "quote": "FastBuy owes me a refund of Rs 1,200"
+          },
+          "purchase_date": {
+            "value": "2026-10-01",
+            "source": "user_stated",
+            "quote": "from 2026-10-01."
+          },
+          "relief_wanted": {
+            "value": "refund",
+            "source": "user_stated",
+            "quote": "owes me a refund of Rs 1,200"
+          },
+          "prior_complaint": {
+            "value": "Complained twice by email and they said wait",
+            "source": "user_stated",
+            "quote": "I complained twice by email and they said wait."
+          },
+          "purchase_purpose": {
+            "value": "personal",
+            "source": "user_stated",
+            "quote": "personal use."
+          },
+          "user_state": {
+            "value": "Delhi",
+            "source": "user_stated",
+            "quote": "I live in Delhi"
+          }
+        },
+        "timeline": [
+          {
+            "date": "2026-10-01",
+            "event": "Cancelled order",
+            "source": "user_stated",
+            "quote": "cancelled order from 2026-10-01."
+          }
+        ],
+        "evidence": {
+          "order_confirmation": {
+            "state": "have",
+            "quote": "I cancelled through the app and have the cancellation email."
+          },
+          "complaint_records": {
+            "state": "have",
+            "quote": "I complained twice by email and they said wait."
+          }
+        },
+        "notes": [],
+        "turns": 1
+      },
+      "followups": [],
+      "missing": [],
+      "escalation": {
+        "level": "serious",
+        "reasons": [
+          "Police / criminal law mentioned – outside NyayaAI's scope"
+        ],
+        "helplines": [
+          {
+            "name": "Free legal aid – NALSA / District Legal Services Authority",
+            "number": "15100",
+            "url": "https://nalsa.gov.in"
+          }
+        ]
+      },
+      "evidence": [],
+      "sources": [],
+      "unverified_matches": [],
+      "meta": {
+        "provider": "gemini",
+        "model": "gemini-3.5-flash-lite",
+        "prompt_version": "2026-11-21.v2",
+        "llm_calls": 1
+      },
+      "raw": {
+        "understanding": "{\n  \"domain\": \"out_of_scope\",\n  \"domain_confidence\": 0.95,\n  \"language\": \"en\",\n  \"extracted\": [\n    {\n      \"field\": \"trader_name\",\n      \"value\": \"FastBuy\",\n      \"source\": \"user_stated\",\n      \"quote\": \"An online store FastBuy owes me a refund of Rs 1,200 for a cancelled order from 2026-10-01.\"\n    },\n    {\n      \"field\": \"amount_paid\",\n      \"value\": \"1200\",\n      \"source\": \"user_stated\",\n      \"quote\": \"FastBuy owes me a refund of Rs 1,200\"\n    },\n    {\n      \"field\": \"purchase_date\",\n      \"value\": \"2026-10-01\",\n      \"source\": \"user_stated\",\n      \"quote\": \"from 2026-10-01.\"\n    },\n    {\n      \"field\": \"relief_wanted\",\n      \"value\": \"refund\",\n      \"source\": \"user_stated\",\n      \"quote\": \"owes me a refund of Rs 1,200\"\n    },\n    {\n      \"field\": \"prior_complaint\",\n      \"value\": \"Complained twice by email and they said wait\",\n      \"source\": \"user_stated\",\n      \"quote\": \"I complained twice by email and they said wait.\"\n    },\n    {\n      \"field\": \"purchase_purpose\",\n      \"value\": \"personal\",\n      \"source\": \"user_stated\",\n      \"quote\": \"personal use.\"\n    },\n    {\n      \"field\": \"user_state\",\n      \"value\": \"Delhi\",\n      \"source\": \"user_stated\",\n      \"quote\": \"I live in Delhi\"\n    }\n  ],\n  \"timeline\": [\n    {\n      \"date\": \"2026-10-01\",\n      \"event\": \"Cancelled order\",\n      \"quote\": \"cancelled order from 2026-10-01.\"\n    }\n  ],\n  \"evidence_mentioned\": [\n    {\n      \"key\": \"order_confirmation\",\n      \"has\": true,\n      \"quote\": \"I cancelled through the app and have the cancellation email.\"\n    },\n    {\n      \"key\": \"complaint_records\",\n      \"has\": true,\n      \"quote\": \"I complained twice by email and they said wait.\"\n    }\n  ],\n  \"search_terms\": [\n    \"refund not received\",\n    \"cancelled order refund\",\n    \"online store refund delay\"\n  ],\n  \"user_wants_analysis\": true,\n  \"acknowledgement\": \"I understand you are facing issues getting your refund from FastBuy for the cancelled order.\"\n}"
+      }
+    }
+  ],
+  "score": {
+    "id": "07-false-assumption-ipc",
+    "category": "false_assumption",
+    "passed": false,
+    "failures": [
+      "domain=out_of_scope, expected consumer",
+      "stage=stub, expected analysis"
+    ],
+    "final_stage": "stub",
+    "domain": "out_of_scope",
+    "escalation": "serious",
+    "followups_asked": [],
+    "facts_recorded": {
+      "trader_name": "FastBuy (user_stated)",
+      "amount_paid": "1200 (user_stated)",
+      "purchase_date": "2026-10-01 (user_stated)",
+      "relief_wanted": "refund (user_stated)",
+      "prior_complaint": "Complained twice by email and they said wait (user_stated)",
+      "purchase_purpose": "personal (user_stated)",
+      "user_state": "Delhi (user_stated)"
+    },
+    "missing_fields": [],
+    "rules": [],
+    "citation": null,
+    "lawyer_recommended": null,
+    "document_placeholders": null,
+    "llm_calls": 1
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "scenario": {
+    "id": "06-commercial-purpose",
+    "title": "Purchase for business use",
+    "category": "consumer_edge",
+    "turns": [
+      "I run a small printing shop in Indore, Madhya Pradesh. I bought a commercial printer from PrintPro Traders on 2026-07-01 for Rs 2,40,000 to use in the business. It keeps jamming and the dealer refuses to replace it. I complained by email twice and they said it's operator error. I want a replacement. I have the invoice and emails."
+    ],
+    "expect": {
+      "domain": "consumer",
+      "escalation": "none",
+      "final_stage": "analysis",
+      "lawyer_recommended": true
+    }
+  },
+  "run": {
+    "at": "2026-11-21T10:32:37.925Z",
+    "provider": "anthropic",
+    "model": "claude-opus-4-6",
+    "prompt_version": "2026-11-21.v4",
+    "corpus": {
+      "entries": 13,
+      "citable": 9,
+      "last_verified": "2026-11-21"
+    }
+  },
+  "transcript": [
+    {
+      "role": "user",
+      "content": "I run a small printing shop in Indore, Madhya Pradesh. I bought a commercial printer from PrintPro Traders on 2026-07-01 for Rs 2,40,000 to use in the business. It keeps jamming and the dealer refuses to replace it. I complained by email twice and they said it's operator error. I want a replacement. I have the invoice and emails."
+    }
+  ],
+  "responses": [
+    {
+      "error": "Error: Anthropic HTTP 400: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011ChFvLZSTWeUmdy57FrVpd\"}",
+      "escalation": {
+        "level": "none",
+        "reasons": [],
+        "helplines": []
+      }
+    }
+  ],
+  "score": {
+    "id": "06-commercial-purpose",
+    "category": "consumer_edge",
+    "passed": false,
+    "failures": [
+      "1 turn(s) errored",
+      "domain=undefined, expected consumer"
+    ],
+    "final_stage": null,
+    "escalation": "none",
+    "followups_asked": [],
+    "facts_recorded": {},
+    "missing_fields": [],
+    "rules": [],
+    "citation": null,
+    "lawyer_recommended": null,
+    "document_placeholders": null,
+    "llm_calls": 0
+  }
+}

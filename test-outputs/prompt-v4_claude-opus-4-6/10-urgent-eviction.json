@@ -1,0 +1,74 @@
+{
+  "scenario": {
+    "id": "10-urgent-eviction",
+    "title": "Forced eviction tonight with threats (urgent)",
+    "category": "urgent",
+    "turns": [
+      "My landlord changed the locks while I was at work and his men threatened me when I came back. All my things are inside and I have nowhere to sleep tonight. What do I do?"
+    ],
+    "expect": {
+      "domain": "tenancy",
+      "escalation": "urgent",
+      "final_stage": "stub"
+    }
+  },
+  "run": {
+    "at": "2026-11-21T10:32:39.832Z",
+    "provider": "anthropic",
+    "model": "claude-opus-4-6",
+    "prompt_version": "2026-11-21.v4",
+    "corpus": {
+      "entries": 13,
+      "citable": 9,
+      "last_verified": "2026-11-21"
+    }
+  },
+  "transcript": [
+    {
+      "role": "user",
+      "content": "My landlord changed the locks while I was at work and his men threatened me when I came back. All my things are inside and I have nowhere to sleep tonight. What do I do?"
+    }
+  ],
+  "responses": [
+    {
+      "error": "Error: Anthropic HTTP 400: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011ChFvNuxHsEzLNp21m7oa9\"}",
+      "escalation": {
+        "level": "urgent",
+        "reasons": [
+          "Threats or violence mentioned",
+          "Forced eviction / lock-out happening or imminent"
+        ],
+        "helplines": [
+          {
+            "name": "Emergency (police / ambulance)",
+            "number": "112"
+          },
+          {
+            "name": "Free legal aid – NALSA / District Legal Services Authority",
+            "number": "15100",
+            "url": "https://nalsa.gov.in"
+          }
+        ]
+      }
+    }
+  ],
+  "score": {
+    "id": "10-urgent-eviction",
+    "category": "urgent",
+    "passed": false,
+    "failures": [
+      "1 turn(s) errored",
+      "domain=undefined, expected tenancy"
+    ],
+    "final_stage": null,
+    "escalation": "urgent",
+    "followups_asked": [],
+    "facts_recorded": {},
+    "missing_fields": [],
+    "rules": [],
+    "citation": null,
+    "lawyer_recommended": null,
+    "document_placeholders": null,
+    "llm_calls": 0
+  }
+}

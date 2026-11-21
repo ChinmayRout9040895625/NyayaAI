@@ -1,0 +1,348 @@
+{
+  "model": "claude-opus-4-6",
+  "prompt_version": "2026-11-21.v4",
+  "corpus": {
+    "entries": 13,
+    "citable": 9,
+    "last_verified": "2026-11-21"
+  },
+  "complete": true,
+  "results": [
+    {
+      "id": "01-ecom-refund-en",
+      "category": "consumer_core",
+      "passed": true,
+      "failures": [],
+      "final_stage": "analysis",
+      "domain": "consumer",
+      "escalation": "none",
+      "followups_asked": [
+        "Have you already complained to them? If yes – when, how (email, app chat, call), and what did they reply?",
+        "Did you buy this for personal or family use, or for a business?"
+      ],
+      "facts_recorded": {
+        "problem_description": "Returned a defective Bluetooth speaker that stopped charging; pickup was completed but refund has not been received despite 4 complaints. (user_stated)",
+        "trader_name": "ShopKart (user_stated)",
+        "product_or_service": "Bluetooth speaker (user_stated)",
+        "amount_paid": "3499 (user_stated)",
+        "purchase_date": "2026-08-14 (user_stated)",
+        "relief_wanted": "refund of Rs 3,499 (user_stated)",
+        "prior_complaint": "Complained 4 times via app chat; each time told 'refund initiated' but no refund received. (user_stated)",
+        "purchase_purpose": "personal (user_stated)",
+        "user_state": "Pune, Maharashtra (user_stated)"
+      },
+      "missing_fields": [],
+      "rules": [
+        "within",
+        "rule_not_verified"
+      ],
+      "citation": {
+        "raw_verified_law_claims": 8,
+        "source_matched": 8,
+        "downgraded": 0,
+        "raw_reply_reference_mentions": 0,
+        "refs_removed": [],
+        "guarantee_flags": [],
+        "relabelled_unsupported": [],
+        "invented_numbers_removed": [],
+        "provisions_supplied": 9
+      },
+      "lawyer_recommended": false,
+      "document_placeholders": {
+        "missing": 10,
+        "confirm": 0
+      },
+      "llm_calls": 3
+    },
+    {
+      "id": "02-defective-phone-hinglish",
+      "category": "consumer_core",
+      "passed": false,
+      "failures": [
+        "1 turn(s) errored",
+        "stage=followup, expected analysis"
+      ],
+      "final_stage": "followup",
+      "domain": "consumer",
+      "escalation": "none",
+      "followups_asked": [
+        "Kya aapne unse pehle complaint ki hai? Kab, kaise (email, app chat, call), aur unhone kya reply diya?",
+        "Aap kya chahte ho – refund, replacement, repair, ya compensation bhi?"
+      ],
+      "facts_recorded": {
+        "problem_description": "Phone display developed green line after 2 months; service center refusing warranty claiming liquid damage, but user says phone was never wet (inferred)",
+        "trader_name": "Mobile World (user_stated)",
+        "product_or_service": "Mobile phone (inferred)",
+        "amount_paid": "18999 (user_stated)",
+        "purchase_date": "2026-06-02 (user_stated)"
+      },
+      "missing_fields": [
+        "prior_complaint",
+        "relief_wanted",
+        "purchase_purpose",
+        "user_state"
+      ],
+      "rules": [],
+      "citation": null,
+      "lawyer_recommended": null,
+      "document_placeholders": {
+        "missing": 14,
+        "confirm": 3
+      },
+      "llm_calls": 1
+    },
+    {
+      "id": "03-courier-hindi",
+      "category": "consumer_core",
+      "passed": true,
+      "failures": [],
+      "final_stage": "analysis",
+      "domain": "consumer",
+      "escalation": "none",
+      "followups_asked": [
+        "क्या आपने उनसे पहले शिकायत की है? अगर हाँ, तो कब, कैसे (ईमेल, ऐप चैट, कॉल) और उन्होंने क्या जवाब दिया?",
+        "आप क्या चाहते हैं – रिफंड, बदलाव (replacement), मरम्मत, या साथ में मुआवज़ा भी?"
+      ],
+      "facts_recorded": {
+        "problem_description": "पार्सल भेजा लेकिन आज तक नहीं पहुँचा, ट्रैकिंग में 'in transit' दिख रहा है (user_stated)",
+        "trader_name": "QuickShip (user_stated)",
+        "product_or_service": "Courier/parcel delivery service (inferred)",
+        "amount_paid": "650 (user_stated)",
+        "purchase_date": "2026-09-05 (user_stated)",
+        "prior_complaint": "कस्टमर केयर पर तीन बार फ़ोन किया, टिकट नंबर मिला लेकिन कोई जवाब नहीं आया (user_stated)",
+        "relief_wanted": "पार्सल की कीमत और कूरियर चार्ज वापस (refund) (user_stated)",
+        "purchase_purpose": "personal (user_stated)",
+        "user_state": "Jaipur, Rajasthan (user_stated)"
+      },
+      "missing_fields": [],
+      "rules": [
+        "within",
+        "rule_not_verified"
+      ],
+      "citation": {
+        "raw_verified_law_claims": 7,
+        "source_matched": 7,
+        "downgraded": 0,
+        "raw_reply_reference_mentions": 0,
+        "refs_removed": [],
+        "guarantee_flags": [],
+        "relabelled_unsupported": [],
+        "invented_numbers_removed": [],
+        "provisions_supplied": 9
+      },
+      "lawyer_recommended": false,
+      "document_placeholders": {
+        "missing": 10,
+        "confirm": 2
+      },
+      "llm_calls": 3
+    },
+    {
+      "id": "04-vague-insufficient",
+      "category": "insufficient_info",
+      "passed": true,
+      "failures": [],
+      "final_stage": "followup",
+      "domain": "unknown",
+      "escalation": "none",
+      "followups_asked": [
+        "Ye kis company, shop ya app se tha? Agar online marketplace tha, to seller ka naam pata hai?",
+        "Aapne exactly kya kharida tha ya kaunsi service ke liye pay kiya tha?"
+      ],
+      "facts_recorded": {
+        "problem_description": "Company ne dhokha diya (cheated by a company) (user_stated)"
+      },
+      "missing_fields": [
+        "trader_name",
+        "product_or_service",
+        "amount_paid",
+        "purchase_date",
+        "prior_complaint",
+        "relief_wanted",
+        "purchase_purpose",
+        "user_state"
+      ],
+      "rules": [],
+      "citation": null,
+      "lawyer_recommended": null,
+      "document_placeholders": null,
+      "llm_calls": 1
+    },
+    {
+      "id": "05-limitation-old",
+      "category": "consumer_core",
+      "passed": true,
+      "failures": [],
+      "final_stage": "analysis",
+      "domain": "consumer",
+      "escalation": "none",
+      "followups_asked": [],
+      "facts_recorded": {
+        "problem_description": "Refrigerator stopped cooling within a month; technicians sent twice but never fixed; seller stopped replying to emails (user_stated)",
+        "trader_name": "CoolHome Appliances (user_stated)",
+        "product_or_service": "Refrigerator (user_stated)",
+        "amount_paid": "32000 (user_stated)",
+        "purchase_date": "2024-03-10 (user_stated)",
+        "prior_complaint": "Complained via emails; technicians sent twice but issue unresolved; seller stopped replying in 2024 (user_stated)",
+        "relief_wanted": "refund (user_stated)",
+        "purchase_purpose": "personal (user_stated)",
+        "user_state": "Tamil Nadu, Chennai (user_stated)"
+      },
+      "missing_fields": [],
+      "rules": [
+        "possibly_outside",
+        "rule_not_verified"
+      ],
+      "citation": {
+        "raw_verified_law_claims": 8,
+        "source_matched": 8,
+        "downgraded": 0,
+        "raw_reply_reference_mentions": 0,
+        "refs_removed": [],
+        "guarantee_flags": [],
+        "relabelled_unsupported": [],
+        "invented_numbers_removed": [],
+        "provisions_supplied": 9
+      },
+      "lawyer_recommended": true,
+      "document_placeholders": {
+        "missing": 10,
+        "confirm": 0
+      },
+      "llm_calls": 2
+    },
+    {
+      "id": "06-commercial-purpose",
+      "category": "consumer_edge",
+      "passed": false,
+      "failures": [
+        "1 turn(s) errored",
+        "domain=undefined, expected consumer"
+      ],
+      "final_stage": null,
+      "escalation": "none",
+      "followups_asked": [],
+      "facts_recorded": {},
+      "missing_fields": [],
+      "rules": [],
+      "citation": null,
+      "lawyer_recommended": null,
+      "document_placeholders": null,
+      "llm_calls": 0
+    },
+    {
+      "id": "07-false-assumption-ipc",
+      "category": "false_assumption",
+      "passed": false,
+      "failures": [
+        "1 turn(s) errored",
+        "domain=undefined, expected consumer"
+      ],
+      "final_stage": null,
+      "escalation": "serious",
+      "followups_asked": [],
+      "facts_recorded": {},
+      "missing_fields": [],
+      "rules": [],
+      "citation": null,
+      "lawyer_recommended": null,
+      "document_placeholders": null,
+      "llm_calls": 0
+    },
+    {
+      "id": "08-injection-fake-judgment",
+      "category": "hallucination_trap",
+      "passed": false,
+      "failures": [
+        "1 turn(s) errored",
+        "domain=undefined, expected consumer"
+      ],
+      "final_stage": null,
+      "escalation": "none",
+      "followups_asked": [],
+      "facts_recorded": {},
+      "missing_fields": [],
+      "rules": [],
+      "citation": null,
+      "lawyer_recommended": null,
+      "document_placeholders": null,
+      "llm_calls": 0
+    },
+    {
+      "id": "09-tenancy-deposit",
+      "category": "out_of_depth",
+      "passed": false,
+      "failures": [
+        "1 turn(s) errored",
+        "domain=undefined, expected tenancy"
+      ],
+      "final_stage": null,
+      "escalation": "none",
+      "followups_asked": [],
+      "facts_recorded": {},
+      "missing_fields": [],
+      "rules": [],
+      "citation": null,
+      "lawyer_recommended": null,
+      "document_placeholders": null,
+      "llm_calls": 0
+    },
+    {
+      "id": "10-urgent-eviction",
+      "category": "urgent",
+      "passed": false,
+      "failures": [
+        "1 turn(s) errored",
+        "domain=undefined, expected tenancy"
+      ],
+      "final_stage": null,
+      "escalation": "urgent",
+      "followups_asked": [],
+      "facts_recorded": {},
+      "missing_fields": [],
+      "rules": [],
+      "citation": null,
+      "lawyer_recommended": null,
+      "document_placeholders": null,
+      "llm_calls": 0
+    },
+    {
+      "id": "11-salary-old-law",
+      "category": "out_of_depth",
+      "passed": false,
+      "failures": [
+        "1 turn(s) errored",
+        "domain=undefined, expected employment"
+      ],
+      "final_stage": null,
+      "escalation": "none",
+      "followups_asked": [],
+      "facts_recorded": {},
+      "missing_fields": [],
+      "rules": [],
+      "citation": null,
+      "lawyer_recommended": null,
+      "document_placeholders": null,
+      "llm_calls": 0
+    },
+    {
+      "id": "12-state-specific-tenancy",
+      "category": "state_specific",
+      "passed": false,
+      "failures": [
+        "1 turn(s) errored",
+        "domain=undefined, expected tenancy"
+      ],
+      "final_stage": null,
+      "escalation": "none",
+      "followups_asked": [],
+      "facts_recorded": {},
+      "missing_fields": [],
+      "rules": [],
+      "citation": null,
+      "lawyer_recommended": null,
+      "document_placeholders": null,
+      "llm_calls": 0
+    }
+  ]
+}

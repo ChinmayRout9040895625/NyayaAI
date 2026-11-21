@@ -1,0 +1,36 @@
+[
+  {
+    "id": "MTA2021",
+    "act": "Model Tenancy Act, 2021",
+    "act_number": "Model law circulated by the Ministry of Housing and Urban Affairs",
+    "section": "Whole Act",
+    "title": "Model Tenancy Act – applies only where adopted by a State",
+    "text": "",
+    "text_type": "pending",
+    "source_url": "https://www.indiacode.nic.in/",
+    "source_name": "India Code",
+    "jurisdiction": "Only States/UTs that adopt it",
+    "status": "model_law",
+    "status_basis": "Model law, not a central statute in force",
+    "amendments": "Not applicable",
+    "verification_checks": {
+      "text_verbatim": false,
+      "section_number": false,
+      "amendments": false,
+      "commencement": false,
+      "applicability": false
+    },
+    "verified_on": null,
+    "domains": [
+      "tenancy"
+    ],
+    "keywords": [
+      "tenancy",
+      "rent",
+      "security deposit",
+      "landlord",
+      "eviction"
+    ],
+    "notes": "Never cite as binding law. Tenancy is not implemented in depth in the MVP."
+  }
+]

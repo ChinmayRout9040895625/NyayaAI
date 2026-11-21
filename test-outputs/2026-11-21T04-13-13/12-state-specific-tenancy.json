@@ -1,0 +1,55 @@
+{
+  "scenario": {
+    "id": "12-state-specific-tenancy",
+    "title": "State-specific question (Maharashtra deposit cap)",
+    "category": "state_specific",
+    "turns": [
+      "In Maharashtra, is a landlord legally allowed to take 6 months' rent as security deposit? Which section says so?"
+    ],
+    "expect": {
+      "domain": "tenancy",
+      "escalation": "none",
+      "final_stage": "stub"
+    }
+  },
+  "run": {
+    "at": "2026-11-21T04:19:45.340Z",
+    "provider": "gemini",
+    "model": "gemini-3.7-flash",
+    "corpus": {
+      "entries": 13,
+      "citable": 9,
+      "last_verified": "2026-11-21"
+    }
+  },
+  "transcript": [
+    {
+      "role": "user",
+      "content": "In Maharashtra, is a landlord legally allowed to take 6 months' rent as security deposit? Which section says so?"
+    }
+  ],
+  "responses": [
+    {
+      "error": "AbortError: This operation was aborted"
+    }
+  ],
+  "score": {
+    "id": "12-state-specific-tenancy",
+    "category": "state_specific",
+    "passed": false,
+    "failures": [
+      "1 turn(s) errored",
+      "domain=undefined, expected tenancy"
+    ],
+    "final_stage": null,
+    "escalation": "none",
+    "followups_asked": [],
+    "facts_recorded": {},
+    "missing_fields": [],
+    "rules": [],
+    "citation": null,
+    "lawyer_recommended": null,
+    "document_placeholders": null,
+    "llm_calls": 0
+  }
+}

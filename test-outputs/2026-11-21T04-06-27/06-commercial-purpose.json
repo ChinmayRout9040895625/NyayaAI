@@ -1,0 +1,434 @@
+{
+  "scenario": {
+    "id": "06-commercial-purpose",
+    "title": "Purchase for business use",
+    "category": "consumer_edge",
+    "turns": [
+      "I run a small printing shop in Indore, Madhya Pradesh. I bought a commercial printer from PrintPro Traders on 2026-07-01 for Rs 2,40,000 to use in the business. It keeps jamming and the dealer refuses to replace it. I complained by email twice and they said it's operator error. I want a replacement. I have the invoice and emails."
+    ],
+    "expect": {
+      "domain": "consumer",
+      "escalation": "none",
+      "final_stage": "analysis",
+      "lawyer_recommended": true
+    }
+  },
+  "run": {
+    "at": "2026-11-21T04:11:31.440Z",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "corpus": {
+      "entries": 13,
+      "citable": 9,
+      "last_verified": "2026-11-21"
+    }
+  },
+  "transcript": [
+    {
+      "role": "user",
+      "content": "I run a small printing shop in Indore, Madhya Pradesh. I bought a commercial printer from PrintPro Traders on 2026-07-01 for Rs 2,40,000 to use in the business. It keeps jamming and the dealer refuses to replace it. I complained by email twice and they said it's operator error. I want a replacement. I have the invoice and emails."
+    },
+    {
+      "role": "assistant",
+      "content": "You purchased a commercial printer for Rs 2,40,000 for your printing shop in Indore, but the dealer refuses to replace it, alleging operator error. Under the Consumer Protection Act, 2019, goods bought for a commercial purpose are excluded from consumer protection unless they are used exclusively for earning your livelihood by self-employment. \n\nHere are your main options:\n1. Send a Formal Written Demand Notice: Issue a clear written notice to PrintPro Traders attaching your invoice and email trail, demanding replacement or repair within a reasonable deadline (for example, the number of days you state in your notice).\n2. File a Consumer Complaint: If unresolved, you may consider filing a consumer complaint. However, you will need to establish that the printer was bought exclusively to earn your livelihood through self-employment.\n\nNext steps:\n- Gather all invoices, emails, and technical report evidence.\n- Consult a legal professional to confirm whether your business setup satisfies the self-employment criteria.\n- Confirm the current pecuniary jurisdiction limits of the District Commission before filing.\n\nThis information is for legal guidance only and does not constitute formal legal advice."
+    }
+  ],
+  "responses": [
+    {
+      "stage": "analysis",
+      "reply": "You purchased a commercial printer for Rs 2,40,000 for your printing shop in Indore, but the dealer refuses to replace it, alleging operator error. Under the Consumer Protection Act, 2019, goods bought for a commercial purpose are excluded from consumer protection unless they are used exclusively for earning your livelihood by self-employment. \n\nHere are your main options:\n1. Send a Formal Written Demand Notice: Issue a clear written notice to PrintPro Traders attaching your invoice and email trail, demanding replacement or repair within a reasonable deadline (for example, the number of days you state in your notice).\n2. File a Consumer Complaint: If unresolved, you may consider filing a consumer complaint. However, you will need to establish that the printer was bought exclusively to earn your livelihood through self-employment.\n\nNext steps:\n- Gather all invoices, emails, and technical report evidence.\n- Consult a legal professional to confirm whether your business setup satisfies the self-employment criteria.\n- Confirm the current pecuniary jurisdiction limits of the District Commission before filing.\n\nThis information is for legal guidance only and does not constitute formal legal advice.",
+      "case": {
+        "domain": "consumer",
+        "language": "en",
+        "facts": {
+          "trader_name": {
+            "value": "PrintPro Traders",
+            "source": "user_stated",
+            "quote": "PrintPro Traders"
+          },
+          "purchase_date": {
+            "value": "2026-07-01",
+            "source": "user_stated",
+            "quote": "2026-07-01"
+          },
+          "amount_paid": {
+            "value": "240000",
+            "source": "user_stated",
+            "quote": "Rs 2,40,000"
+          },
+          "product_or_service": {
+            "value": "commercial printer",
+            "source": "user_stated",
+            "quote": "commercial printer"
+          },
+          "purchase_purpose": {
+            "value": "commercial",
+            "source": "user_stated",
+            "quote": "I run a small printing shop in Indore, Madhya Pradesh. I bought a commercial printer from PrintPro Traders on 2026-07-01 for Rs 2,40,000 to use in the business."
+          },
+          "problem_description": {
+            "value": "Printer keeps jamming and the dealer refuses to replace it, claiming operator error",
+            "source": "user_stated",
+            "quote": "It keeps jamming and the dealer refuses to replace it. I complained by email twice and they said it's operator error."
+          },
+          "prior_complaint": {
+            "value": "Complained twice by email, trader claimed it's operator error and refused replacement",
+            "source": "user_stated",
+            "quote": "I complained by email twice and they said it's operator error."
+          },
+          "relief_wanted": {
+            "value": "replacement",
+            "source": "user_stated",
+            "quote": "I want a replacement."
+          },
+          "user_state": {
+            "value": "Madhya Pradesh, Indore",
+            "source": "user_stated",
+            "quote": "Indore, Madhya Pradesh"
+          }
+        },
+        "timeline": [
+          {
+            "date": "2026-07-01",
+            "event": "Purchased commercial printer from PrintPro Traders for Rs 2,40,000",
+            "source": "user_stated",
+            "quote": "bought a commercial printer from PrintPro Traders on 2026-07-01 for Rs 2,40,000"
+          }
+        ],
+        "evidence": {
+          "invoice": {
+            "state": "have",
+            "quote": "I have the invoice"
+          },
+          "complaint_records": {
+            "state": "have",
+            "quote": "I complained by email twice"
+          },
+          "written_refusal": {
+            "state": "have",
+            "quote": "they said it's operator error"
+          }
+        },
+        "notes": [],
+        "turns": 1
+      },
+      "followups": [],
+      "missing": [],
+      "escalation": {
+        "level": "none",
+        "reasons": [],
+        "helplines": []
+      },
+      "evidence": [
+        {
+          "key": "invoice",
+          "label": "Invoice / bill / receipt",
+          "why": "Proves you bought it, from whom, when and for how much – the basis of a consumer claim and of the amount paid.",
+          "state": "have",
+          "quote": "I have the invoice"
+        },
+        {
+          "key": "order_confirmation",
+          "label": "Order ID / booking confirmation",
+          "why": "Links you to the transaction, especially for online purchases.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "payment_proof",
+          "label": "Payment proof (bank/UPI/card statement)",
+          "why": "Shows the money actually left your account, which matters if the seller disputes the amount.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "product_photos",
+          "label": "Photos / videos of the defect",
+          "why": "Shows the condition of the goods; take them before returning or repairing anything.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "warranty_card",
+          "label": "Warranty / guarantee card",
+          "why": "Shows what the seller or manufacturer promised and for how long.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "complaint_records",
+          "label": "Your complaints (emails, chats, ticket numbers)",
+          "why": "Shows you gave them a chance to fix it, and when – useful for the notice and for dates.",
+          "state": "have",
+          "quote": "I complained by email twice"
+        },
+        {
+          "key": "written_refusal",
+          "label": "Their reply / refusal in writing",
+          "why": "Shows their position; the date can matter for when the dispute arose.",
+          "state": "have",
+          "quote": "they said it's operator error"
+        },
+        {
+          "key": "delivery_proof",
+          "label": "Delivery / courier / service record",
+          "why": "Shows what was (or wasn't) delivered or done, and when.",
+          "state": "not_mentioned"
+        }
+      ],
+      "analysis": {
+        "issue_summary": "You purchased a commercial printer for Rs 2,40,000 for your shop, but it repeatedly jams. The trader refuses to replace it, claiming operator error.",
+        "claims": [
+          {
+            "text": "Under the law, a person who buys goods for a commercial purpose is generally excluded from the definition of a consumer, unless the goods were bought and used exclusively to earn a livelihood by self-employment.",
+            "type": "verified_law",
+            "provision_id": "CPA2019-S2-7",
+            "support_quote": "does not include a person who obtains such goods for resale or for any commercial purpose [...] the expression \"commercial purpose\" does not include use by a person of goods bought and used by him exclusively for the purpose of earning his livelihood, by means of self-employment;",
+            "status": "source_matched"
+          },
+          {
+            "text": "A defect refers to any fault, imperfection, or shortcoming in the quality or standard of goods required by law, contract, or as claimed by the trader.",
+            "type": "verified_law",
+            "provision_id": "CPA2019-S2-10",
+            "support_quote": "\"defect\" means any fault, imperfection or shortcoming in the quality, quantity, potency, purity or standard which is required to be maintained by or under any law for the time being in force or under any contract",
+            "status": "source_matched"
+          },
+          {
+            "text": "If a product is proven to be defective, the District Commission may order the trader to replace the goods or refund the price.",
+            "type": "verified_law",
+            "provision_id": "CPA2019-S39-1",
+            "support_quote": "to replace the goods with new goods of similar description which shall be free from any defect [...] to return to the complainant the price",
+            "status": "source_matched"
+          }
+        ],
+        "options": [
+          {
+            "title": "Send a Formal Written Notice",
+            "description": "Send a formal written notice or legal notice to PrintPro Traders attaching your invoice and email complaints, demanding replacement or repair within a reasonable deadline (for example, the number of days you state in your notice)."
+          },
+          {
+            "title": "File a Consumer Complaint",
+            "description": "If the matter remains unresolved, you could file a complaint before the District Commission. However, because this was bought for a business, you must establish that you use it exclusively for earning your livelihood by self-employment."
+          }
+        ],
+        "next_steps": [
+          "Gather all purchase documents, invoice copies, and email exchanges showing your complaints and the seller's refusal.",
+          "Consult a lawyer to evaluate whether your printing shop qualifies under the self-employment livelihood exception before filing a formal consumer court case.",
+          "Send a final written demand notice to the trader specifying the defect and your required resolution."
+        ],
+        "uncertainties": [
+          "Whether you operate the printing shop individually for self-employment livelihood or employ workers/run a larger commercial establishment."
+        ],
+        "lawyer_recommended": true,
+        "lawyer_reason": "The printer was purchased for a business, so whether you fall under the self-employment exception to qualify as a 'consumer' requires legal evaluation. Additionally, the dealer disputes the defect claiming operator error.",
+        "report": {
+          "claims_total": 3,
+          "claims_source_matched": 3,
+          "claims_downgraded": 0,
+          "unverified_refs_removed": [],
+          "guarantee_phrases_flagged": [],
+          "note": "Source check only confirms that quoted words exist in a verified official provision. It does not confirm that the provision applies to your facts or that the legal reasoning is correct. Have a lawyer review before acting."
+        }
+      },
+      "rules": [
+        {
+          "status": "within",
+          "message": "About 4 month(s) have passed. That appears to be within the two-year period in Section 69(1).",
+          "provision_ids": [
+            "CPA2019-S69"
+          ],
+          "assumptions": [
+            "Counted from the purchase/service date (2026-07-01). The \"cause of action\" may arise later – for example when the defect appeared or when the trader finally refused – which could give you more time. This is a conservative estimate."
+          ]
+        },
+        {
+          "status": "rule_not_verified",
+          "message": "Which Commission hears a case depends on the value of the goods or services paid as consideration – not on the compensation you claim. The Act originally set the District Commission's limit at one crore rupees but lets the Central Government prescribe a different value by rules, and NyayaAI has not verified the current rules – so it cannot tell you the current limit. Confirm the current limit on the official consumer e-filing portal or with the Commission before filing.",
+          "provision_ids": [],
+          "assumptions": []
+        },
+        {
+          "status": "commercial_flag",
+          "message": "You said this was bought for a business. The definition of 'consumer' in Section 2(7) does not include a person who obtains goods for resale or for any commercial purpose, or who avails a service for any commercial purpose. Its Explanation says 'commercial purpose' does not include goods bought and used exclusively to earn a livelihood by self-employment. Whether this applies to you depends on the facts – get legal advice before filing.",
+          "provision_ids": [
+            "CPA2019-S2-7"
+          ],
+          "assumptions": []
+        }
+      ],
+      "sources": [
+        {
+          "id": "CPA2019-S2-7",
+          "act": "Consumer Protection Act, 2019",
+          "section": "2(7)",
+          "title": "Definition of 'consumer'",
+          "text": "(7) \"consumer\" means any person who-- (i) buys any goods for a consideration which has been paid or promised or partly paid and partly promised, or under any system of deferred payment and includes any user of such goods other than the person who buys such goods for consideration paid or promised or partly paid or partly promised, or under any system of deferred payment, when such use is made with the approval of such person, but does not include a person who obtains such goods for resale or for any commercial purpose; or (ii) hires or avails of any service for a consideration which has been paid or promised or partly paid and partly promised, or under any system of deferred payment and includes any beneficiary of such service other than the person who hires or avails of the services for consideration paid or promised, or partly paid and partly promised, or under any system of deferred payment, when such services are availed of with the approval of the first mentioned person, but does not include a person who avails of such service for any commercial purpose. Explanation. --For the purposes of this clause, -- (a) the expression \"commercial purpose\" does not include use by a person of goods bought and used by him exclusively for the purpose of earning his livelihood, by means of self-employment; (b) the expressions \"buys any goods\" and \"hires or avails any services\" includes offline or online transactions through electronic means or by teleshopping or direct selling or multi-level marketing;",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": true
+        },
+        {
+          "id": "CPA2019-S2-10",
+          "act": "Consumer Protection Act, 2019",
+          "section": "2(10)",
+          "title": "Definition of 'defect'",
+          "text": "(10) \"defect\" means any fault, imperfection or shortcoming in the quality, quantity, potency, purity or standard which is required to be maintained by or under any law for the time being in force or under any contract, express or implied or as is claimed by the trader in any manner whatsoever in relation to any goods or product and the expression \"defective\" shall be construed accordingly;",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": true
+        },
+        {
+          "id": "CPA2019-S2-11",
+          "act": "Consumer Protection Act, 2019",
+          "section": "2(11)",
+          "title": "Definition of 'deficiency'",
+          "text": "(11) \"deficiency\" means any fault, imperfection, shortcoming or inadequacy in the quality, nature and manner of performance which is required to be maintained by or under any law for the time being in force or has been undertaken to be performed by a person in pursuance of a contract or otherwise in relation to any service and includes-- (i) any act of negligence or omission or commission by such person which causes loss or injury to the consumer; and (ii) deliberate withholding of relevant information by such person to the consumer;",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        },
+        {
+          "id": "CPA2019-S34-2",
+          "act": "Consumer Protection Act, 2019",
+          "section": "34(2)",
+          "title": "Jurisdiction of District Commission – where to file",
+          "text": "34. Jurisdiction of District Commission.-- (2) A complaint shall be instituted in a District Commission within the local limits of whose jurisdiction,-- (a) the opposite party or each of the opposite parties, where there are more than one, at the time of the institution of the complaint, ordinarily resides or carries on business or has a branch office or personally works for gain; or (b) any of the opposite parties, where there are more than one, at the time of the institution of the complaint, actually and voluntarily resides, or carries on business or has a branch office, or personally works for gain, provided that in such case the permission of the District Commission is given; or (c) the cause of action, wholly or in part, arises; or (d) the complainant resides or personally works for gain.",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        },
+        {
+          "id": "CPA2019-S2-47-VIII",
+          "act": "Consumer Protection Act, 2019",
+          "section": "2(47)(viii)",
+          "title": "Unfair trade practice – refusing to take back defective goods / refund",
+          "text": "(viii) refusing, after selling goods or rendering services, to take back or withdraw defective goods or to withdraw or discontinue deficient services and to refund the consideration thereof, if paid, within the period stipulated in the bill or cash memo or receipt or in the absence of such stipulation, within a period of thirty days;",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        },
+        {
+          "id": "CPA2019-S35-1",
+          "act": "Consumer Protection Act, 2019",
+          "section": "35(1)",
+          "title": "Manner in which complaint shall be made",
+          "text": "35. Manner in which complaint shall be made.--(1) A complaint, in relation to any goods sold or delivered or agreed to be sold or delivered or any service provided or agreed to be provided, may be filed with a District Commission by-- (a) the consumer,-- (i) to whom such goods are sold or delivered or agreed to be sold or delivered or such service is provided or agreed to be provided; or (ii) who alleges unfair trade practice in respect of such goods or service; [...] Provided that the complaint under this sub-section may be filed electronically in such manner as may be prescribed.",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        },
+        {
+          "id": "CPA2019-S39-1",
+          "act": "Consumer Protection Act, 2019",
+          "section": "39(1)",
+          "title": "Findings of District Commission (reliefs)",
+          "text": "39. Findings of District Commission.--(1) Where the District Commission is satisfied that the goods complained against suffer from any of the defects specified in the complaint or that any of the allegations contained in the complaint about the services or any unfair trade practices, or claims for compensation under product liability are proved, it shall issue an order to the opposite party directing him to do one or more of the following, namely:-- (a) to remove the defect pointed out by the appropriate laboratory from the goods in question; (b) to replace the goods with new goods of similar description which shall be free from any defect; (c) to return to the complainant the price, or, as the case may be, the charges paid by the complainant along with such interest on such price or charges as may be decided; (d) to pay such amount as may be awarded by it as compensation to the consumer for any loss or injury suffered by the consumer due to the negligence of the opposite party: Provided that the District Commission shall have the power to grant punitive damages in such circumstances as it deems fit; (e) to pay such amount as may be awarded by it as compensation in a product liability action under Chapter VI; (f) to remove the defects in goods or deficiencies in the services in question; [...]",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": true
+        },
+        {
+          "id": "CPA2019-S69",
+          "act": "Consumer Protection Act, 2019",
+          "section": "69",
+          "title": "Limitation period",
+          "text": "69. Limitation period.--(1) The District Commission, the State Commission or the National Commission shall not admit a complaint unless it is filed within two years from the date on which the cause of action has arisen. (2) Notwithstanding anything contained in sub-section (1), a complaint may be entertained after the period specified in sub-section (1), if the complainant satisfies the District Commission, the State Commission or the National Commission, as the case may be, that he had sufficient cause for not filing the complaint within such period: Provided that no such complaint shall be entertained unless the District Commission or the State Commission or the National Commission, as the case may be, records its reasons for condoning such delay.",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        },
+        {
+          "id": "CPA2019-S100",
+          "act": "Consumer Protection Act, 2019",
+          "section": "100",
+          "title": "Act not in derogation of any other law",
+          "text": "100. Act not in derogation of any other law.--The provisions of this Act shall be in addition to and not in derogation of the provisions of any other law for the time being in force.",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        }
+      ],
+      "unverified_matches": [
+        {
+          "id": "CPA2019-S34-1",
+          "act": "Consumer Protection Act, 2019",
+          "section": "34(1)",
+          "title": "Jurisdiction of District Commission – monetary limit (as enacted)",
+          "text": "34. Jurisdiction of District Commission.--(1) Subject to the other provisions of this Act, the District Commission shall have jurisdiction to entertain complaints where the value of the goods or services paid as consideration does not exceed one crore rupees: Provided that where the Central Government deems it necessary so to do, it may prescribe such other value, as it deems fit.",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "verify",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        },
+        {
+          "id": "JR2021-R3",
+          "act": "Consumer Protection (Jurisdiction of the District Commission, the State Commission and the National Commission) Rules, 2021",
+          "section": "Rule 3",
+          "title": "Pecuniary jurisdiction of the District Commission",
+          "text": "",
+          "source_url": "https://consumeraffairs.nic.in/acts-and-rules/consumer-protection",
+          "status": "verify",
+          "verified_on": null,
+          "used_in_claim": false
+        }
+      ],
+      "meta": {
+        "provider": "gemini",
+        "model": "gemini-3.5-flash",
+        "prompt_version": "2026-11-21.v2",
+        "llm_calls": 2
+      },
+      "raw": {
+        "understanding": "{\n  \"domain\": \"consumer\",\n  \"domain_confidence\": 0.95,\n  \"language\": \"en\",\n  \"extracted\": [\n    {\n      \"field\": \"trader_name\",\n      \"value\": \"PrintPro Traders\",\n      \"source\": \"user_stated\",\n      \"quote\": \"PrintPro Traders\"\n    },\n    {\n      \"field\": \"purchase_date\",\n      \"value\": \"2026-07-01\",\n      \"source\": \"user_stated\",\n      \"quote\": \"2026-07-01\"\n    },\n    {\n      \"field\": \"amount_paid\",\n      \"value\": \"240000\",\n      \"source\": \"user_stated\",\n      \"quote\": \"Rs 2,40,000\"\n    },\n    {\n      \"field\": \"product_or_service\",\n      \"value\": \"commercial printer\",\n      \"source\": \"user_stated\",\n      \"quote\": \"commercial printer\"\n    },\n    {\n      \"field\": \"purchase_purpose\",\n      \"value\": \"commercial\",\n      \"source\": \"user_stated\",\n      \"quote\": \"I run a small printing shop in Indore, Madhya Pradesh. I bought a commercial printer from PrintPro Traders on 2026-07-01 for Rs 2,40,000 to use in the business.\"\n    },\n    {\n      \"field\": \"problem_description\",\n      \"value\": \"Printer keeps jamming and the dealer refuses to replace it, claiming operator error\",\n      \"source\": \"user_stated\",\n      \"quote\": \"It keeps jamming and the dealer refuses to replace it. I complained by email twice and they said it's operator error.\"\n    },\n    {\n      \"field\": \"prior_complaint\",\n      \"value\": \"Complained twice by email, trader claimed it's operator error and refused replacement\",\n      \"source\": \"user_stated\",\n      \"quote\": \"I complained by email twice and they said it's operator error.\"\n    },\n    {\n      \"field\": \"relief_wanted\",\n      \"value\": \"replacement\",\n      \"source\": \"user_stated\",\n      \"quote\": \"I want a replacement.\"\n    },\n    {\n      \"field\": \"user_state\",\n      \"value\": \"Madhya Pradesh, Indore\",\n      \"source\": \"user_stated\",\n      \"quote\": \"Indore, Madhya Pradesh\"\n    }\n  ],\n  \"timeline\": [\n    {\n      \"date\": \"2026-07-01\",\n      \"event\": \"Purchased commercial printer from PrintPro Traders for Rs 2,40,000\",\n      \"quote\": \"bought a commercial printer from PrintPro Traders on 2026-07-01 for Rs 2,40,000\"\n    }\n  ],\n  \"evidence_mentioned\": [\n    {\n      \"key\": \"invoice\",\n      \"has\": true,\n      \"quote\": \"I have the invoice\"\n    },\n    {\n      \"key\": \"complaint_records\",\n      \"has\": true,\n      \"quote\": \"I complained by email twice\"\n    },\n    {\n      \"key\": \"written_refusal\",\n      \"has\": true,\n      \"quote\": \"they said it's operator error\"\n    }\n  ],\n  \"search_terms\": [\n    \"commercial printer defective\",\n    \"refusal to replace product\",\n    \"deficiency in service seller\",\n    \"commercial purpose exception consumer protection\"\n  ],\n  \"user_wants_analysis\": false,\n  \"acknowledgement\": \"I understand your frustration with the defective printer you purchased from PrintPro Traders for your shop in Indore. It is concerning that the dealer is refusing a replacement despite your repeated complaints.\"\n}",
+        "analysis": "{\n \"issue_summary\": \"You purchased a commercial printer for Rs 2,40,000 for your shop, but it repeatedly jams. The trader refuses to replace it, claiming operator error.\",\n \"claims\": [\n  {\n   \"text\": \"Under the law, a person who buys goods for a commercial purpose is generally excluded from the definition of a consumer, unless the goods were bought and used exclusively to earn a livelihood by self-employment.\",\n   \"type\": \"verified_law\",\n   \"provision_id\": \"CPA2019-S2-7\",\n   \"support_quote\": \"does not include a person who obtains such goods for resale or for any commercial purpose [...] the expression \\\"commercial purpose\\\" does not include use by a person of goods bought and used by him exclusively for the purpose of earning his livelihood, by means of self-employment;\"\n  },\n  {\n   \"text\": \"A defect refers to any fault, imperfection, or shortcoming in the quality or standard of goods required by law, contract, or as claimed by the trader.\",\n   \"type\": \"verified_law\",\n   \"provision_id\": \"CPA2019-S2-10\",\n   \"support_quote\": \"\\\"defect\\\" means any fault, imperfection or shortcoming in the quality, quantity, potency, purity or standard which is required to be maintained by or under any law for the time being in force or under any contract\"\n  },\n  {\n   \"text\": \"If a product is proven to be defective, the District Commission may order the trader to replace the goods or refund the price.\",\n   \"type\": \"verified_law\",\n   \"provision_id\": \"CPA2019-S39-1\",\n   \"support_quote\": \"to replace the goods with new goods of similar description which shall be free from any defect [...] to return to the complainant the price\"\n  }\n ],\n \"options\": [\n  {\n   \"title\": \"Send a Formal Written Notice\",\n   \"description\": \"Send a formal written notice or legal notice to PrintPro Traders attaching your invoice and email complaints, demanding replacement or repair within a reasonable deadline (for example, the number of days you state in your notice).\"\n  },\n  {\n   \"title\": \"File a Consumer Complaint\",\n   \"description\": \"If the matter remains unresolved, you could file a complaint before the District Commission. However, because this was bought for a business, you must establish that you use it exclusively for earning your livelihood by self-employment.\"\n  }\n ],\n \"next_steps\": [\n  \"Gather all purchase documents, invoice copies, and email exchanges showing your complaints and the seller's refusal.\",\n  \"Consult a lawyer to evaluate whether your printing shop qualifies under the self-employment livelihood exception before filing a formal consumer court case.\",\n  \"Send a final written demand notice to the trader specifying the defect and your required resolution.\"\n ],\n \"uncertainties\": [\n  \"Whether you operate the printing shop individually for self-employment livelihood or employ workers/run a larger commercial establishment.\"\n ],\n \"lawyer_recommended\": true,\n \"lawyer_reason\": \"The printer was purchased for a business, so whether you fall under the self-employment exception to qualify as a 'consumer' requires legal evaluation. Additionally, the dealer disputes the defect claiming operator error.\",\n \"reply\": \"You purchased a commercial printer for Rs 2,40,000 for your printing shop in Indore, but the dealer refuses to replace it, alleging operator error. Under the Consumer Protection Act, 2019, goods bought for a commercial purpose are excluded from consumer protection unless they are used exclusively for earning your livelihood by self-employment. \\n\\nHere are your main options:\\n1. Send a Formal Written Demand Notice: Issue a clear written notice to PrintPro Traders attaching your invoice and email trail, demanding replacement or repair within a reasonable deadline (for example, the number of days you state in your notice).\\n2. File a Consumer Complaint: If unresolved, you may consider filing a consumer complaint. However, you will need to establish that the printer was bought exclusively to earn your livelihood through self-employment.\\n\\nNext steps:\\n- Gather all invoices, emails, and technical report evidence.\\n- Consult a legal professional to confirm whether your business setup satisfies the self-employment criteria.\\n- Confirm the current pecuniary jurisdiction limits of the District Commission before filing.\\n\\nThis information is for legal guidance only and does not constitute formal legal advice.\"\n}"
+      }
+    }
+  ],
+  "score": {
+    "id": "06-commercial-purpose",
+    "category": "consumer_edge",
+    "passed": true,
+    "failures": [],
+    "final_stage": "analysis",
+    "domain": "consumer",
+    "escalation": "none",
+    "followups_asked": [],
+    "facts_recorded": {
+      "trader_name": "PrintPro Traders (user_stated)",
+      "purchase_date": "2026-07-01 (user_stated)",
+      "amount_paid": "240000 (user_stated)",
+      "product_or_service": "commercial printer (user_stated)",
+      "purchase_purpose": "commercial (user_stated)",
+      "problem_description": "Printer keeps jamming and the dealer refuses to replace it, claiming operator error (user_stated)",
+      "prior_complaint": "Complained twice by email, trader claimed it's operator error and refused replacement (user_stated)",
+      "relief_wanted": "replacement (user_stated)",
+      "user_state": "Madhya Pradesh, Indore (user_stated)"
+    },
+    "missing_fields": [],
+    "rules": [
+      "within",
+      "rule_not_verified",
+      "commercial_flag"
+    ],
+    "citation": {
+      "raw_verified_law_claims": 3,
+      "source_matched": 3,
+      "downgraded": 0,
+      "raw_reply_reference_mentions": 0,
+      "refs_removed": [],
+      "guarantee_flags": [],
+      "provisions_supplied": 9
+    },
+    "lawyer_recommended": true,
+    "document_placeholders": {
+      "missing": 8,
+      "confirm": 0
+    },
+    "llm_calls": 2
+  }
+}

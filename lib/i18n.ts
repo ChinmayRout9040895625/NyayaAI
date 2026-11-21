@@ -1,0 +1,226 @@
+import type { Domain, Language } from "./schemas";
+
+/**
+ * Case-panel interface text in English and Hindi.
+ * Scope: labels, headings, badges and the non-legal evidence explanations.
+ * NOT translated: legal rule messages (time limit / forum) and official provision text – translating
+ * legal wording would create new, unverified legal text, so those stay in English and are marked as such.
+ * Hinglish users get the English (Latin-script) interface.
+ */
+export type UiLang = "en" | "hi";
+
+export function uiLang(language: Language | undefined): UiLang {
+  return language === "hi" ? "hi" : "en";
+}
+
+/** Consumer fact table only for consumer (or not-yet-classified) cases; stub domains get a short summary instead. */
+export function panelMode(domain: Domain): "consumer" | "stub" {
+  return domain === "tenancy" || domain === "employment" || domain === "out_of_scope" ? "stub" : "consumer";
+}
+
+const en = {
+  tabs: { Summary: "Summary", "Law & sources": "Law & sources", Evidence: "Evidence", Documents: "Documents" },
+  domain: "Domain",
+  language: "Language",
+  turns: "Turns",
+  stage: "Stage",
+  domains: { consumer: "consumer", tenancy: "tenancy", employment: "employment", out_of_scope: "out of scope", unknown: "unknown" },
+  stages: { followup: "follow-up", analysis: "analysis", stub: "general pointers" },
+  languages: { en: "English", hi: "Hindi", hinglish: "Hinglish" },
+  stubNotice: "This topic is recognised but not covered in depth. Only general pointers are given; no legal provisions are cited.",
+  whatYouToldMe: "What you told me",
+  usefulToKeep: "Useful to keep",
+  caseFacts: "Case facts",
+  youSaid: "you said",
+  inferred: "inferred – please confirm",
+  dateInferred: "date worked out by AI – please confirm",
+  missing: "missing",
+  needed: "(needed)",
+  timeline: "Timeline",
+  dateUnknown: "date ?",
+  checks: "Checks calculated by code",
+  inEnglish: "",
+  assumption: "Assumption",
+  whereYouStand: "Where you stand",
+  options: "Options",
+  nextSteps: "Next steps",
+  uncertain: "Uncertain / missing",
+  lawyer: "A lawyer's review is recommended.",
+  freeAid: "Free legal aid: NALSA helpline 15100.",
+  systemNotes: "System notes",
+  yourWords: "Your words",
+  library: (n: number, c: number, d: string) => `Library: ${n} provisions, ${c} verified and citable, last verified ${d}. Statutes only – no case law.`,
+  analysisLater: "Legal analysis appears once enough facts are collected.",
+  sourceCheck: (m: number, t: number) => `Source check: ${m} of ${t} statements matched official text`,
+  downgraded: (n: number) => ` · ${n} downgraded`,
+  removed: (n: number) => ` · ${n} unverified reference(s) removed`,
+  reasoningNote: "", // English uses the server's own note text
+  guaranteeFlag: (x: string) => `Outcome language flagged (${x}). No outcome is guaranteed.`,
+  statements: "Statements",
+  verifiedLaw: "Verified law (quote matched the official text)",
+  noneVerified: "No statement in this answer could be matched to the official text.",
+  needsVerification: "Needs checking by a lawyer (not verified)",
+  needsReason: {
+    general_explanation: "general explanation – no official source quoted",
+    citation_failed: "citation failed the source check",
+    unsupported_legal_statement: "legal statement without a verified source",
+    invalid_reference: "cited a reference that is not verified",
+    model_flagged: "flagged by the AI as needing a lawyer's check",
+  },
+  relabelledCount: (n: number) => `${n} legal statement(s) moved to "needs checking" because no verified source supports them.`,
+  numbersRemoved: (n: number) => `${n} number(s) removed that could not be traced to your messages, the official text or a code check`,
+  quoteMatched: "quote matched",
+  generalExpl: "general explanation – not a cited rule",
+  citationFailed: "citation failed check – treat as unverified",
+  removedList: "Removed (not verified)",
+  supplied: "Verified provisions supplied to the AI",
+  used: "(used)",
+  status: "Status",
+  verified: "verified",
+  officialSource: "official source",
+  officialText: "Official text",
+  noProvision: "No verified provision was available for this question, so no law is cited. The guidance above is general only.",
+  relatedUnverified: "Related but NOT verified (not cited)",
+  evidenceIntro: "Proof that usually matters in a consumer dispute. Status is based only on what you have told me.",
+  have: "you have it",
+  dontHave: "you don't have it",
+  notMentioned: "not mentioned",
+  startConversation: "Start the conversation to see the checklist.",
+  // documents tab
+  legalNotice: "Legal notice",
+  complaintDraft: "Consumer complaint draft",
+  yourDetails: "Your details (stay in your browser – never sent to the AI)",
+  placeholders: (m: number, c: number) => `${m} missing · ${c} to confirm`,
+  download: "Download .md",
+  print: "Print / Save as PDF",
+  docEnglish: "",
+  docsConsumerOnly: "Documents are available for consumer disputes once the case has started.",
+  partyLabels: {
+    complainant_name: "Your full name",
+    complainant_address: "Your address",
+    complainant_contact: "Your phone / email",
+    opposite_party_name: "Seller / company legal name",
+    opposite_party_address: "Seller / company address",
+    order_or_invoice_no: "Order / invoice number",
+    reply_days: "Days to respond (e.g. 15)",
+    district: "District / state (for complaint)",
+  },
+};
+
+export type UiText = typeof en;
+
+const hi: UiText = {
+  tabs: { Summary: "सारांश", "Law & sources": "कानून और स्रोत", Evidence: "सबूत", Documents: "दस्तावेज़" },
+  domain: "क्षेत्र",
+  language: "भाषा",
+  turns: "बातचीत",
+  stage: "चरण",
+  domains: { consumer: "उपभोक्ता", tenancy: "किरायेदारी", employment: "रोज़गार", out_of_scope: "दायरे से बाहर", unknown: "अज्ञात" },
+  stages: { followup: "सवाल", analysis: "विश्लेषण", stub: "सामान्य जानकारी" },
+  languages: { en: "अंग्रेज़ी", hi: "हिंदी", hinglish: "हिंग्लिश" },
+  stubNotice: "यह विषय पहचाना गया है, लेकिन NyayaAI इसे विस्तार से कवर नहीं करता। केवल सामान्य सुझाव दिए गए हैं; किसी कानूनी प्रावधान का हवाला नहीं दिया गया है।",
+  whatYouToldMe: "आपने जो बताया",
+  usefulToKeep: "संभालकर रखने लायक",
+  caseFacts: "मामले के तथ्य",
+  youSaid: "आपने कहा",
+  inferred: "अनुमानित – कृपया पुष्टि करें",
+  dateInferred: "तारीख AI ने निकाली – कृपया पुष्टि करें",
+  missing: "नहीं मिला",
+  needed: "(ज़रूरी)",
+  timeline: "समय-क्रम",
+  dateUnknown: "तारीख ?",
+  checks: "कोड द्वारा की गई जाँच",
+  inEnglish: "(यह जानकारी अंग्रेज़ी में है)",
+  assumption: "मान्यता",
+  whereYouStand: "आपकी स्थिति",
+  options: "विकल्प",
+  nextSteps: "अगले कदम",
+  uncertain: "अनिश्चित / कमी",
+  lawyer: "किसी वकील से जाँच करवाने की सलाह दी जाती है।",
+  freeAid: "मुफ़्त कानूनी सहायता: NALSA हेल्पलाइन 15100।",
+  systemNotes: "सिस्टम नोट्स (अंग्रेज़ी में)",
+  yourWords: "आपके शब्द",
+  library: (n, c, d) => `लाइब्रेरी: ${n} प्रावधान, जिनमें ${c} सत्यापित और उद्धृत करने योग्य हैं; अंतिम सत्यापन ${d}। केवल कानून (अधिनियम) – कोई न्यायिक फ़ैसला नहीं।`,
+  analysisLater: "पर्याप्त जानकारी मिलने पर कानूनी विश्लेषण यहाँ दिखेगा।",
+  sourceCheck: (m, t) => `स्रोत जाँच: ${t} में से ${m} कथन आधिकारिक पाठ से मेल खाते हैं`,
+  downgraded: (n) => ` · ${n} कथन अमान्य किए गए`,
+  removed: (n) => ` · ${n} असत्यापित संदर्भ हटाए गए`,
+  reasoningNote:
+    "स्रोत जाँच केवल यह पुष्टि करती है कि उद्धृत शब्द किसी सत्यापित आधिकारिक प्रावधान में मौजूद हैं। इससे यह पुष्टि नहीं होती कि वह प्रावधान आपके मामले पर लागू होता है या कानूनी तर्क सही है। कोई कदम उठाने से पहले किसी वकील से जाँच करवाएँ।",
+  guaranteeFlag: (x) => `परिणाम से जुड़े शब्द चिह्नित किए गए (${x})। किसी परिणाम की गारंटी नहीं है।`,
+  statements: "कथन",
+  verifiedLaw: "सत्यापित कानून (उद्धरण आधिकारिक पाठ से मेल खाया)",
+  noneVerified: "इस जवाब का कोई भी कथन आधिकारिक पाठ से मेल नहीं खा सका।",
+  needsVerification: "वकील से जाँच ज़रूरी (सत्यापित नहीं)",
+  needsReason: {
+    general_explanation: "सामान्य व्याख्या – कोई आधिकारिक स्रोत उद्धृत नहीं",
+    citation_failed: "हवाला स्रोत-जाँच में विफल",
+    unsupported_legal_statement: "बिना सत्यापित स्रोत का कानूनी कथन",
+    invalid_reference: "असत्यापित संदर्भ का हवाला दिया गया",
+    model_flagged: "AI ने वकील से जाँच के लिए चिह्नित किया",
+  },
+  relabelledCount: (n) => `${n} कानूनी कथन "जाँच ज़रूरी" में ले जाए गए, क्योंकि कोई सत्यापित स्रोत उनका समर्थन नहीं करता।`,
+  numbersRemoved: (n) => `${n} संख्या(एँ) हटाई गईं जो आपके संदेशों, आधिकारिक पाठ या कोड की जाँच से मेल नहीं खातीं`,
+  quoteMatched: "उद्धरण मेल खाया",
+  generalExpl: "सामान्य व्याख्या – किसी नियम का हवाला नहीं",
+  citationFailed: "हवाला जाँच में विफल – इसे असत्यापित मानें",
+  removedList: "हटाए गए (असत्यापित)",
+  supplied: "AI को दिए गए सत्यापित प्रावधान (आधिकारिक पाठ अंग्रेज़ी में)",
+  used: "(उपयोग किया गया)",
+  status: "स्थिति",
+  verified: "सत्यापित",
+  officialSource: "आधिकारिक स्रोत",
+  officialText: "आधिकारिक पाठ",
+  noProvision: "इस प्रश्न के लिए कोई सत्यापित प्रावधान उपलब्ध नहीं था, इसलिए किसी कानून का हवाला नहीं दिया गया। ऊपर दी गई जानकारी केवल सामान्य है।",
+  relatedUnverified: "संबंधित, लेकिन असत्यापित (हवाला नहीं दिया गया)",
+  evidenceIntro: "उपभोक्ता विवाद में आम तौर पर काम आने वाले सबूत। स्थिति केवल आपकी बताई बातों पर आधारित है।",
+  have: "आपके पास है",
+  dontHave: "आपके पास नहीं है",
+  notMentioned: "ज़िक्र नहीं किया",
+  startConversation: "सूची देखने के लिए बातचीत शुरू करें।",
+  legalNotice: "कानूनी नोटिस",
+  complaintDraft: "उपभोक्ता शिकायत का मसौदा",
+  yourDetails: "आपका विवरण (केवल आपके ब्राउज़र में रहता है – AI को कभी नहीं भेजा जाता)",
+  placeholders: (m, c) => `${m} जानकारी बाकी · ${c} पुष्टि करनी है`,
+  download: ".md डाउनलोड करें",
+  print: "प्रिंट / PDF के रूप में सहेजें",
+  docEnglish: "दस्तावेज़ अंग्रेज़ी में तैयार किया गया है, क्योंकि कानूनी नोटिस और शिकायतें आम तौर पर अंग्रेज़ी में दी जाती हैं।",
+  docsConsumerOnly: "दस्तावेज़ केवल उपभोक्ता विवादों के लिए उपलब्ध हैं, मामला शुरू होने के बाद।",
+  partyLabels: {
+    complainant_name: "आपका पूरा नाम",
+    complainant_address: "आपका पता",
+    complainant_contact: "आपका फ़ोन / ईमेल",
+    opposite_party_name: "विक्रेता / कंपनी का कानूनी नाम",
+    opposite_party_address: "विक्रेता / कंपनी का पता",
+    order_or_invoice_no: "ऑर्डर / इनवॉइस नंबर",
+    reply_days: "जवाब देने के लिए दिन (जैसे 15)",
+    district: "ज़िला / राज्य (शिकायत के लिए)",
+  },
+};
+
+export const UI_TEXT: Record<UiLang, UiText> = { en, hi };
+
+/** Hindi labels for consumer case fields (English labels live in lib/domains/consumer.ts). */
+export const FIELD_LABELS_HI: Record<string, string> = {
+  problem_description: "क्या गड़बड़ हुई",
+  trader_name: "विक्रेता / कंपनी / प्लेटफ़ॉर्म",
+  product_or_service: "सामान या सेवा",
+  amount_paid: "चुकाई गई राशि (₹)",
+  purchase_date: "खरीद / सेवा की तारीख",
+  prior_complaint: "पहले की गई शिकायत और जवाब",
+  relief_wanted: "आप क्या चाहते हैं",
+  purchase_purpose: "निजी या व्यावसायिक उपयोग",
+  user_state: "आपका राज्य / शहर",
+};
+
+/** Hindi evidence labels and practical (non-legal) explanations. */
+export const EVIDENCE_HI: Record<string, { label: string; why: string }> = {
+  invoice: { label: "बिल / रसीद / इनवॉइस", why: "यह दिखाता है कि आपने सामान किससे, कब और कितने में खरीदा – उपभोक्ता दावे और चुकाई गई राशि का आधार।" },
+  order_confirmation: { label: "ऑर्डर आईडी / बुकिंग पुष्टि", why: "आपको लेन-देन से जोड़ता है, खासकर ऑनलाइन खरीद में।" },
+  payment_proof: { label: "भुगतान का प्रमाण (बैंक/UPI/कार्ड स्टेटमेंट)", why: "दिखाता है कि पैसा सच में आपके खाते से गया – अगर विक्रेता राशि पर विवाद करे तो यह काम आता है।" },
+  product_photos: { label: "खराबी की फ़ोटो / वीडियो", why: "सामान की हालत दिखाते हैं; सामान लौटाने या ठीक कराने से पहले ही फ़ोटो ले लें।" },
+  warranty_card: { label: "वारंटी / गारंटी कार्ड", why: "दिखाता है कि विक्रेता या निर्माता ने क्या वादा किया था और कितने समय के लिए।" },
+  complaint_records: { label: "आपकी शिकायतें (ईमेल, चैट, टिकट नंबर)", why: "दिखाता है कि आपने उन्हें समस्या सुधारने का मौका दिया, और कब – नोटिस और तारीखों के लिए उपयोगी।" },
+  written_refusal: { label: "उनका लिखित जवाब / इनकार", why: "उनका पक्ष दिखाता है; इसकी तारीख यह तय करने में अहम हो सकती है कि विवाद कब शुरू हुआ।" },
+  delivery_proof: { label: "डिलीवरी / कूरियर / सेवा का रिकॉर्ड", why: "दिखाता है कि क्या डिलीवर हुआ या किया गया (या नहीं), और कब।" },
+};

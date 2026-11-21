@@ -1,0 +1,398 @@
+{
+  "scenario": {
+    "id": "02-defective-phone-hinglish",
+    "title": "Defective phone, warranty refused (Hinglish)",
+    "category": "consumer_core",
+    "turns": [
+      "Bhai maine 2026-06-02 ko ek phone liya tha 18,999 ka, local shop 'Mobile World' se. 2 mahine mein display mein green line aa gayi. Service center bol raha hai warranty mein cover nahi hai, liquid damage hai, par phone kabhi geela hua hi nahi.",
+      "Shop wale ne bola company se baat karo. Maine service center ko email kiya tha, unhone written mein mana kar diya. Mujhe replacement ya refund chahiye. Personal use ke liye liya tha, Lucknow mein rehta hoon. Bill aur warranty card dono hai."
+    ],
+    "expect": {
+      "domain": "consumer",
+      "escalation": "none",
+      "final_stage": "analysis"
+    }
+  },
+  "run": {
+    "at": "2026-11-21T04:08:55.650Z",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "corpus": {
+      "entries": 13,
+      "citable": 9,
+      "last_verified": "2026-11-21"
+    }
+  },
+  "transcript": [
+    {
+      "role": "user",
+      "content": "Bhai maine 2026-06-02 ko ek phone liya tha 18,999 ka, local shop 'Mobile World' se. 2 mahine mein display mein green line aa gayi. Service center bol raha hai warranty mein cover nahi hai, liquid damage hai, par phone kabhi geela hua hi nahi."
+    },
+    {
+      "role": "assistant",
+      "content": "Aapke phone mein display issue aana aur service center dwara bina strong proof ke warranty refuse karna ek consumer dispute hai. CPA 2019 ke tehat defected product par aap free repair, replacement ya refund claim kar sakte hain. Aapka case 2 saal ki limitation period ke andar hai.\n\nAapke paas yeh vikalp hain:\n1. Mobile World aur Service Center ko ek written notice ya email bhejein aur ek reasonable deadline dein.\n2. National Consumer Helpline (NCH) par grievance register karein.\n3. Agar samadhan na mile toh District Consumer Commission (e-Daakhil portal) par complaint file karein. (Kripya filing se pehle District Commission ki monetary limit verify kar lein).\n\nAgle kadam:\n- Job sheet aur purchase bill sambhal kar rakhein.\n- Screen defect ke clear photos/videos le lein.\n- Written notice bhejein.\n\nYeh sirf kanooni jankari hai, koi legal advice nahi."
+    },
+    {
+      "role": "user",
+      "content": "Shop wale ne bola company se baat karo. Maine service center ko email kiya tha, unhone written mein mana kar diya. Mujhe replacement ya refund chahiye. Personal use ke liye liya tha, Lucknow mein rehta hoon. Bill aur warranty card dono hai."
+    }
+  ],
+  "responses": [
+    {
+      "stage": "analysis",
+      "reply": "Aapke phone mein display issue aana aur service center dwara bina strong proof ke warranty refuse karna ek consumer dispute hai. CPA 2019 ke tehat defected product par aap free repair, replacement ya refund claim kar sakte hain. Aapka case 2 saal ki limitation period ke andar hai.\n\nAapke paas yeh vikalp hain:\n1. Mobile World aur Service Center ko ek written notice ya email bhejein aur ek reasonable deadline dein.\n2. National Consumer Helpline (NCH) par grievance register karein.\n3. Agar samadhan na mile toh District Consumer Commission (e-Daakhil portal) par complaint file karein. (Kripya filing se pehle District Commission ki monetary limit verify kar lein).\n\nAgle kadam:\n- Job sheet aur purchase bill sambhal kar rakhein.\n- Screen defect ke clear photos/videos le lein.\n- Written notice bhejein.\n\nYeh sirf kanooni jankari hai, koi legal advice nahi.",
+      "case": {
+        "domain": "consumer",
+        "language": "hinglish",
+        "facts": {
+          "purchase_date": {
+            "value": "2026-06-02",
+            "source": "user_stated",
+            "quote": "2026-06-02"
+          },
+          "product_or_service": {
+            "value": "phone",
+            "source": "user_stated",
+            "quote": "phone"
+          },
+          "amount_paid": {
+            "value": "18999",
+            "source": "inferred",
+            "quote": "18,999"
+          },
+          "trader_name": {
+            "value": "Mobile World",
+            "source": "user_stated",
+            "quote": "Mobile World"
+          },
+          "problem_description": {
+            "value": "2 mahine mein display mein green line aa gayi. Service center bol raha hai warranty mein cover nahi hai, liquid damage hai, par phone kabhi geela hua hi nahi.",
+            "source": "user_stated",
+            "quote": "2 mahine mein display mein green line aa gayi. Service center bol raha hai warranty mein cover nahi hai, liquid damage hai, par phone kabhi geela hua hi nahi."
+          },
+          "prior_complaint": {
+            "value": "Service center bol raha hai warranty mein cover nahi hai, liquid damage hai",
+            "source": "user_stated",
+            "quote": "Service center bol raha hai warranty mein cover nahi hai, liquid damage hai"
+          }
+        },
+        "timeline": [
+          {
+            "date": "2026-06-02",
+            "event": "Purchased phone for Rs. 18,999 from Mobile World",
+            "source": "user_stated",
+            "quote": "2026-06-02 ko ek phone liya tha 18,999 ka, local shop 'Mobile World' se"
+          },
+          {
+            "date": "2026-08-02",
+            "event": "Green line appeared on screen after 2 months",
+            "source": "user_stated",
+            "quote": "2 mahine mein display mein green line aa gayi"
+          }
+        ],
+        "evidence": {},
+        "notes": [
+          "Amount 18999 not found in your messages – marked as inferred, please confirm."
+        ],
+        "turns": 1
+      },
+      "followups": [],
+      "missing": [
+        "relief_wanted",
+        "purchase_purpose",
+        "user_state"
+      ],
+      "escalation": {
+        "level": "none",
+        "reasons": [],
+        "helplines": []
+      },
+      "evidence": [
+        {
+          "key": "invoice",
+          "label": "Invoice / bill / receipt",
+          "why": "Proves you bought it, from whom, when and for how much – the basis of a consumer claim and of the amount paid.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "order_confirmation",
+          "label": "Order ID / booking confirmation",
+          "why": "Links you to the transaction, especially for online purchases.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "payment_proof",
+          "label": "Payment proof (bank/UPI/card statement)",
+          "why": "Shows the money actually left your account, which matters if the seller disputes the amount.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "product_photos",
+          "label": "Photos / videos of the defect",
+          "why": "Shows the condition of the goods; take them before returning or repairing anything.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "warranty_card",
+          "label": "Warranty / guarantee card",
+          "why": "Shows what the seller or manufacturer promised and for how long.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "complaint_records",
+          "label": "Your complaints (emails, chats, ticket numbers)",
+          "why": "Shows you gave them a chance to fix it, and when – useful for the notice and for dates.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "written_refusal",
+          "label": "Their reply / refusal in writing",
+          "why": "Shows their position; the date can matter for when the dispute arose.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "delivery_proof",
+          "label": "Delivery / courier / service record",
+          "why": "Shows what was (or wasn't) delivered or done, and when.",
+          "state": "not_mentioned"
+        }
+      ],
+      "analysis": {
+        "issue_summary": "Aapne Mobile World se Rs 18,999 ka phone kharida jisme 2 mahine mein green line display issue aa gaya. Service center ise liquid damage bata kar warranty dene se mana kar raha hai, jabki aapka kehna hai ki phone geela nahi hua.",
+        "claims": [
+          {
+            "text": "Aap Consumer Protection Act, 2019 ke tehat 'consumer' ki shreni mein aate hain agar yeh phone aapne personal use ke liye kharida hai.",
+            "type": "verified_law",
+            "provision_id": "CPA2019-S2-7",
+            "support_quote": "\"consumer\" means any person who-- (i) buys any goods for a consideration which has been paid or promised or partly paid and partly promised",
+            "status": "source_matched"
+          },
+          {
+            "text": "Product mein koi fault ya kami hone par use 'defect' mana jata hai.",
+            "type": "verified_law",
+            "provision_id": "CPA2019-S2-10",
+            "support_quote": "\"defect\" means any fault, imperfection or shortcoming in the quality, quantity, potency, purity or standard which is required to be maintained",
+            "status": "source_matched"
+          },
+          {
+            "text": "Consumer Commission complaint ki date se do saal ke andar case file karne ki anumati deta hai.",
+            "type": "verified_law",
+            "provision_id": "CPA2019-S69",
+            "support_quote": "The District Commission, the State Commission or the National Commission shall not admit a complaint unless it is filed within two years from the date on which the cause of action has arisen.",
+            "status": "source_matched"
+          }
+        ],
+        "options": [
+          {
+            "title": "Formal Legal Notice bhejein",
+            "description": "Seller aur service center ko ek likhit legal notice bhejein jisme bill copy attach karein aur repair, replacement ya refund ki demand karein."
+          },
+          {
+            "title": "National Consumer Helpline par complaint karein",
+            "description": "Aap NCH portal ya helpline number par toll-free call karke grievance register kara sakte hain."
+          },
+          {
+            "title": "District Consumer Commission mein case file karein",
+            "description": "Agar seller/service center respond na kare, toh aap e-daakhil portal ke zariye online ya District Commission mein offline complaint file kar sakte hain."
+          }
+        ],
+        "next_steps": [
+          "Purchase invoice/bill aur service center ki denial job sheet secure karke rakhein.",
+          "Phone ki current condition aur green line display ke photos aur video record kar lein.",
+          "Shopkeeper aur service center ko ek written email ya legal notice bhejkar 15 din ka time dein."
+        ],
+        "uncertainties": [
+          "Aapne phone personal use ke liye liya tha ya business use ke liye?",
+          "Kya aapke paas service center ki written inspection report ya job sheet hai jisme unhone 'liquid damage' likha hai?"
+        ],
+        "lawyer_recommended": false,
+        "lawyer_reason": "",
+        "report": {
+          "claims_total": 3,
+          "claims_source_matched": 3,
+          "claims_downgraded": 0,
+          "unverified_refs_removed": [],
+          "guarantee_phrases_flagged": [],
+          "note": "Source check only confirms that quoted words exist in a verified official provision. It does not confirm that the provision applies to your facts or that the legal reasoning is correct. Have a lawyer review before acting."
+        }
+      },
+      "rules": [
+        {
+          "status": "within",
+          "message": "About 5 month(s) have passed. That appears to be within the two-year period in Section 69(1).",
+          "provision_ids": [
+            "CPA2019-S69"
+          ],
+          "assumptions": [
+            "Counted from the purchase/service date (2026-06-02). The \"cause of action\" may arise later – for example when the defect appeared or when the trader finally refused – which could give you more time. This is a conservative estimate."
+          ]
+        },
+        {
+          "status": "rule_not_verified",
+          "message": "Which Commission hears a case depends on the value of the goods or services paid as consideration – not on the compensation you claim. The Act originally set the District Commission's limit at one crore rupees but lets the Central Government prescribe a different value by rules, and NyayaAI has not verified the current rules – so it cannot tell you the current limit. Confirm the current limit on the official consumer e-filing portal or with the Commission before filing.",
+          "provision_ids": [],
+          "assumptions": []
+        }
+      ],
+      "sources": [
+        {
+          "id": "CPA2019-S2-7",
+          "act": "Consumer Protection Act, 2019",
+          "section": "2(7)",
+          "title": "Definition of 'consumer'",
+          "text": "(7) \"consumer\" means any person who-- (i) buys any goods for a consideration which has been paid or promised or partly paid and partly promised, or under any system of deferred payment and includes any user of such goods other than the person who buys such goods for consideration paid or promised or partly paid or partly promised, or under any system of deferred payment, when such use is made with the approval of such person, but does not include a person who obtains such goods for resale or for any commercial purpose; or (ii) hires or avails of any service for a consideration which has been paid or promised or partly paid and partly promised, or under any system of deferred payment and includes any beneficiary of such service other than the person who hires or avails of the services for consideration paid or promised, or partly paid and partly promised, or under any system of deferred payment, when such services are availed of with the approval of the first mentioned person, but does not include a person who avails of such service for any commercial purpose. Explanation. --For the purposes of this clause, -- (a) the expression \"commercial purpose\" does not include use by a person of goods bought and used by him exclusively for the purpose of earning his livelihood, by means of self-employment; (b) the expressions \"buys any goods\" and \"hires or avails any services\" includes offline or online transactions through electronic means or by teleshopping or direct selling or multi-level marketing;",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": true
+        },
+        {
+          "id": "CPA2019-S2-10",
+          "act": "Consumer Protection Act, 2019",
+          "section": "2(10)",
+          "title": "Definition of 'defect'",
+          "text": "(10) \"defect\" means any fault, imperfection or shortcoming in the quality, quantity, potency, purity or standard which is required to be maintained by or under any law for the time being in force or under any contract, express or implied or as is claimed by the trader in any manner whatsoever in relation to any goods or product and the expression \"defective\" shall be construed accordingly;",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": true
+        },
+        {
+          "id": "CPA2019-S2-11",
+          "act": "Consumer Protection Act, 2019",
+          "section": "2(11)",
+          "title": "Definition of 'deficiency'",
+          "text": "(11) \"deficiency\" means any fault, imperfection, shortcoming or inadequacy in the quality, nature and manner of performance which is required to be maintained by or under any law for the time being in force or has been undertaken to be performed by a person in pursuance of a contract or otherwise in relation to any service and includes-- (i) any act of negligence or omission or commission by such person which causes loss or injury to the consumer; and (ii) deliberate withholding of relevant information by such person to the consumer;",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        },
+        {
+          "id": "CPA2019-S34-2",
+          "act": "Consumer Protection Act, 2019",
+          "section": "34(2)",
+          "title": "Jurisdiction of District Commission – where to file",
+          "text": "34. Jurisdiction of District Commission.-- (2) A complaint shall be instituted in a District Commission within the local limits of whose jurisdiction,-- (a) the opposite party or each of the opposite parties, where there are more than one, at the time of the institution of the complaint, ordinarily resides or carries on business or has a branch office or personally works for gain; or (b) any of the opposite parties, where there are more than one, at the time of the institution of the complaint, actually and voluntarily resides, or carries on business or has a branch office, or personally works for gain, provided that in such case the permission of the District Commission is given; or (c) the cause of action, wholly or in part, arises; or (d) the complainant resides or personally works for gain.",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        },
+        {
+          "id": "CPA2019-S2-47-VIII",
+          "act": "Consumer Protection Act, 2019",
+          "section": "2(47)(viii)",
+          "title": "Unfair trade practice – refusing to take back defective goods / refund",
+          "text": "(viii) refusing, after selling goods or rendering services, to take back or withdraw defective goods or to withdraw or discontinue deficient services and to refund the consideration thereof, if paid, within the period stipulated in the bill or cash memo or receipt or in the absence of such stipulation, within a period of thirty days;",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        },
+        {
+          "id": "CPA2019-S35-1",
+          "act": "Consumer Protection Act, 2019",
+          "section": "35(1)",
+          "title": "Manner in which complaint shall be made",
+          "text": "35. Manner in which complaint shall be made.--(1) A complaint, in relation to any goods sold or delivered or agreed to be sold or delivered or any service provided or agreed to be provided, may be filed with a District Commission by-- (a) the consumer,-- (i) to whom such goods are sold or delivered or agreed to be sold or delivered or such service is provided or agreed to be provided; or (ii) who alleges unfair trade practice in respect of such goods or service; [...] Provided that the complaint under this sub-section may be filed electronically in such manner as may be prescribed.",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        },
+        {
+          "id": "CPA2019-S39-1",
+          "act": "Consumer Protection Act, 2019",
+          "section": "39(1)",
+          "title": "Findings of District Commission (reliefs)",
+          "text": "39. Findings of District Commission.--(1) Where the District Commission is satisfied that the goods complained against suffer from any of the defects specified in the complaint or that any of the allegations contained in the complaint about the services or any unfair trade practices, or claims for compensation under product liability are proved, it shall issue an order to the opposite party directing him to do one or more of the following, namely:-- (a) to remove the defect pointed out by the appropriate laboratory from the goods in question; (b) to replace the goods with new goods of similar description which shall be free from any defect; (c) to return to the complainant the price, or, as the case may be, the charges paid by the complainant along with such interest on such price or charges as may be decided; (d) to pay such amount as may be awarded by it as compensation to the consumer for any loss or injury suffered by the consumer due to the negligence of the opposite party: Provided that the District Commission shall have the power to grant punitive damages in such circumstances as it deems fit; (e) to pay such amount as may be awarded by it as compensation in a product liability action under Chapter VI; (f) to remove the defects in goods or deficiencies in the services in question; [...]",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        },
+        {
+          "id": "CPA2019-S69",
+          "act": "Consumer Protection Act, 2019",
+          "section": "69",
+          "title": "Limitation period",
+          "text": "69. Limitation period.--(1) The District Commission, the State Commission or the National Commission shall not admit a complaint unless it is filed within two years from the date on which the cause of action has arisen. (2) Notwithstanding anything contained in sub-section (1), a complaint may be entertained after the period specified in sub-section (1), if the complainant satisfies the District Commission, the State Commission or the National Commission, as the case may be, that he had sufficient cause for not filing the complaint within such period: Provided that no such complaint shall be entertained unless the District Commission or the State Commission or the National Commission, as the case may be, records its reasons for condoning such delay.",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": true
+        },
+        {
+          "id": "CPA2019-S100",
+          "act": "Consumer Protection Act, 2019",
+          "section": "100",
+          "title": "Act not in derogation of any other law",
+          "text": "100. Act not in derogation of any other law.--The provisions of this Act shall be in addition to and not in derogation of the provisions of any other law for the time being in force.",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        }
+      ],
+      "unverified_matches": [],
+      "meta": {
+        "provider": "gemini",
+        "model": "gemini-3.5-flash",
+        "prompt_version": "2026-11-21.v2",
+        "llm_calls": 2
+      },
+      "raw": {
+        "understanding": "{\n  \"domain\": \"consumer\",\n  \"domain_confidence\": 0.95,\n  \"language\": \"hinglish\",\n  \"extracted\": [\n    {\n      \"field\": \"purchase_date\",\n      \"value\": \"2026-06-02\",\n      \"source\": \"user_stated\",\n      \"quote\": \"2026-06-02\"\n    },\n    {\n      \"field\": \"product_or_service\",\n      \"value\": \"phone\",\n      \"source\": \"user_stated\",\n      \"quote\": \"phone\"\n    },\n    {\n      \"field\": \"amount_paid\",\n      \"value\": \"18999\",\n      \"source\": \"user_stated\",\n      \"quote\": \"18,999\"\n    },\n    {\n      \"field\": \"trader_name\",\n      \"value\": \"Mobile World\",\n      \"source\": \"user_stated\",\n      \"quote\": \"Mobile World\"\n    },\n    {\n      \"field\": \"problem_description\",\n      \"value\": \"2 mahine mein display mein green line aa gayi. Service center bol raha hai warranty mein cover nahi hai, liquid damage hai, par phone kabhi geela hua hi nahi.\",\n      \"source\": \"user_stated\",\n      \"quote\": \"2 mahine mein display mein green line aa gayi. Service center bol raha hai warranty mein cover nahi hai, liquid damage hai, par phone kabhi geela hua hi nahi.\"\n    },\n    {\n      \"field\": \"prior_complaint\",\n      \"value\": \"Service center bol raha hai warranty mein cover nahi hai, liquid damage hai\",\n      \"source\": \"user_stated\",\n      \"quote\": \"Service center bol raha hai warranty mein cover nahi hai, liquid damage hai\"\n    }\n  ],\n  \"timeline\": [\n    {\n      \"date\": \"2026-06-02\",\n      \"event\": \"Purchased phone for Rs. 18,999 from Mobile World\",\n      \"quote\": \"2026-06-02 ko ek phone liya tha 18,999 ka, local shop 'Mobile World' se\"\n    },\n    {\n      \"date\": \"2026-08-02\",\n      \"event\": \"Green line appeared on screen after 2 months\",\n      \"quote\": \"2 mahine mein display mein green line aa gayi\"\n    }\n  ],\n  \"evidence_mentioned\": [],\n  \"search_terms\": [\n    \"defective phone display green line\",\n    \"warranty refusal false liquid damage claim\",\n    \"deficiency in service mobile manufacturer\"\n  ],\n  \"user_wants_analysis\": false,\n  \"acknowledgement\": \"Samajh gaya bhai, phone lene ke kuch hi mahino mein display kharab hona aur service center ka bina vajah warranty refuse karna kafi disappointing hai.\"\n}",
+        "analysis": "{\n \"issue_summary\": \"Aapne Mobile World se Rs 18,999 ka phone kharida jisme 2 mahine mein green line display issue aa gaya. Service center ise liquid damage bata kar warranty dene se mana kar raha hai, jabki aapka kehna hai ki phone geela nahi hua.\",\n \"claims\": [\n  {\n   \"text\": \"Aap Consumer Protection Act, 2019 ke tehat 'consumer' ki shreni mein aate hain agar yeh phone aapne personal use ke liye kharida hai.\",\n   \"type\": \"verified_law\",\n   \"provision_id\": \"CPA2019-S2-7\",\n   \"support_quote\": \"\\\"consumer\\\" means any person who-- (i) buys any goods for a consideration which has been paid or promised or partly paid and partly promised\"\n  },\n  {\n   \"text\": \"Product mein koi fault ya kami hone par use 'defect' mana jata hai.\",\n   \"type\": \"verified_law\",\n   \"provision_id\": \"CPA2019-S2-10\",\n   \"support_quote\": \"\\\"defect\\\" means any fault, imperfection or shortcoming in the quality, quantity, potency, purity or standard which is required to be maintained\"\n  },\n  {\n   \"text\": \"Consumer Commission complaint ki date se do saal ke andar case file karne ki anumati deta hai.\",\n   \"type\": \"verified_law\",\n   \"provision_id\": \"CPA2019-S69\",\n   \"support_quote\": \"The District Commission, the State Commission or the National Commission shall not admit a complaint unless it is filed within two years from the date on which the cause of action has arisen.\"\n  }\n ],\n \"options\": [\n  {\n   \"title\": \"Formal Legal Notice bhejein\",\n   \"description\": \"Seller aur service center ko ek likhit legal notice bhejein jisme bill copy attach karein aur repair, replacement ya refund ki demand karein.\"\n  },\n  {\n   \"title\": \"National Consumer Helpline par complaint karein\",\n   \"description\": \"Aap NCH portal ya helpline number par toll-free call karke grievance register kara sakte hain.\"\n  },\n  {\n   \"title\": \"District Consumer Commission mein case file karein\",\n   \"description\": \"Agar seller/service center respond na kare, toh aap e-daakhil portal ke zariye online ya District Commission mein offline complaint file kar sakte hain.\"\n  }\n ],\n \"next_steps\": [\n  \"Purchase invoice/bill aur service center ki denial job sheet secure karke rakhein.\",\n  \"Phone ki current condition aur green line display ke photos aur video record kar lein.\",\n  \"Shopkeeper aur service center ko ek written email ya legal notice bhejkar 15 din ka time dein.\"\n ],\n \"uncertainties\": [\n  \"Aapne phone personal use ke liye liya tha ya business use ke liye?\",\n  \"Kya aapke paas service center ki written inspection report ya job sheet hai jisme unhone 'liquid damage' likha hai?\"\n ],\n \"lawyer_recommended\": false,\n \"lawyer_reason\": \"\",\n \"reply\": \"Aapke phone mein display issue aana aur service center dwara bina strong proof ke warranty refuse karna ek consumer dispute hai. CPA 2019 ke tehat defected product par aap free repair, replacement ya refund claim kar sakte hain. Aapka case 2 saal ki limitation period ke andar hai.\\n\\nAapke paas yeh vikalp hain:\\n1. Mobile World aur Service Center ko ek written notice ya email bhejein aur ek reasonable deadline dein.\\n2. National Consumer Helpline (NCH) par grievance register karein.\\n3. Agar samadhan na mile toh District Consumer Commission (e-Daakhil portal) par complaint file karein. (Kripya filing se pehle District Commission ki monetary limit verify kar lein).\\n\\nAgle kadam:\\n- Job sheet aur purchase bill sambhal kar rakhein.\\n- Screen defect ke clear photos/videos le lein.\\n- Written notice bhejein.\\n\\nYeh sirf kanooni jankari hai, koi legal advice nahi.\"\n}"
+      }
+    },
+    {
+      "error": "AbortError: This operation was aborted"
+    }
+  ],
+  "score": {
+    "id": "02-defective-phone-hinglish",
+    "category": "consumer_core",
+    "passed": false,
+    "failures": [
+      "1 turn(s) errored"
+    ],
+    "final_stage": "analysis",
+    "domain": "consumer",
+    "escalation": "none",
+    "followups_asked": [],
+    "facts_recorded": {
+      "purchase_date": "2026-06-02 (user_stated)",
+      "product_or_service": "phone (user_stated)",
+      "amount_paid": "18999 (inferred)",
+      "trader_name": "Mobile World (user_stated)",
+      "problem_description": "2 mahine mein display mein green line aa gayi. Service center bol raha hai warranty mein cover nahi hai, liquid damage hai, par phone kabhi geela hua hi nahi. (user_stated)",
+      "prior_complaint": "Service center bol raha hai warranty mein cover nahi hai, liquid damage hai (user_stated)"
+    },
+    "missing_fields": [
+      "relief_wanted",
+      "purchase_purpose",
+      "user_state"
+    ],
+    "rules": [
+      "within",
+      "rule_not_verified"
+    ],
+    "citation": {
+      "raw_verified_law_claims": 3,
+      "source_matched": 3,
+      "downgraded": 0,
+      "raw_reply_reference_mentions": 0,
+      "refs_removed": [],
+      "guarantee_flags": [],
+      "provisions_supplied": 9
+    },
+    "lawyer_recommended": false,
+    "document_placeholders": {
+      "missing": 11,
+      "confirm": 1
+    },
+    "llm_calls": 2
+  }
+}

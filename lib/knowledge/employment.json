@@ -1,0 +1,35 @@
+[
+  {
+    "id": "COW2019",
+    "act": "Code on Wages, 2019",
+    "act_number": "Act No. 29 of 2019",
+    "section": "Whole Code",
+    "title": "Code on Wages – replaces Payment of Wages Act, 1936 and others",
+    "text": "",
+    "text_type": "pending",
+    "source_url": "https://labour.gov.in/",
+    "source_name": "Ministry of Labour and Employment",
+    "jurisdiction": "central (all India) + State rules",
+    "status": "verify",
+    "status_basis": "Reported in force w.e.f. 21 Nov 2025; Central Rules 2026 listed by the Ministry. Requires separate legal verification (future work).",
+    "amendments": "Not checked",
+    "verification_checks": {
+      "text_verbatim": false,
+      "section_number": false,
+      "amendments": false,
+      "commencement": false,
+      "applicability": false
+    },
+    "verified_on": null,
+    "domains": [
+      "employment"
+    ],
+    "keywords": [
+      "salary",
+      "wages",
+      "unpaid salary",
+      "payment of wages"
+    ],
+    "notes": "Future work. Not citable in MVP."
+  }
+]

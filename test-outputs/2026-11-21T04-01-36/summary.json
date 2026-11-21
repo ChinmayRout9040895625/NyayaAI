@@ -1,0 +1,29 @@
+{
+  "model": "gemini-2.5-flash",
+  "corpus": {
+    "entries": 13,
+    "citable": 9,
+    "last_verified": "2026-11-21"
+  },
+  "results": [
+    {
+      "id": "01-ecom-refund-en",
+      "category": "consumer_core",
+      "passed": false,
+      "failures": [
+        "1 turn(s) errored",
+        "domain=undefined, expected consumer"
+      ],
+      "final_stage": null,
+      "escalation": "none",
+      "followups_asked": [],
+      "facts_recorded": {},
+      "missing_fields": [],
+      "rules": [],
+      "citation": null,
+      "lawyer_recommended": null,
+      "document_placeholders": null,
+      "llm_calls": 0
+    }
+  ]
+}

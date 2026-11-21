@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+}
+
+mark.ph-missing {
+  @apply rounded bg-amber-200 px-0.5 text-amber-950;
+}
+mark.ph-confirm {
+  @apply rounded bg-sky-200 px-0.5 text-sky-950;
+}
+
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+  #print-doc,
+  #print-doc * {
+    visibility: visible !important;
+  }
+  #print-doc {
+    position: absolute;
+    inset: 0;
+    padding: 0;
+    font-size: 12pt;
+    max-height: none !important;
+    overflow: visible !important;
+    border: none !important;
+  }
+  mark.ph-missing,
+  mark.ph-confirm {
+    background: #fde68a !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

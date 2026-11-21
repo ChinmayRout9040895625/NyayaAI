@@ -1,0 +1,172 @@
+{
+  "scenario": {
+    "id": "04-vague-insufficient",
+    "title": "Vague story – insufficient information",
+    "category": "insufficient_info",
+    "turns": [
+      "company ne dhokha diya, ab kya karun?"
+    ],
+    "expect": {
+      "domain_any": [
+        "consumer",
+        "unknown",
+        "out_of_scope"
+      ],
+      "escalation": "none",
+      "final_stage": "followup"
+    }
+  },
+  "run": {
+    "at": "2026-11-21T10:30:49.409Z",
+    "provider": "anthropic",
+    "model": "claude-opus-4-6",
+    "prompt_version": "2026-11-21.v4",
+    "corpus": {
+      "entries": 13,
+      "citable": 9,
+      "last_verified": "2026-11-21"
+    }
+  },
+  "transcript": [
+    {
+      "role": "user",
+      "content": "company ne dhokha diya, ab kya karun?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yeh sunkar bura laga ki aapko company ne dhokha diya. Aap thoda detail batayein toh main aapki madad kar sakta hoon.\n\n1. Ye kis company, shop ya app se tha? Agar online marketplace tha, to seller ka naam pata hai?\n\n2. Aapne exactly kya kharida tha ya kaunsi service ke liye pay kiya tha?"
+    }
+  ],
+  "responses": [
+    {
+      "stage": "followup",
+      "reply": "Yeh sunkar bura laga ki aapko company ne dhokha diya. Aap thoda detail batayein toh main aapki madad kar sakta hoon.\n\n1. Ye kis company, shop ya app se tha? Agar online marketplace tha, to seller ka naam pata hai?\n\n2. Aapne exactly kya kharida tha ya kaunsi service ke liye pay kiya tha?",
+      "case": {
+        "domain": "unknown",
+        "language": "hinglish",
+        "facts": {
+          "problem_description": {
+            "value": "Company ne dhokha diya (cheated by a company)",
+            "source": "user_stated",
+            "quote": "company ne dhokha diya"
+          }
+        },
+        "timeline": [],
+        "evidence": {},
+        "notes": [],
+        "turns": 1
+      },
+      "followups": [
+        "Ye kis company, shop ya app se tha? Agar online marketplace tha, to seller ka naam pata hai?",
+        "Aapne exactly kya kharida tha ya kaunsi service ke liye pay kiya tha?"
+      ],
+      "missing": [
+        "trader_name",
+        "product_or_service",
+        "amount_paid",
+        "purchase_date",
+        "prior_complaint",
+        "relief_wanted",
+        "purchase_purpose",
+        "user_state"
+      ],
+      "escalation": {
+        "level": "none",
+        "reasons": [],
+        "helplines": []
+      },
+      "evidence": [
+        {
+          "key": "invoice",
+          "label": "Invoice / bill / receipt",
+          "why": "Proves you bought it, from whom, when and for how much – the basis of a consumer claim and of the amount paid.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "order_confirmation",
+          "label": "Order ID / booking confirmation",
+          "why": "Links you to the transaction, especially for online purchases.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "payment_proof",
+          "label": "Payment proof (bank/UPI/card statement)",
+          "why": "Shows the money actually left your account, which matters if the seller disputes the amount.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "product_photos",
+          "label": "Photos / videos of the defect",
+          "why": "Shows the condition of the goods; take them before returning or repairing anything.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "warranty_card",
+          "label": "Warranty / guarantee card",
+          "why": "Shows what the seller or manufacturer promised and for how long.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "complaint_records",
+          "label": "Your complaints (emails, chats, ticket numbers)",
+          "why": "Shows you gave them a chance to fix it, and when – useful for the notice and for dates.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "written_refusal",
+          "label": "Their reply / refusal in writing",
+          "why": "Shows their position; the date can matter for when the dispute arose.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "delivery_proof",
+          "label": "Delivery / courier / service record",
+          "why": "Shows what was (or wasn't) delivered or done, and when.",
+          "state": "not_mentioned"
+        }
+      ],
+      "sources": [],
+      "unverified_matches": [],
+      "meta": {
+        "provider": "anthropic",
+        "model": "claude-opus-4-6",
+        "prompt_version": "2026-11-21.v4",
+        "llm_calls": 1
+      },
+      "raw": {
+        "understanding": "{\"domain\": \"unknown\", \"domain_confidence\": 0.3, \"language\": \"hinglish\", \"extracted\": [{\"field\": \"problem_description\", \"value\": \"Company ne dhokha diya (cheated by a company)\", \"source\": \"user_stated\", \"quote\": \"company ne dhokha diya\"}], \"timeline\": [], \"evidence_mentioned\": [], \"search_terms\": [\"company cheated consumer\", \"fraud by company India\", \"consumer complaint company\"], \"user_wants_analysis\": true, \"acknowledgement\": \"Yeh sunkar bura laga ki aapko company ne dhokha diya. Aap thoda detail batayein toh main aapki madad kar sakta hoon.\"}"
+      }
+    }
+  ],
+  "score": {
+    "id": "04-vague-insufficient",
+    "category": "insufficient_info",
+    "passed": true,
+    "failures": [],
+    "final_stage": "followup",
+    "domain": "unknown",
+    "escalation": "none",
+    "followups_asked": [
+      "Ye kis company, shop ya app se tha? Agar online marketplace tha, to seller ka naam pata hai?",
+      "Aapne exactly kya kharida tha ya kaunsi service ke liye pay kiya tha?"
+    ],
+    "facts_recorded": {
+      "problem_description": "Company ne dhokha diya (cheated by a company) (user_stated)"
+    },
+    "missing_fields": [
+      "trader_name",
+      "product_or_service",
+      "amount_paid",
+      "purchase_date",
+      "prior_complaint",
+      "relief_wanted",
+      "purchase_purpose",
+      "user_state"
+    ],
+    "rules": [],
+    "citation": null,
+    "lawyer_recommended": null,
+    "document_placeholders": null,
+    "llm_calls": 1
+  }
+}

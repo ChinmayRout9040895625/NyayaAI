@@ -1,0 +1,548 @@
+{
+  "scenario": {
+    "id": "03-courier-hindi",
+    "title": "Courier lost parcel – deficient service (Hindi)",
+    "category": "consumer_core",
+    "turns": [
+      "मैंने 2026-09-05 को QuickShip कूरियर से अपनी बहन को एक पार्सल भेजा था, 650 रुपये चुकाए थे। पार्सल आज तक नहीं पहुँचा और ट्रैकिंग में 'in transit' ही दिख रहा है।",
+      "मैंने कस्टमर केयर पर तीन बार फ़ोन किया, टिकट नंबर मिला पर कोई जवाब नहीं आया। मुझे पार्सल की कीमत और कूरियर चार्ज वापस चाहिए। रसीद मेरे पास है। मैं जयपुर, राजस्थान में रहती हूँ। निजी उपयोग के लिए था।"
+    ],
+    "expect": {
+      "domain": "consumer",
+      "escalation": "none",
+      "final_stage": "analysis"
+    }
+  },
+  "run": {
+    "at": "2026-11-21T04:09:38.010Z",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "corpus": {
+      "entries": 13,
+      "citable": 9,
+      "last_verified": "2026-11-21"
+    }
+  },
+  "transcript": [
+    {
+      "role": "user",
+      "content": "मैंने 2026-09-05 को QuickShip कूरियर से अपनी बहन को एक पार्सल भेजा था, 650 रुपये चुकाए थे। पार्सल आज तक नहीं पहुँचा और ट्रैकिंग में 'in transit' ही दिख रहा है।"
+    },
+    {
+      "role": "assistant",
+      "content": "QuickShip कूरियर द्वारा आपका पार्सल न पहुँचाए जाने की समस्या समझ में आई। हम आपकी पूरी सहायता करेंगे।\n\n1. क्या आपने उनसे पहले शिकायत की है? अगर हाँ, तो कब, कैसे (ईमेल, ऐप चैट, कॉल) और उन्होंने क्या जवाब दिया?\n\n2. आप क्या चाहते हैं – रिफंड, बदलाव (replacement), मरम्मत, या साथ में मुआवज़ा भी?"
+    },
+    {
+      "role": "user",
+      "content": "मैंने कस्टमर केयर पर तीन बार फ़ोन किया, टिकट नंबर मिला पर कोई जवाब नहीं आया। मुझे पार्सल की कीमत और कूरियर चार्ज वापस चाहिए। रसीद मेरे पास है। मैं जयपुर, राजस्थान में रहती हूँ। निजी उपयोग के लिए था।"
+    },
+    {
+      "role": "assistant",
+      "content": "आपने 5 सितंबर 2026 को QuickShip कूरियर से ₹650 में पार्सल भेजा था, जो अब तक नहीं पहुँचा है। कस्टमर केयर से टिकट नंबर मिलने के बाद भी कोई समाधान नहीं हुआ है।\n\nकानूनी रूप से, सेवा में दी गई यह लापरवाही 'deficiency' (सेवा में कमी) के अंतर्गत आती है। दो साल की तय समय-सीमा के भीतर आप इसके खिलाफ कानूनी कदम उठा सकते हैं।\n\nआपके पास निम्नलिखित विकल्प हैं:\n1. कंपनी को एक औपचारिक लीगल नोटिस भेजें और रिफंड के लिए एक उचित समय दें।\n2. यदि कंपनी प्रतिक्रिया नहीं देती है, तो आप राष्ट्रीय उपभोक्ता हेल्पलाइन (NCH) में शिकायत कर सकते हैं या ई-दाखिल पोर्टल द्वारा जयपुर जिला उपभोक्ता आयोग में मामला दर्ज कर सकते हैं।\n\nतत्काल कदम:\n- अपनी भुगतान रसीद और कस्टमर केयर टिकट नंबर का रिकॉर्ड संभाल कर रखें।\n- कूरियर कंपनी को अंतिम लिखित चेतावनी भेजें।\n\nनोट: यह केवल कानूनी जानकारी है, कानूनी सलाह नहीं।"
+    }
+  ],
+  "responses": [
+    {
+      "stage": "followup",
+      "reply": "QuickShip कूरियर द्वारा आपका पार्सल न पहुँचाए जाने की समस्या समझ में आई। हम आपकी पूरी सहायता करेंगे।\n\n1. क्या आपने उनसे पहले शिकायत की है? अगर हाँ, तो कब, कैसे (ईमेल, ऐप चैट, कॉल) और उन्होंने क्या जवाब दिया?\n\n2. आप क्या चाहते हैं – रिफंड, बदलाव (replacement), मरम्मत, या साथ में मुआवज़ा भी?",
+      "case": {
+        "domain": "consumer",
+        "language": "hi",
+        "facts": {
+          "trader_name": {
+            "value": "QuickShip",
+            "source": "user_stated",
+            "quote": "QuickShip"
+          },
+          "product_or_service": {
+            "value": "कूरियर सेवा",
+            "source": "inferred",
+            "quote": "कूरियर से अपनी बहन को एक पार्सल भेजा था"
+          },
+          "amount_paid": {
+            "value": "650",
+            "source": "user_stated",
+            "quote": "650 रुपये चुकाए थे"
+          },
+          "purchase_date": {
+            "value": "2026-09-05",
+            "source": "user_stated",
+            "quote": "2026-09-05"
+          },
+          "problem_description": {
+            "value": "पार्सल आज तक नहीं पहुँचा और ट्रैकिंग में 'in transit' ही दिख रहा है।",
+            "source": "user_stated",
+            "quote": "पार्सल आज तक नहीं पहुँचा और ट्रैकिंग में 'in transit' ही दिख रहा है।"
+          }
+        },
+        "timeline": [
+          {
+            "date": "2026-09-05",
+            "event": "QuickShip से पार्सल भेजा और ₹650 का भुगतान किया",
+            "source": "user_stated",
+            "quote": "2026-09-05 को QuickShip कूरियर से अपनी बहन को एक पार्सल भेजा था, 650 रुपये चुकाए थे।"
+          }
+        ],
+        "evidence": {},
+        "notes": [],
+        "turns": 1
+      },
+      "followups": [
+        "क्या आपने उनसे पहले शिकायत की है? अगर हाँ, तो कब, कैसे (ईमेल, ऐप चैट, कॉल) और उन्होंने क्या जवाब दिया?",
+        "आप क्या चाहते हैं – रिफंड, बदलाव (replacement), मरम्मत, या साथ में मुआवज़ा भी?"
+      ],
+      "missing": [
+        "prior_complaint",
+        "relief_wanted",
+        "purchase_purpose",
+        "user_state"
+      ],
+      "escalation": {
+        "level": "none",
+        "reasons": [],
+        "helplines": []
+      },
+      "evidence": [
+        {
+          "key": "invoice",
+          "label": "Invoice / bill / receipt",
+          "why": "Proves you bought it, from whom, when and for how much – the basis of a consumer claim and of the amount paid.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "order_confirmation",
+          "label": "Order ID / booking confirmation",
+          "why": "Links you to the transaction, especially for online purchases.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "payment_proof",
+          "label": "Payment proof (bank/UPI/card statement)",
+          "why": "Shows the money actually left your account, which matters if the seller disputes the amount.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "product_photos",
+          "label": "Photos / videos of the defect",
+          "why": "Shows the condition of the goods; take them before returning or repairing anything.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "warranty_card",
+          "label": "Warranty / guarantee card",
+          "why": "Shows what the seller or manufacturer promised and for how long.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "complaint_records",
+          "label": "Your complaints (emails, chats, ticket numbers)",
+          "why": "Shows you gave them a chance to fix it, and when – useful for the notice and for dates.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "written_refusal",
+          "label": "Their reply / refusal in writing",
+          "why": "Shows their position; the date can matter for when the dispute arose.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "delivery_proof",
+          "label": "Delivery / courier / service record",
+          "why": "Shows what was (or wasn't) delivered or done, and when.",
+          "state": "not_mentioned"
+        }
+      ],
+      "sources": [],
+      "unverified_matches": [],
+      "meta": {
+        "provider": "gemini",
+        "model": "gemini-3.5-flash",
+        "prompt_version": "2026-11-21.v2",
+        "llm_calls": 1
+      },
+      "raw": {
+        "understanding": "{\n  \"domain\": \"consumer\",\n  \"domain_confidence\": 0.95,\n  \"language\": \"hi\",\n  \"extracted\": [\n    {\n      \"field\": \"trader_name\",\n      \"value\": \"QuickShip\",\n      \"source\": \"user_stated\",\n      \"quote\": \"QuickShip\"\n    },\n    {\n      \"field\": \"product_or_service\",\n      \"value\": \"कूरियर सेवा\",\n      \"source\": \"inferred\",\n      \"quote\": \"कूरियर से अपनी बहन को एक पार्सल भेजा था\"\n    },\n    {\n      \"field\": \"amount_paid\",\n      \"value\": \"650\",\n      \"source\": \"user_stated\",\n      \"quote\": \"650 रुपये चुकाए थे\"\n    },\n    {\n      \"field\": \"purchase_date\",\n      \"value\": \"2026-09-05\",\n      \"source\": \"user_stated\",\n      \"quote\": \"2026-09-05\"\n    },\n    {\n      \"field\": \"problem_description\",\n      \"value\": \"पार्सल आज तक नहीं पहुँचा और ट्रैकिंग में 'in transit' ही दिख रहा है।\",\n      \"source\": \"user_stated\",\n      \"quote\": \"पार्सल आज तक नहीं पहुँचा और ट्रैकिंग में 'in transit' ही दिख रहा है।\"\n    }\n  ],\n  \"timeline\": [\n    {\n      \"date\": \"2026-09-05\",\n      \"event\": \"QuickShip से पार्सल भेजा और ₹650 का भुगतान किया\",\n      \"quote\": \"2026-09-05 को QuickShip कूरियर से अपनी बहन को एक पार्सल भेजा था, 650 रुपये चुकाए थे।\"\n    }\n  ],\n  \"evidence_mentioned\": [],\n  \"search_terms\": [\n    \"courier delay in delivery\",\n    \"deficiency in courier service\",\n    \"undelivered parcel courier refund\",\n    \"loss of courier parcel compensation\"\n  ],\n  \"user_wants_analysis\": false,\n  \"acknowledgement\": \"QuickShip कूरियर द्वारा आपका पार्सल न पहुँचाए जाने की समस्या समझ में आई। हम आपकी पूरी सहायता करेंगे।\"\n}"
+      }
+    },
+    {
+      "stage": "analysis",
+      "reply": "आपने 5 सितंबर 2026 को QuickShip कूरियर से ₹650 में पार्सल भेजा था, जो अब तक नहीं पहुँचा है। कस्टमर केयर से टिकट नंबर मिलने के बाद भी कोई समाधान नहीं हुआ है।\n\nकानूनी रूप से, सेवा में दी गई यह लापरवाही 'deficiency' (सेवा में कमी) के अंतर्गत आती है। दो साल की तय समय-सीमा के भीतर आप इसके खिलाफ कानूनी कदम उठा सकते हैं।\n\nआपके पास निम्नलिखित विकल्प हैं:\n1. कंपनी को एक औपचारिक लीगल नोटिस भेजें और रिफंड के लिए एक उचित समय दें।\n2. यदि कंपनी प्रतिक्रिया नहीं देती है, तो आप राष्ट्रीय उपभोक्ता हेल्पलाइन (NCH) में शिकायत कर सकते हैं या ई-दाखिल पोर्टल द्वारा जयपुर जिला उपभोक्ता आयोग में मामला दर्ज कर सकते हैं।\n\nतत्काल कदम:\n- अपनी भुगतान रसीद और कस्टमर केयर टिकट नंबर का रिकॉर्ड संभाल कर रखें।\n- कूरियर कंपनी को अंतिम लिखित चेतावनी भेजें।\n\nनोट: यह केवल कानूनी जानकारी है, कानूनी सलाह नहीं।",
+      "case": {
+        "domain": "consumer",
+        "language": "hi",
+        "facts": {
+          "trader_name": {
+            "value": "QuickShip",
+            "source": "user_stated",
+            "quote": "QuickShip"
+          },
+          "product_or_service": {
+            "value": "कूरियर सेवा",
+            "source": "inferred",
+            "quote": "कूरियर से अपनी बहन को एक पार्सल भेजा था"
+          },
+          "amount_paid": {
+            "value": "650",
+            "source": "user_stated",
+            "quote": "650 रुपये चुकाए थे"
+          },
+          "purchase_date": {
+            "value": "2026-09-05",
+            "source": "user_stated",
+            "quote": "2026-09-05"
+          },
+          "problem_description": {
+            "value": "पार्सल आज तक नहीं पहुँचा और ट्रैकिंग में 'in transit' ही दिख रहा है।",
+            "source": "user_stated",
+            "quote": "पार्सल आज तक नहीं पहुँचा और ट्रैकिंग में 'in transit' ही दिख रहा है।"
+          },
+          "prior_complaint": {
+            "value": "कस्टमर केयर पर तीन बार फ़ोन किया, टिकट नंबर मिला पर कोई जवाब नहीं आया।",
+            "source": "user_stated",
+            "quote": "मैंने कस्टमर केयर पर तीन बार फ़ोन किया, टिकट नंबर मिला पर कोई जवाब नहीं आया।"
+          },
+          "relief_wanted": {
+            "value": "पार्सल की कीमत और कूरियर चार्ज की वापसी",
+            "source": "user_stated",
+            "quote": "मुझे पार्सल की कीमत और कूरियर चार्ज वापस चाहिए।"
+          },
+          "purchase_purpose": {
+            "value": "personal",
+            "source": "user_stated",
+            "quote": "निजी उपयोग के लिए था।"
+          },
+          "user_state": {
+            "value": "जयपुर, राजस्थान",
+            "source": "user_stated",
+            "quote": "जयपुर, राजस्थान"
+          }
+        },
+        "timeline": [
+          {
+            "date": "2026-09-05",
+            "event": "QuickShip से पार्सल भेजा और ₹650 का भुगतान किया",
+            "source": "user_stated",
+            "quote": "2026-09-05 को QuickShip कूरियर से अपनी बहन को एक पार्सल भेजा था, 650 रुपये चुकाए थे।"
+          },
+          {
+            "date": "2026-09-05",
+            "event": "QuickShip से पार्सल भेजा और 650 रुपये का भुगतान किया।",
+            "source": "user_stated",
+            "quote": "2026-09-05 को QuickShip कूरियर से अपनी बहन को एक पार्सल भेजा था, 650 रुपये चुकाए थे।"
+          },
+          {
+            "date": null,
+            "event": "कस्टमर केयर में शिकायत दर्ज कराई और टिकट नंबर मिला।",
+            "source": "user_stated",
+            "quote": "मैंने कस्टमर केयर पर तीन बार फ़ोन किया, टिकट नंबर मिला"
+          }
+        ],
+        "evidence": {
+          "invoice": {
+            "state": "have",
+            "quote": "रसीद मेरे पास है।"
+          },
+          "complaint_records": {
+            "state": "have",
+            "quote": "टिकट नंबर मिला"
+          }
+        },
+        "notes": [],
+        "turns": 2
+      },
+      "followups": [],
+      "missing": [],
+      "escalation": {
+        "level": "none",
+        "reasons": [],
+        "helplines": []
+      },
+      "evidence": [
+        {
+          "key": "invoice",
+          "label": "Invoice / bill / receipt",
+          "why": "Proves you bought it, from whom, when and for how much – the basis of a consumer claim and of the amount paid.",
+          "state": "have",
+          "quote": "रसीद मेरे पास है।"
+        },
+        {
+          "key": "order_confirmation",
+          "label": "Order ID / booking confirmation",
+          "why": "Links you to the transaction, especially for online purchases.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "payment_proof",
+          "label": "Payment proof (bank/UPI/card statement)",
+          "why": "Shows the money actually left your account, which matters if the seller disputes the amount.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "product_photos",
+          "label": "Photos / videos of the defect",
+          "why": "Shows the condition of the goods; take them before returning or repairing anything.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "warranty_card",
+          "label": "Warranty / guarantee card",
+          "why": "Shows what the seller or manufacturer promised and for how long.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "complaint_records",
+          "label": "Your complaints (emails, chats, ticket numbers)",
+          "why": "Shows you gave them a chance to fix it, and when – useful for the notice and for dates.",
+          "state": "have",
+          "quote": "टिकट नंबर मिला"
+        },
+        {
+          "key": "written_refusal",
+          "label": "Their reply / refusal in writing",
+          "why": "Shows their position; the date can matter for when the dispute arose.",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "delivery_proof",
+          "label": "Delivery / courier / service record",
+          "why": "Shows what was (or wasn't) delivered or done, and when.",
+          "state": "not_mentioned"
+        }
+      ],
+      "analysis": {
+        "issue_summary": "आपने QuickShip कूरियर से ₹650 का भुगतान करके एक पार्सल भेजा था, जो अभी तक डिलीवर नहीं हुआ है और ट्रैकिंग पर 'in transit' दिखा रहा है। शिकायत के बावजूद कूरियर कंपनी से कोई प्रतिक्रिया नहीं मिली है।",
+        "claims": [
+          {
+            "text": "उपभोक्ता संरक्षण अधिनियम के तहत सेवा में कोई भी कमी या लापरवाही 'deficiency' (सेवा में कमी) मानी जाती है।",
+            "type": "verified_law",
+            "provision_id": "CPA2019-S2-11",
+            "support_quote": "(11) \"deficiency\" means any fault, imperfection, shortcoming or inadequacy in the quality, nature and manner of performance which is required to be maintained by or under any law for the time being in force or has been undertaken to be performed by a person in pursuance of a contract or otherwise in relation to any service and includes--",
+            "status": "source_matched"
+          },
+          {
+            "text": "उपभोक्ता आयोग में शिकायत दर्ज करने की समय-सीमा कारण उत्पन्न होने की तिथि से दो वर्ष होती है।",
+            "type": "verified_law",
+            "provision_id": "CPA2019-S69",
+            "support_quote": "69. Limitation period.--(1) The District Commission, the State Commission or the National Commission shall not admit a complaint unless it is filed within two years from the date on which the cause of action has arisen.",
+            "status": "source_matched"
+          }
+        ],
+        "options": [
+          {
+            "title": "लीगल नोटिस भेजें",
+            "description": "कूरियर कंपनी को एक औपचारिक नोटिस भेजकर पार्सल का मूल्य और कूरियर शुल्क वापस मांगने के लिए एक उचित समय सीमा तय करें।"
+          },
+          {
+            "title": "राष्ट्रीय उपभोक्ता हेल्पलाइन या उपभोक्ता आयोग में शिकायत",
+            "description": "यदि नोटिस का जवाब न मिले, तो ऑनलाइन ई-दाखिल पोर्टल के माध्यम से या अपने नजदीकी जिला उपभोक्ता आयोग (जयपुर) में शिकायत दर्ज करें।"
+          }
+        ],
+        "next_steps": [
+          "भुगतान रसीद, कूरियर रसीद और कस्टमर केयर टिकट नंबर को सुरक्षित रखें।",
+          "कंपनी को लिखित शिकायत/नोटिस भेजकर समाधान या रिफंड के लिए उचित समय दें।",
+          "ई-दाखिल पोर्टल पर अपनी शिकायत दर्ज करने की प्रक्रिया शुरू करें।"
+        ],
+        "uncertainties": [
+          "पार्सल के अंदर मौजूद सामान का कुल मूल्य प्रमाण के साथ स्थापित होना बाकी है।",
+          "आयोग की वर्तमान आर्थिक सीमा नियम की पुष्टि आधिकारिक पोर्टल से की जानी बाकी है।"
+        ],
+        "lawyer_recommended": false,
+        "lawyer_reason": "यह मामला एक साधारण उपभोक्ता विवाद और कम राशि से जुड़ा है, जिसे आप स्वयं या उपभोक्ता हेल्पलाइन के माध्यम से सुलझा सकते हैं।",
+        "report": {
+          "claims_total": 2,
+          "claims_source_matched": 2,
+          "claims_downgraded": 0,
+          "unverified_refs_removed": [],
+          "guarantee_phrases_flagged": [],
+          "note": "Source check only confirms that quoted words exist in a verified official provision. It does not confirm that the provision applies to your facts or that the legal reasoning is correct. Have a lawyer review before acting."
+        }
+      },
+      "rules": [
+        {
+          "status": "within",
+          "message": "About 2 month(s) have passed. That appears to be within the two-year period in Section 69(1).",
+          "provision_ids": [
+            "CPA2019-S69"
+          ],
+          "assumptions": [
+            "Counted from the purchase/service date (2026-09-05). The \"cause of action\" may arise later – for example when the defect appeared or when the trader finally refused – which could give you more time. This is a conservative estimate."
+          ]
+        },
+        {
+          "status": "rule_not_verified",
+          "message": "Which Commission hears a case depends on the value of the goods or services paid as consideration – not on the compensation you claim. The Act originally set the District Commission's limit at one crore rupees but lets the Central Government prescribe a different value by rules, and NyayaAI has not verified the current rules – so it cannot tell you the current limit. Confirm the current limit on the official consumer e-filing portal or with the Commission before filing.",
+          "provision_ids": [],
+          "assumptions": []
+        }
+      ],
+      "sources": [
+        {
+          "id": "CPA2019-S2-7",
+          "act": "Consumer Protection Act, 2019",
+          "section": "2(7)",
+          "title": "Definition of 'consumer'",
+          "text": "(7) \"consumer\" means any person who-- (i) buys any goods for a consideration which has been paid or promised or partly paid and partly promised, or under any system of deferred payment and includes any user of such goods other than the person who buys such goods for consideration paid or promised or partly paid or partly promised, or under any system of deferred payment, when such use is made with the approval of such person, but does not include a person who obtains such goods for resale or for any commercial purpose; or (ii) hires or avails of any service for a consideration which has been paid or promised or partly paid and partly promised, or under any system of deferred payment and includes any beneficiary of such service other than the person who hires or avails of the services for consideration paid or promised, or partly paid and partly promised, or under any system of deferred payment, when such services are availed of with the approval of the first mentioned person, but does not include a person who avails of such service for any commercial purpose. Explanation. --For the purposes of this clause, -- (a) the expression \"commercial purpose\" does not include use by a person of goods bought and used by him exclusively for the purpose of earning his livelihood, by means of self-employment; (b) the expressions \"buys any goods\" and \"hires or avails any services\" includes offline or online transactions through electronic means or by teleshopping or direct selling or multi-level marketing;",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        },
+        {
+          "id": "CPA2019-S2-10",
+          "act": "Consumer Protection Act, 2019",
+          "section": "2(10)",
+          "title": "Definition of 'defect'",
+          "text": "(10) \"defect\" means any fault, imperfection or shortcoming in the quality, quantity, potency, purity or standard which is required to be maintained by or under any law for the time being in force or under any contract, express or implied or as is claimed by the trader in any manner whatsoever in relation to any goods or product and the expression \"defective\" shall be construed accordingly;",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        },
+        {
+          "id": "CPA2019-S2-11",
+          "act": "Consumer Protection Act, 2019",
+          "section": "2(11)",
+          "title": "Definition of 'deficiency'",
+          "text": "(11) \"deficiency\" means any fault, imperfection, shortcoming or inadequacy in the quality, nature and manner of performance which is required to be maintained by or under any law for the time being in force or has been undertaken to be performed by a person in pursuance of a contract or otherwise in relation to any service and includes-- (i) any act of negligence or omission or commission by such person which causes loss or injury to the consumer; and (ii) deliberate withholding of relevant information by such person to the consumer;",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": true
+        },
+        {
+          "id": "CPA2019-S34-2",
+          "act": "Consumer Protection Act, 2019",
+          "section": "34(2)",
+          "title": "Jurisdiction of District Commission – where to file",
+          "text": "34. Jurisdiction of District Commission.-- (2) A complaint shall be instituted in a District Commission within the local limits of whose jurisdiction,-- (a) the opposite party or each of the opposite parties, where there are more than one, at the time of the institution of the complaint, ordinarily resides or carries on business or has a branch office or personally works for gain; or (b) any of the opposite parties, where there are more than one, at the time of the institution of the complaint, actually and voluntarily resides, or carries on business or has a branch office, or personally works for gain, provided that in such case the permission of the District Commission is given; or (c) the cause of action, wholly or in part, arises; or (d) the complainant resides or personally works for gain.",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        },
+        {
+          "id": "CPA2019-S2-47-VIII",
+          "act": "Consumer Protection Act, 2019",
+          "section": "2(47)(viii)",
+          "title": "Unfair trade practice – refusing to take back defective goods / refund",
+          "text": "(viii) refusing, after selling goods or rendering services, to take back or withdraw defective goods or to withdraw or discontinue deficient services and to refund the consideration thereof, if paid, within the period stipulated in the bill or cash memo or receipt or in the absence of such stipulation, within a period of thirty days;",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        },
+        {
+          "id": "CPA2019-S35-1",
+          "act": "Consumer Protection Act, 2019",
+          "section": "35(1)",
+          "title": "Manner in which complaint shall be made",
+          "text": "35. Manner in which complaint shall be made.--(1) A complaint, in relation to any goods sold or delivered or agreed to be sold or delivered or any service provided or agreed to be provided, may be filed with a District Commission by-- (a) the consumer,-- (i) to whom such goods are sold or delivered or agreed to be sold or delivered or such service is provided or agreed to be provided; or (ii) who alleges unfair trade practice in respect of such goods or service; [...] Provided that the complaint under this sub-section may be filed electronically in such manner as may be prescribed.",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        },
+        {
+          "id": "CPA2019-S39-1",
+          "act": "Consumer Protection Act, 2019",
+          "section": "39(1)",
+          "title": "Findings of District Commission (reliefs)",
+          "text": "39. Findings of District Commission.--(1) Where the District Commission is satisfied that the goods complained against suffer from any of the defects specified in the complaint or that any of the allegations contained in the complaint about the services or any unfair trade practices, or claims for compensation under product liability are proved, it shall issue an order to the opposite party directing him to do one or more of the following, namely:-- (a) to remove the defect pointed out by the appropriate laboratory from the goods in question; (b) to replace the goods with new goods of similar description which shall be free from any defect; (c) to return to the complainant the price, or, as the case may be, the charges paid by the complainant along with such interest on such price or charges as may be decided; (d) to pay such amount as may be awarded by it as compensation to the consumer for any loss or injury suffered by the consumer due to the negligence of the opposite party: Provided that the District Commission shall have the power to grant punitive damages in such circumstances as it deems fit; (e) to pay such amount as may be awarded by it as compensation in a product liability action under Chapter VI; (f) to remove the defects in goods or deficiencies in the services in question; [...]",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        },
+        {
+          "id": "CPA2019-S69",
+          "act": "Consumer Protection Act, 2019",
+          "section": "69",
+          "title": "Limitation period",
+          "text": "69. Limitation period.--(1) The District Commission, the State Commission or the National Commission shall not admit a complaint unless it is filed within two years from the date on which the cause of action has arisen. (2) Notwithstanding anything contained in sub-section (1), a complaint may be entertained after the period specified in sub-section (1), if the complainant satisfies the District Commission, the State Commission or the National Commission, as the case may be, that he had sufficient cause for not filing the complaint within such period: Provided that no such complaint shall be entertained unless the District Commission or the State Commission or the National Commission, as the case may be, records its reasons for condoning such delay.",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": true
+        },
+        {
+          "id": "CPA2019-S100",
+          "act": "Consumer Protection Act, 2019",
+          "section": "100",
+          "title": "Act not in derogation of any other law",
+          "text": "100. Act not in derogation of any other law.--The provisions of this Act shall be in addition to and not in derogation of the provisions of any other law for the time being in force.",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "in_force",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        }
+      ],
+      "unverified_matches": [
+        {
+          "id": "CPA2019-S34-1",
+          "act": "Consumer Protection Act, 2019",
+          "section": "34(1)",
+          "title": "Jurisdiction of District Commission – monetary limit (as enacted)",
+          "text": "34. Jurisdiction of District Commission.--(1) Subject to the other provisions of this Act, the District Commission shall have jurisdiction to entertain complaints where the value of the goods or services paid as consideration does not exceed one crore rupees: Provided that where the Central Government deems it necessary so to do, it may prescribe such other value, as it deems fit.",
+          "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+          "status": "verify",
+          "verified_on": "2026-11-21",
+          "used_in_claim": false
+        }
+      ],
+      "meta": {
+        "provider": "gemini",
+        "model": "gemini-3.5-flash",
+        "prompt_version": "2026-11-21.v2",
+        "llm_calls": 2
+      },
+      "raw": {
+        "understanding": "{\n  \"domain\": \"consumer\",\n  \"domain_confidence\": 0.95,\n  \"language\": \"hi\",\n  \"extracted\": [\n    {\n      \"field\": \"trader_name\",\n      \"value\": \"QuickShip\",\n      \"source\": \"user_stated\",\n      \"quote\": \"QuickShip\"\n    },\n    {\n      \"field\": \"product_or_service\",\n      \"value\": \"कूरियर सेवा\",\n      \"source\": \"inferred\",\n      \"quote\": \"कूरियर से अपनी बहन को एक पार्सल भेजा था\"\n    },\n    {\n      \"field\": \"amount_paid\",\n      \"value\": \"650\",\n      \"source\": \"user_stated\",\n      \"quote\": \"650 रुपये चुकाए थे\"\n    },\n    {\n      \"field\": \"purchase_date\",\n      \"value\": \"2026-09-05\",\n      \"source\": \"user_stated\",\n      \"quote\": \"2026-09-05\"\n    },\n    {\n      \"field\": \"problem_description\",\n      \"value\": \"पार्सल आज तक नहीं पहुँचा और ट्रैकिंग में 'in transit' ही दिख रहा है।\",\n      \"source\": \"user_stated\",\n      \"quote\": \"पार्सल आज तक नहीं पहुँचा और ट्रैकिंग में 'in transit' ही दिख रहा है।\"\n    },\n    {\n      \"field\": \"prior_complaint\",\n      \"value\": \"कस्टमर केयर पर तीन बार फ़ोन किया, टिकट नंबर मिला पर कोई जवाब नहीं आया।\",\n      \"source\": \"user_stated\",\n      \"quote\": \"मैंने कस्टमर केयर पर तीन बार फ़ोन किया, टिकट नंबर मिला पर कोई जवाब नहीं आया।\"\n    },\n    {\n      \"field\": \"relief_wanted\",\n      \"value\": \"पार्सल की कीमत और कूरियर चार्ज की वापसी\",\n      \"source\": \"user_stated\",\n      \"quote\": \"मुझे पार्सल की कीमत और कूरियर चार्ज वापस चाहिए।\"\n    },\n    {\n      \"field\": \"purchase_purpose\",\n      \"value\": \"personal\",\n      \"source\": \"user_stated\",\n      \"quote\": \"निजी उपयोग के लिए था।\"\n    },\n    {\n      \"field\": \"user_state\",\n      \"value\": \"जयपुर, राजस्थान\",\n      \"source\": \"user_stated\",\n      \"quote\": \"जयपुर, राजस्थान\"\n    }\n  ],\n  \"timeline\": [\n    {\n      \"date\": \"2026-09-05\",\n      \"event\": \"QuickShip से पार्सल भेजा और 650 रुपये का भुगतान किया।\",\n      \"quote\": \"2026-09-05 को QuickShip कूरियर से अपनी बहन को एक पार्सल भेजा था, 650 रुपये चुकाए थे।\"\n    },\n    {\n      \"date\": null,\n      \"event\": \"कस्टमर केयर में शिकायत दर्ज कराई और टिकट नंबर मिला।\",\n      \"quote\": \"मैंने कस्टमर केयर पर तीन बार फ़ोन किया, टिकट नंबर मिला\"\n    }\n  ],\n  \"evidence_mentioned\": [\n    {\n      \"key\": \"invoice\",\n      \"has\": true,\n      \"quote\": \"रसीद मेरे पास है।\"\n    },\n    {\n      \"key\": \"complaint_records\",\n      \"has\": true,\n      \"quote\": \"टिकट नंबर मिला\"\n    }\n  ],\n  \"search_terms\": [\n    \"courier service parcel lost\",\n    \"deficiency in courier service\",\n    \"non delivery of parcel refund\",\n    \"courier company compensation\"\n  ],\n  \"user_wants_analysis\": true,\n  \"acknowledgement\": \"आपके द्वारा दी गई सभी जानकारियों को दर्ज कर लिया गया है। कूरियर द्वारा पार्सल न पहुँचाना और शिकायत पर जवाब न देना गंभीर सेवा में कमी का मामला है।\"\n}",
+        "analysis": "{\n \"issue_summary\": \"आपने QuickShip कूरियर से ₹650 का भुगतान करके एक पार्सल भेजा था, जो अभी तक डिलीवर नहीं हुआ है और ट्रैकिंग पर 'in transit' दिखा रहा है। शिकायत के बावजूद कूरियर कंपनी से कोई प्रतिक्रिया नहीं मिली है।\",\n \"claims\": [\n  {\n   \"text\": \"उपभोक्ता संरक्षण अधिनियम के तहत सेवा में कोई भी कमी या लापरवाही 'deficiency' (सेवा में कमी) मानी जाती है।\",\n   \"type\": \"verified_law\",\n   \"provision_id\": \"CPA2019-S2-11\",\n   \"support_quote\": \"(11) \\\"deficiency\\\" means any fault, imperfection, shortcoming or inadequacy in the quality, nature and manner of performance which is required to be maintained by or under any law for the time being in force or has been undertaken to be performed by a person in pursuance of a contract or otherwise in relation to any service and includes--\"\n  },\n  {\n   \"text\": \"उपभोक्ता आयोग में शिकायत दर्ज करने की समय-सीमा कारण उत्पन्न होने की तिथि से दो वर्ष होती है।\",\n   \"type\": \"verified_law\",\n   \"provision_id\": \"CPA2019-S69\",\n   \"support_quote\": \"69. Limitation period.--(1) The District Commission, the State Commission or the National Commission shall not admit a complaint unless it is filed within two years from the date on which the cause of action has arisen.\"\n  }\n ],\n \"options\": [\n  {\n   \"title\": \"लीगल नोटिस भेजें\",\n   \"description\": \"कूरियर कंपनी को एक औपचारिक नोटिस भेजकर पार्सल का मूल्य और कूरियर शुल्क वापस मांगने के लिए एक उचित समय सीमा तय करें।\"\n  },\n  {\n   \"title\": \"राष्ट्रीय उपभोक्ता हेल्पलाइन या उपभोक्ता आयोग में शिकायत\",\n   \"description\": \"यदि नोटिस का जवाब न मिले, तो ऑनलाइन ई-दाखिल पोर्टल के माध्यम से या अपने नजदीकी जिला उपभोक्ता आयोग (जयपुर) में शिकायत दर्ज करें।\"\n  }\n ],\n \"next_steps\": [\n  \"भुगतान रसीद, कूरियर रसीद और कस्टमर केयर टिकट नंबर को सुरक्षित रखें।\",\n  \"कंपनी को लिखित शिकायत/नोटिस भेजकर समाधान या रिफंड के लिए उचित समय दें।\",\n  \"ई-दाखिल पोर्टल पर अपनी शिकायत दर्ज करने की प्रक्रिया शुरू करें।\"\n ],\n \"uncertainties\": [\n  \"पार्सल के अंदर मौजूद सामान का कुल मूल्य प्रमाण के साथ स्थापित होना बाकी है।\",\n  \"आयोग की वर्तमान आर्थिक सीमा नियम की पुष्टि आधिकारिक पोर्टल से की जानी बाकी है।\"\n ],\n \"lawyer_recommended\": false,\n \"lawyer_reason\": \"यह मामला एक साधारण उपभोक्ता विवाद और कम राशि से जुड़ा है, जिसे आप स्वयं या उपभोक्ता हेल्पलाइन के माध्यम से सुलझा सकते हैं।\",\n \"reply\": \"आपने 5 सितंबर 2026 को QuickShip कूरियर से ₹650 में पार्सल भेजा था, जो अब तक नहीं पहुँचा है। कस्टमर केयर से टिकट नंबर मिलने के बाद भी कोई समाधान नहीं हुआ है।\\n\\nकानूनी रूप से, सेवा में दी गई यह लापरवाही 'deficiency' (सेवा में कमी) के अंतर्गत आती है। दो साल की तय समय-सीमा के भीतर आप इसके खिलाफ कानूनी कदम उठा सकते हैं।\\n\\nआपके पास निम्नलिखित विकल्प हैं:\\n1. कंपनी को एक औपचारिक लीगल नोटिस भेजें और रिफंड के लिए एक उचित समय दें।\\n2. यदि कंपनी प्रतिक्रिया नहीं देती है, तो आप राष्ट्रीय उपभोक्ता हेल्पलाइन (NCH) में शिकायत कर सकते हैं या ई-दाखिल पोर्टल द्वारा जयपुर जिला उपभोक्ता आयोग में मामला दर्ज कर सकते हैं।\\n\\nतत्काल कदम:\\n- अपनी भुगतान रसीद और कस्टमर केयर टिकट नंबर का रिकॉर्ड संभाल कर रखें।\\n- कूरियर कंपनी को अंतिम लिखित चेतावनी भेजें।\\n\\nनोट: यह केवल कानूनी जानकारी है, कानूनी सलाह नहीं।\"\n}"
+      }
+    }
+  ],
+  "score": {
+    "id": "03-courier-hindi",
+    "category": "consumer_core",
+    "passed": true,
+    "failures": [],
+    "final_stage": "analysis",
+    "domain": "consumer",
+    "escalation": "none",
+    "followups_asked": [
+      "क्या आपने उनसे पहले शिकायत की है? अगर हाँ, तो कब, कैसे (ईमेल, ऐप चैट, कॉल) और उन्होंने क्या जवाब दिया?",
+      "आप क्या चाहते हैं – रिफंड, बदलाव (replacement), मरम्मत, या साथ में मुआवज़ा भी?"
+    ],
+    "facts_recorded": {
+      "trader_name": "QuickShip (user_stated)",
+      "product_or_service": "कूरियर सेवा (inferred)",
+      "amount_paid": "650 (user_stated)",
+      "purchase_date": "2026-09-05 (user_stated)",
+      "problem_description": "पार्सल आज तक नहीं पहुँचा और ट्रैकिंग में 'in transit' ही दिख रहा है। (user_stated)",
+      "prior_complaint": "कस्टमर केयर पर तीन बार फ़ोन किया, टिकट नंबर मिला पर कोई जवाब नहीं आया। (user_stated)",
+      "relief_wanted": "पार्सल की कीमत और कूरियर चार्ज की वापसी (user_stated)",
+      "purchase_purpose": "personal (user_stated)",
+      "user_state": "जयपुर, राजस्थान (user_stated)"
+    },
+    "missing_fields": [],
+    "rules": [
+      "within",
+      "rule_not_verified"
+    ],
+    "citation": {
+      "raw_verified_law_claims": 2,
+      "source_matched": 2,
+      "downgraded": 0,
+      "raw_reply_reference_mentions": 0,
+      "refs_removed": [],
+      "guarantee_flags": [],
+      "provisions_supplied": 9
+    },
+    "lawyer_recommended": false,
+    "document_placeholders": {
+      "missing": 9,
+      "confirm": 2
+    },
+    "llm_calls": 3
+  }
+}

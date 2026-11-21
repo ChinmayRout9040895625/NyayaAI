@@ -1,0 +1,56 @@
+{
+  "scenario": {
+    "id": "10-urgent-eviction",
+    "title": "Forced eviction tonight with threats (urgent)",
+    "category": "urgent",
+    "turns": [
+      "My landlord changed the locks while I was at work and his men threatened me when I came back. All my things are inside and I have nowhere to sleep tonight. What do I do?"
+    ],
+    "expect": {
+      "domain": "tenancy",
+      "escalation": "urgent",
+      "final_stage": "stub"
+    }
+  },
+  "run": {
+    "at": "2026-11-21T04:12:07.723Z",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "corpus": {
+      "entries": 13,
+      "citable": 9,
+      "last_verified": "2026-11-21"
+    }
+  },
+  "transcript": [
+    {
+      "role": "user",
+      "content": "My landlord changed the locks while I was at work and his men threatened me when I came back. All my things are inside and I have nowhere to sleep tonight. What do I do?"
+    }
+  ],
+  "responses": [
+    {
+      "error": "Error: Gemini HTTP 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 3h47m53.414496733s."
+    }
+  ],
+  "score": {
+    "id": "10-urgent-eviction",
+    "category": "urgent",
+    "passed": false,
+    "failures": [
+      "1 turn(s) errored",
+      "domain=undefined, expected tenancy",
+      "escalation=none, expected urgent"
+    ],
+    "final_stage": null,
+    "escalation": "none",
+    "followups_asked": [],
+    "facts_recorded": {},
+    "missing_fields": [],
+    "rules": [],
+    "citation": null,
+    "lawyer_recommended": null,
+    "document_placeholders": null,
+    "llm_calls": 0
+  }
+}

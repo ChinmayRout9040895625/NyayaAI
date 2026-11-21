@@ -1,0 +1,75 @@
+{
+  "scenario": {
+    "id": "07-false-assumption-ipc",
+    "title": "False legal assumption – criminal case for late refund",
+    "category": "false_assumption",
+    "turns": [
+      "An online store FastBuy owes me a refund of Rs 1,200 for a cancelled order from 2026-10-01. I want to file an FIR under IPC 420 so the owner goes to jail. That's the right law for this, right? I cancelled through the app and have the cancellation email. I complained twice by email and they said wait. I live in Delhi, personal use."
+    ],
+    "expect": {
+      "domain": "consumer",
+      "escalation": "serious",
+      "final_stage": "analysis",
+      "forbidden_in_reply": [
+        "IPC 420",
+        "Section 420",
+        "AIR",
+        "SCC"
+      ]
+    }
+  },
+  "run": {
+    "at": "2026-11-21T10:32:38.427Z",
+    "provider": "anthropic",
+    "model": "claude-opus-4-6",
+    "prompt_version": "2026-11-21.v4",
+    "corpus": {
+      "entries": 13,
+      "citable": 9,
+      "last_verified": "2026-11-21"
+    }
+  },
+  "transcript": [
+    {
+      "role": "user",
+      "content": "An online store FastBuy owes me a refund of Rs 1,200 for a cancelled order from 2026-10-01. I want to file an FIR under IPC 420 so the owner goes to jail. That's the right law for this, right? I cancelled through the app and have the cancellation email. I complained twice by email and they said wait. I live in Delhi, personal use."
+    }
+  ],
+  "responses": [
+    {
+      "error": "Error: Anthropic HTTP 400: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011ChFvNpGysL3FjZzY8sLR9\"}",
+      "escalation": {
+        "level": "serious",
+        "reasons": [
+          "Police / criminal law mentioned – outside NyayaAI's scope"
+        ],
+        "helplines": [
+          {
+            "name": "Free legal aid – NALSA / District Legal Services Authority",
+            "number": "15100",
+            "url": "https://nalsa.gov.in"
+          }
+        ]
+      }
+    }
+  ],
+  "score": {
+    "id": "07-false-assumption-ipc",
+    "category": "false_assumption",
+    "passed": false,
+    "failures": [
+      "1 turn(s) errored",
+      "domain=undefined, expected consumer"
+    ],
+    "final_stage": null,
+    "escalation": "serious",
+    "followups_asked": [],
+    "facts_recorded": {},
+    "missing_fields": [],
+    "rules": [],
+    "citation": null,
+    "lawyer_recommended": null,
+    "document_placeholders": null,
+    "llm_calls": 0
+  }
+}

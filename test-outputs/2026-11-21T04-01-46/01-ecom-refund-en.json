@@ -1,0 +1,56 @@
+{
+  "scenario": {
+    "id": "01-ecom-refund-en",
+    "title": "E-commerce refund not received (English)",
+    "category": "consumer_core",
+    "turns": [
+      "I ordered a Bluetooth speaker from an online store called ShopKart for Rs 3,499 on 2026-08-14. I returned it on 2026-08-20 because it stopped charging, and the pickup was done, but the refund still hasn't come.",
+      "I complained 4 times on their app chat. They keep saying 'refund initiated' but nothing comes. I just want my 3,499 back. I bought it for my own use. I live in Pune, Maharashtra. I have the invoice and the return pickup receipt."
+    ],
+    "expect": {
+      "domain": "consumer",
+      "escalation": "none",
+      "final_stage": "analysis"
+    }
+  },
+  "run": {
+    "at": "2026-11-21T04:02:31.487Z",
+    "provider": "gemini",
+    "model": "gemini-3.8-flash",
+    "corpus": {
+      "entries": 13,
+      "citable": 9,
+      "last_verified": "2026-11-21"
+    }
+  },
+  "transcript": [
+    {
+      "role": "user",
+      "content": "I ordered a Bluetooth speaker from an online store called ShopKart for Rs 3,499 on 2026-08-14. I returned it on 2026-08-20 because it stopped charging, and the pickup was done, but the refund still hasn't come."
+    }
+  ],
+  "responses": [
+    {
+      "error": "AbortError: This operation was aborted"
+    }
+  ],
+  "score": {
+    "id": "01-ecom-refund-en",
+    "category": "consumer_core",
+    "passed": false,
+    "failures": [
+      "1 turn(s) errored",
+      "domain=undefined, expected consumer"
+    ],
+    "final_stage": null,
+    "escalation": "none",
+    "followups_asked": [],
+    "facts_recorded": {},
+    "missing_fields": [],
+    "rules": [],
+    "citation": null,
+    "lawyer_recommended": null,
+    "document_placeholders": null,
+    "llm_calls": 0
+  }
+}

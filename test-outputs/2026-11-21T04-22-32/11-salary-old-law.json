@@ -1,0 +1,143 @@
+{
+  "scenario": {
+    "id": "11-salary-old-law",
+    "title": "Unpaid salary citing Payment of Wages Act (stub + Labour Codes)",
+    "category": "out_of_depth",
+    "turns": [
+      "Meri company ne 3 mahine se salary nahi di, 45,000 per month hai. Main Payment of Wages Act 1936 ke under case karna chahta hoon. Kaise karun?"
+    ],
+    "expect": {
+      "domain": "employment",
+      "escalation": "none",
+      "final_stage": "stub"
+    }
+  },
+  "run": {
+    "at": "2026-11-21T04:23:24.517Z",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "corpus": {
+      "entries": 13,
+      "citable": 9,
+      "last_verified": "2026-11-21"
+    }
+  },
+  "transcript": [
+    {
+      "role": "user",
+      "content": "Meri company ne 3 mahine se salary nahi di, 45,000 per month hai. Main Payment of Wages Act 1936 ke under case karna chahta hoon. Kaise karun?"
+    },
+    {
+      "role": "assistant",
+      "content": "Ye employment / unpaid salary ka issue lagta hai. NyayaAI abhi employment law par advice nahi deta. India mein wage law recently badla hai: chaaron Labour Codes, jisme Code on Wages, 2019 bhi hai, lagu kiye gaye hain aur ye Payment of Wages Act, 1936 jaise purane laws ki jagah lete hain; naye Central aur State rules bhi lagu hain. Maine ye provisions verify nahi kiye hain, isliye main inka reference nahi dunga. Appointment letter, salary slips, purani salary ke bank statements, attendance records aur unpaid salary wale emails sambhal ke rakhiye. Aap apne area ke Labour Department se contact kar sakte ho, aur District Legal Services Authority (NALSA helpline 15100) se free legal aid mil sakti hai."
+    }
+  ],
+  "responses": [
+    {
+      "stage": "stub",
+      "reply": "Ye employment / unpaid salary ka issue lagta hai. NyayaAI abhi employment law par advice nahi deta. India mein wage law recently badla hai: chaaron Labour Codes, jisme Code on Wages, 2019 bhi hai, lagu kiye gaye hain aur ye Payment of Wages Act, 1936 jaise purane laws ki jagah lete hain; naye Central aur State rules bhi lagu hain. Maine ye provisions verify nahi kiye hain, isliye main inka reference nahi dunga. Appointment letter, salary slips, purani salary ke bank statements, attendance records aur unpaid salary wale emails sambhal ke rakhiye. Aap apne area ke Labour Department se contact kar sakte ho, aur District Legal Services Authority (NALSA helpline 15100) se free legal aid mil sakti hai.",
+      "case": {
+        "domain": "employment",
+        "language": "hinglish",
+        "facts": {
+          "problem_description": {
+            "value": "Meri company ne 3 mahine se salary nahi di",
+            "source": "user_stated",
+            "quote": "Meri company ne 3 mahine se salary nahi di"
+          },
+          "amount_paid": {
+            "value": "45000",
+            "source": "user_stated",
+            "quote": "45,000 per month hai"
+          }
+        },
+        "timeline": [],
+        "evidence": {},
+        "notes": [],
+        "turns": 1
+      },
+      "followups": [],
+      "missing": [],
+      "escalation": {
+        "level": "none",
+        "reasons": [],
+        "helplines": []
+      },
+      "evidence": [
+        {
+          "key": "stub_0",
+          "label": "Appointment / offer letter",
+          "why": "",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "stub_1",
+          "label": "Salary slips",
+          "why": "",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "stub_2",
+          "label": "Bank statements showing salary credits",
+          "why": "",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "stub_3",
+          "label": "Attendance records",
+          "why": "",
+          "state": "not_mentioned"
+        },
+        {
+          "key": "stub_4",
+          "label": "Emails/messages about unpaid salary",
+          "why": "",
+          "state": "not_mentioned"
+        }
+      ],
+      "sources": [],
+      "unverified_matches": [
+        {
+          "id": "COW2019",
+          "act": "Code on Wages, 2019",
+          "section": "Whole Code",
+          "title": "Code on Wages – replaces Payment of Wages Act, 1936 and others",
+          "text": "",
+          "source_url": "https://labour.gov.in/",
+          "status": "verify",
+          "verified_on": null,
+          "used_in_claim": false
+        }
+      ],
+      "meta": {
+        "provider": "gemini",
+        "model": "gemini-3.5-flash-lite",
+        "prompt_version": "2026-11-21.v2",
+        "llm_calls": 1
+      },
+      "raw": {
+        "understanding": "{\n  \"domain\": \"employment\",\n  \"domain_confidence\": 1.0,\n  \"language\": \"hinglish\",\n  \"extracted\": [\n    {\n      \"field\": \"problem_description\",\n      \"value\": \"Meri company ne 3 mahine se salary nahi di\",\n      \"source\": \"user_stated\",\n      \"quote\": \"Meri company ne 3 mahine se salary nahi di\"\n    },\n    {\n      \"field\": \"amount_paid\",\n      \"value\": \"45000\",\n      \"source\": \"user_stated\",\n      \"quote\": \"45,000 per month hai\"\n    }\n  ],\n  \"timeline\": [],\n  \"evidence_mentioned\": [],\n  \"search_terms\": [\n    \"salary not paid\",\n    \"delayed wages\",\n    \"unpaid salary\"\n  ],\n  \"user_wants_analysis\": true,\n  \"acknowledgement\": \"Aapki salary 3 mahine se na milna behad pareshani ki baat hai, main aapki is situation ko samajhta hoon.\"\n}"
+      }
+    }
+  ],
+  "score": {
+    "id": "11-salary-old-law",
+    "category": "out_of_depth",
+    "passed": true,
+    "failures": [],
+    "final_stage": "stub",
+    "domain": "employment",
+    "escalation": "none",
+    "followups_asked": [],
+    "facts_recorded": {
+      "problem_description": "Meri company ne 3 mahine se salary nahi di (user_stated)",
+      "amount_paid": "45000 (user_stated)"
+    },
+    "missing_fields": [],
+    "rules": [],
+    "citation": null,
+    "lawyer_recommended": null,
+    "document_placeholders": null,
+    "llm_calls": 1
+  }
+}

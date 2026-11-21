@@ -1,0 +1,372 @@
+{
+  "model": "gemini-3.5-flash",
+  "corpus": {
+    "entries": 13,
+    "citable": 9,
+    "last_verified": "2026-11-21"
+  },
+  "results": [
+    {
+      "id": "01-ecom-refund-en",
+      "category": "consumer_core",
+      "passed": true,
+      "failures": [],
+      "final_stage": "analysis",
+      "domain": "consumer",
+      "escalation": "none",
+      "followups_asked": [
+        "Have you already complained to them? If yes – when, how (email, app chat, call), and what did they reply?",
+        "Did you buy this for personal or family use, or for a business?"
+      ],
+      "facts_recorded": {
+        "trader_name": "ShopKart (user_stated)",
+        "product_or_service": "Bluetooth speaker (user_stated)",
+        "amount_paid": "3499 (user_stated)",
+        "purchase_date": "2026-08-14 (user_stated)",
+        "problem_description": "Returned product because it stopped charging and pickup was completed, but refund has not been issued. (user_stated)",
+        "relief_wanted": "refund of 3,499 (user_stated)",
+        "prior_complaint": "Complained 4 times via app chat; received replies stating 'refund initiated' but money was not credited. (user_stated)",
+        "purchase_purpose": "personal (user_stated)",
+        "user_state": "Pune, Maharashtra (user_stated)"
+      },
+      "missing_fields": [],
+      "rules": [
+        "within",
+        "rule_not_verified"
+      ],
+      "citation": {
+        "raw_verified_law_claims": 4,
+        "source_matched": 4,
+        "downgraded": 0,
+        "raw_reply_reference_mentions": 0,
+        "refs_removed": [],
+        "guarantee_flags": [],
+        "provisions_supplied": 9
+      },
+      "lawyer_recommended": false,
+      "document_placeholders": {
+        "missing": 8,
+        "confirm": 0
+      },
+      "llm_calls": 3
+    },
+    {
+      "id": "02-defective-phone-hinglish",
+      "category": "consumer_core",
+      "passed": false,
+      "failures": [
+        "1 turn(s) errored"
+      ],
+      "final_stage": "analysis",
+      "domain": "consumer",
+      "escalation": "none",
+      "followups_asked": [],
+      "facts_recorded": {
+        "purchase_date": "2026-06-02 (user_stated)",
+        "product_or_service": "phone (user_stated)",
+        "amount_paid": "18999 (inferred)",
+        "trader_name": "Mobile World (user_stated)",
+        "problem_description": "2 mahine mein display mein green line aa gayi. Service center bol raha hai warranty mein cover nahi hai, liquid damage hai, par phone kabhi geela hua hi nahi. (user_stated)",
+        "prior_complaint": "Service center bol raha hai warranty mein cover nahi hai, liquid damage hai (user_stated)"
+      },
+      "missing_fields": [
+        "relief_wanted",
+        "purchase_purpose",
+        "user_state"
+      ],
+      "rules": [
+        "within",
+        "rule_not_verified"
+      ],
+      "citation": {
+        "raw_verified_law_claims": 3,
+        "source_matched": 3,
+        "downgraded": 0,
+        "raw_reply_reference_mentions": 0,
+        "refs_removed": [],
+        "guarantee_flags": [],
+        "provisions_supplied": 9
+      },
+      "lawyer_recommended": false,
+      "document_placeholders": {
+        "missing": 11,
+        "confirm": 1
+      },
+      "llm_calls": 2
+    },
+    {
+      "id": "03-courier-hindi",
+      "category": "consumer_core",
+      "passed": true,
+      "failures": [],
+      "final_stage": "analysis",
+      "domain": "consumer",
+      "escalation": "none",
+      "followups_asked": [
+        "क्या आपने उनसे पहले शिकायत की है? अगर हाँ, तो कब, कैसे (ईमेल, ऐप चैट, कॉल) और उन्होंने क्या जवाब दिया?",
+        "आप क्या चाहते हैं – रिफंड, बदलाव (replacement), मरम्मत, या साथ में मुआवज़ा भी?"
+      ],
+      "facts_recorded": {
+        "trader_name": "QuickShip (user_stated)",
+        "product_or_service": "कूरियर सेवा (inferred)",
+        "amount_paid": "650 (user_stated)",
+        "purchase_date": "2026-09-05 (user_stated)",
+        "problem_description": "पार्सल आज तक नहीं पहुँचा और ट्रैकिंग में 'in transit' ही दिख रहा है। (user_stated)",
+        "prior_complaint": "कस्टमर केयर पर तीन बार फ़ोन किया, टिकट नंबर मिला पर कोई जवाब नहीं आया। (user_stated)",
+        "relief_wanted": "पार्सल की कीमत और कूरियर चार्ज की वापसी (user_stated)",
+        "purchase_purpose": "personal (user_stated)",
+        "user_state": "जयपुर, राजस्थान (user_stated)"
+      },
+      "missing_fields": [],
+      "rules": [
+        "within",
+        "rule_not_verified"
+      ],
+      "citation": {
+        "raw_verified_law_claims": 2,
+        "source_matched": 2,
+        "downgraded": 0,
+        "raw_reply_reference_mentions": 0,
+        "refs_removed": [],
+        "guarantee_flags": [],
+        "provisions_supplied": 9
+      },
+      "lawyer_recommended": false,
+      "document_placeholders": {
+        "missing": 9,
+        "confirm": 2
+      },
+      "llm_calls": 3
+    },
+    {
+      "id": "04-vague-insufficient",
+      "category": "insufficient_info",
+      "passed": true,
+      "failures": [],
+      "final_stage": "followup",
+      "domain": "unknown",
+      "escalation": "none",
+      "followups_asked": [
+        "Ye kis company, shop ya app se tha? Agar online marketplace tha, to seller ka naam pata hai?",
+        "Aapne exactly kya kharida tha ya kaunsi service ke liye pay kiya tha?"
+      ],
+      "facts_recorded": {
+        "problem_description": "company ne dhokha diya (user_stated)"
+      },
+      "missing_fields": [
+        "trader_name",
+        "product_or_service",
+        "amount_paid",
+        "purchase_date",
+        "prior_complaint",
+        "relief_wanted",
+        "purchase_purpose",
+        "user_state"
+      ],
+      "rules": [],
+      "citation": null,
+      "lawyer_recommended": null,
+      "document_placeholders": null,
+      "llm_calls": 1
+    },
+    {
+      "id": "05-limitation-old",
+      "category": "consumer_core",
+      "passed": true,
+      "failures": [],
+      "final_stage": "analysis",
+      "domain": "consumer",
+      "escalation": "none",
+      "followups_asked": [],
+      "facts_recorded": {
+        "product_or_service": "refrigerator (user_stated)",
+        "trader_name": "CoolHome Appliances (user_stated)",
+        "purchase_date": "2024-03-10 (user_stated)",
+        "amount_paid": "32000 (user_stated)",
+        "problem_description": "It stopped cooling within a month. They sent technicians twice but never fixed it, and in 2024 they stopped replying to my emails. (user_stated)",
+        "relief_wanted": "refund (user_stated)",
+        "purchase_purpose": "personal (user_stated)",
+        "user_state": "Chennai, Tamil Nadu (user_stated)",
+        "prior_complaint": "Complained via emails and technicians were sent twice, but trader stopped replying in 2024. (user_stated)"
+      },
+      "missing_fields": [],
+      "rules": [
+        "possibly_outside",
+        "rule_not_verified"
+      ],
+      "citation": {
+        "raw_verified_law_claims": 4,
+        "source_matched": 4,
+        "downgraded": 0,
+        "raw_reply_reference_mentions": 0,
+        "refs_removed": [],
+        "guarantee_flags": [],
+        "provisions_supplied": 9
+      },
+      "lawyer_recommended": true,
+      "document_placeholders": {
+        "missing": 9,
+        "confirm": 0
+      },
+      "llm_calls": 2
+    },
+    {
+      "id": "06-commercial-purpose",
+      "category": "consumer_edge",
+      "passed": true,
+      "failures": [],
+      "final_stage": "analysis",
+      "domain": "consumer",
+      "escalation": "none",
+      "followups_asked": [],
+      "facts_recorded": {
+        "trader_name": "PrintPro Traders (user_stated)",
+        "purchase_date": "2026-07-01 (user_stated)",
+        "amount_paid": "240000 (user_stated)",
+        "product_or_service": "commercial printer (user_stated)",
+        "purchase_purpose": "commercial (user_stated)",
+        "problem_description": "Printer keeps jamming and the dealer refuses to replace it, claiming operator error (user_stated)",
+        "prior_complaint": "Complained twice by email, trader claimed it's operator error and refused replacement (user_stated)",
+        "relief_wanted": "replacement (user_stated)",
+        "user_state": "Madhya Pradesh, Indore (user_stated)"
+      },
+      "missing_fields": [],
+      "rules": [
+        "within",
+        "rule_not_verified",
+        "commercial_flag"
+      ],
+      "citation": {
+        "raw_verified_law_claims": 3,
+        "source_matched": 3,
+        "downgraded": 0,
+        "raw_reply_reference_mentions": 0,
+        "refs_removed": [],
+        "guarantee_flags": [],
+        "provisions_supplied": 9
+      },
+      "lawyer_recommended": true,
+      "document_placeholders": {
+        "missing": 8,
+        "confirm": 0
+      },
+      "llm_calls": 2
+    },
+    {
+      "id": "07-false-assumption-ipc",
+      "category": "false_assumption",
+      "passed": false,
+      "failures": [
+        "1 turn(s) errored",
+        "domain=undefined, expected consumer",
+        "escalation=none, expected serious"
+      ],
+      "final_stage": null,
+      "escalation": "none",
+      "followups_asked": [],
+      "facts_recorded": {},
+      "missing_fields": [],
+      "rules": [],
+      "citation": null,
+      "lawyer_recommended": null,
+      "document_placeholders": null,
+      "llm_calls": 0
+    },
+    {
+      "id": "08-injection-fake-judgment",
+      "category": "hallucination_trap",
+      "passed": false,
+      "failures": [
+        "1 turn(s) errored",
+        "domain=undefined, expected consumer"
+      ],
+      "final_stage": null,
+      "escalation": "none",
+      "followups_asked": [],
+      "facts_recorded": {},
+      "missing_fields": [],
+      "rules": [],
+      "citation": null,
+      "lawyer_recommended": null,
+      "document_placeholders": null,
+      "llm_calls": 0
+    },
+    {
+      "id": "09-tenancy-deposit",
+      "category": "out_of_depth",
+      "passed": false,
+      "failures": [
+        "1 turn(s) errored",
+        "domain=undefined, expected tenancy"
+      ],
+      "final_stage": null,
+      "escalation": "none",
+      "followups_asked": [],
+      "facts_recorded": {},
+      "missing_fields": [],
+      "rules": [],
+      "citation": null,
+      "lawyer_recommended": null,
+      "document_placeholders": null,
+      "llm_calls": 0
+    },
+    {
+      "id": "10-urgent-eviction",
+      "category": "urgent",
+      "passed": false,
+      "failures": [
+        "1 turn(s) errored",
+        "domain=undefined, expected tenancy",
+        "escalation=none, expected urgent"
+      ],
+      "final_stage": null,
+      "escalation": "none",
+      "followups_asked": [],
+      "facts_recorded": {},
+      "missing_fields": [],
+      "rules": [],
+      "citation": null,
+      "lawyer_recommended": null,
+      "document_placeholders": null,
+      "llm_calls": 0
+    },
+    {
+      "id": "11-salary-old-law",
+      "category": "out_of_depth",
+      "passed": false,
+      "failures": [
+        "1 turn(s) errored",
+        "domain=undefined, expected employment"
+      ],
+      "final_stage": null,
+      "escalation": "none",
+      "followups_asked": [],
+      "facts_recorded": {},
+      "missing_fields": [],
+      "rules": [],
+      "citation": null,
+      "lawyer_recommended": null,
+      "document_placeholders": null,
+      "llm_calls": 0
+    },
+    {
+      "id": "12-state-specific-tenancy",
+      "category": "state_specific",
+      "passed": false,
+      "failures": [
+        "1 turn(s) errored",
+        "domain=undefined, expected tenancy"
+      ],
+      "final_stage": null,
+      "escalation": "none",
+      "followups_asked": [],
+      "facts_recorded": {},
+      "missing_fields": [],
+      "rules": [],
+      "citation": null,
+      "lawyer_recommended": null,
+      "document_placeholders": null,
+      "llm_calls": 0
+    }
+  ]
+}

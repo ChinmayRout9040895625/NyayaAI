@@ -1,0 +1,410 @@
+[
+  {
+    "id": "CPA2019-S2-7",
+    "act": "Consumer Protection Act, 2019",
+    "act_number": "Act No. 35 of 2019",
+    "section": "2(7)",
+    "title": "Definition of 'consumer'",
+    "text": "(7) \"consumer\" means any person who-- (i) buys any goods for a consideration which has been paid or promised or partly paid and partly promised, or under any system of deferred payment and includes any user of such goods other than the person who buys such goods for consideration paid or promised or partly paid or partly promised, or under any system of deferred payment, when such use is made with the approval of such person, but does not include a person who obtains such goods for resale or for any commercial purpose; or (ii) hires or avails of any service for a consideration which has been paid or promised or partly paid and partly promised, or under any system of deferred payment and includes any beneficiary of such service other than the person who hires or avails of the services for consideration paid or promised, or partly paid and partly promised, or under any system of deferred payment, when such services are availed of with the approval of the first mentioned person, but does not include a person who avails of such service for any commercial purpose. Explanation. --For the purposes of this clause, -- (a) the expression \"commercial purpose\" does not include use by a person of goods bought and used by him exclusively for the purpose of earning his livelihood, by means of self-employment; (b) the expressions \"buys any goods\" and \"hires or avails any services\" includes offline or online transactions through electronic means or by teleshopping or direct selling or multi-level marketing;",
+    "text_type": "verbatim",
+    "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+    "source_name": "India Code (Legislative Department, Government of India)",
+    "source_document": "Consumer Protection Act, 2019.pdf – India Code consolidated text ('Last Updated: 17-9-2021'), 39 pages, SHA-256 414fb1edd9b0f7fbc2839ad92fb2b29ebfa3b557e70e928ab4a535802199e3e7; downloaded by the project owner from India Code (direct fetch from this environment was blocked)",
+    "jurisdiction": "central (all India)",
+    "status": "in_force",
+    "status_basis": "In force from 20 July 2020: notification S.O. 2351(E) dated 15 July 2020 (Gazette of India, Extraordinary, Part II, sec. 3(ii)) brought s.2 [except cl. (4), (13), (14), (16), (40)], ss.28-73, s.100 and others into force (footnote 1 to s.1(3) in the official text).",
+    "amendments": "No amendment footnote on this provision in the consolidated text (last updated 17-9-2021). The only amendment shown anywhere in the Act is Act 33 of 2021, s.30 (w.e.f. 4-4-2021), affecting National Commission provisions, not this one. Amendments after 17-9-2021 could not be checked against the live India Code page.",
+    "verification_checks": {
+      "text_verbatim": true,
+      "section_number": true,
+      "amendments": true,
+      "commencement": true,
+      "applicability": true
+    },
+    "verified_on": "2026-11-21",
+    "domains": [
+      "consumer"
+    ],
+    "keywords": [
+      "consumer",
+      "buyer",
+      "buys goods",
+      "hires services",
+      "avails service",
+      "personal use",
+      "commercial purpose",
+      "resale",
+      "online",
+      "e-commerce",
+      "self-employment"
+    ]
+  },
+  {
+    "id": "CPA2019-S2-10",
+    "act": "Consumer Protection Act, 2019",
+    "act_number": "Act No. 35 of 2019",
+    "section": "2(10)",
+    "title": "Definition of 'defect'",
+    "text": "(10) \"defect\" means any fault, imperfection or shortcoming in the quality, quantity, potency, purity or standard which is required to be maintained by or under any law for the time being in force or under any contract, express or implied or as is claimed by the trader in any manner whatsoever in relation to any goods or product and the expression \"defective\" shall be construed accordingly;",
+    "text_type": "verbatim",
+    "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+    "source_name": "India Code (Legislative Department, Government of India)",
+    "source_document": "Consumer Protection Act, 2019.pdf – India Code consolidated text ('Last Updated: 17-9-2021'), 39 pages, SHA-256 414fb1edd9b0f7fbc2839ad92fb2b29ebfa3b557e70e928ab4a535802199e3e7; downloaded by the project owner from India Code (direct fetch from this environment was blocked)",
+    "jurisdiction": "central (all India)",
+    "status": "in_force",
+    "status_basis": "In force from 20 July 2020: notification S.O. 2351(E) dated 15 July 2020 (Gazette of India, Extraordinary, Part II, sec. 3(ii)) brought s.2 [except cl. (4), (13), (14), (16), (40)], ss.28-73, s.100 and others into force (footnote 1 to s.1(3) in the official text).",
+    "amendments": "No amendment footnote on this provision in the consolidated text (last updated 17-9-2021). The only amendment shown anywhere in the Act is Act 33 of 2021, s.30 (w.e.f. 4-4-2021), affecting National Commission provisions, not this one. Amendments after 17-9-2021 could not be checked against the live India Code page.",
+    "verification_checks": {
+      "text_verbatim": true,
+      "section_number": true,
+      "amendments": true,
+      "commencement": true,
+      "applicability": true
+    },
+    "verified_on": "2026-11-21",
+    "domains": [
+      "consumer"
+    ],
+    "keywords": [
+      "defect",
+      "defective",
+      "faulty",
+      "broken",
+      "quality",
+      "damaged product",
+      "not working",
+      "warranty"
+    ]
+  },
+  {
+    "id": "CPA2019-S2-11",
+    "act": "Consumer Protection Act, 2019",
+    "act_number": "Act No. 35 of 2019",
+    "section": "2(11)",
+    "title": "Definition of 'deficiency'",
+    "text": "(11) \"deficiency\" means any fault, imperfection, shortcoming or inadequacy in the quality, nature and manner of performance which is required to be maintained by or under any law for the time being in force or has been undertaken to be performed by a person in pursuance of a contract or otherwise in relation to any service and includes-- (i) any act of negligence or omission or commission by such person which causes loss or injury to the consumer; and (ii) deliberate withholding of relevant information by such person to the consumer;",
+    "text_type": "verbatim",
+    "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+    "source_name": "India Code (Legislative Department, Government of India)",
+    "source_document": "Consumer Protection Act, 2019.pdf – India Code consolidated text ('Last Updated: 17-9-2021'), 39 pages, SHA-256 414fb1edd9b0f7fbc2839ad92fb2b29ebfa3b557e70e928ab4a535802199e3e7; downloaded by the project owner from India Code (direct fetch from this environment was blocked)",
+    "jurisdiction": "central (all India)",
+    "status": "in_force",
+    "status_basis": "In force from 20 July 2020: notification S.O. 2351(E) dated 15 July 2020 (Gazette of India, Extraordinary, Part II, sec. 3(ii)) brought s.2 [except cl. (4), (13), (14), (16), (40)], ss.28-73, s.100 and others into force (footnote 1 to s.1(3) in the official text).",
+    "amendments": "No amendment footnote on this provision in the consolidated text (last updated 17-9-2021). The only amendment shown anywhere in the Act is Act 33 of 2021, s.30 (w.e.f. 4-4-2021), affecting National Commission provisions, not this one. Amendments after 17-9-2021 could not be checked against the live India Code page.",
+    "verification_checks": {
+      "text_verbatim": true,
+      "section_number": true,
+      "amendments": true,
+      "commencement": true,
+      "applicability": true
+    },
+    "verified_on": "2026-11-21",
+    "domains": [
+      "consumer"
+    ],
+    "keywords": [
+      "deficiency",
+      "service",
+      "poor service",
+      "not provided",
+      "delay",
+      "negligence",
+      "courier",
+      "repair",
+      "travel",
+      "refund not processed"
+    ]
+  },
+  {
+    "id": "CPA2019-S2-47-VIII",
+    "act": "Consumer Protection Act, 2019",
+    "act_number": "Act No. 35 of 2019",
+    "section": "2(47)(viii)",
+    "title": "Unfair trade practice – refusing to take back defective goods / refund",
+    "text": "(viii) refusing, after selling goods or rendering services, to take back or withdraw defective goods or to withdraw or discontinue deficient services and to refund the consideration thereof, if paid, within the period stipulated in the bill or cash memo or receipt or in the absence of such stipulation, within a period of thirty days;",
+    "text_type": "verbatim",
+    "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+    "source_name": "India Code (Legislative Department, Government of India)",
+    "source_document": "Consumer Protection Act, 2019.pdf – India Code consolidated text ('Last Updated: 17-9-2021'), 39 pages, SHA-256 414fb1edd9b0f7fbc2839ad92fb2b29ebfa3b557e70e928ab4a535802199e3e7; downloaded by the project owner from India Code (direct fetch from this environment was blocked)",
+    "jurisdiction": "central (all India)",
+    "status": "in_force",
+    "status_basis": "In force from 20 July 2020: notification S.O. 2351(E) dated 15 July 2020 (Gazette of India, Extraordinary, Part II, sec. 3(ii)) brought s.2 [except cl. (4), (13), (14), (16), (40)], ss.28-73, s.100 and others into force (footnote 1 to s.1(3) in the official text).",
+    "amendments": "No amendment footnote on this provision in the consolidated text (last updated 17-9-2021). The only amendment shown anywhere in the Act is Act 33 of 2021, s.30 (w.e.f. 4-4-2021), affecting National Commission provisions, not this one. Amendments after 17-9-2021 could not be checked against the live India Code page.",
+    "verification_checks": {
+      "text_verbatim": true,
+      "section_number": true,
+      "amendments": true,
+      "commencement": true,
+      "applicability": true
+    },
+    "verified_on": "2026-11-21",
+    "domains": [
+      "consumer"
+    ],
+    "keywords": [
+      "unfair trade practice",
+      "refuse to take back",
+      "refund",
+      "withdraw defective goods",
+      "thirty days",
+      "return",
+      "cash memo"
+    ],
+    "notes": "Excerpt: clause (viii) of the definition of 'unfair trade practice' in s.2(47)."
+  },
+  {
+    "id": "CPA2019-S34-1",
+    "act": "Consumer Protection Act, 2019",
+    "act_number": "Act No. 35 of 2019",
+    "section": "34(1)",
+    "title": "Jurisdiction of District Commission – monetary limit (as enacted)",
+    "text": "34. Jurisdiction of District Commission.--(1) Subject to the other provisions of this Act, the District Commission shall have jurisdiction to entertain complaints where the value of the goods or services paid as consideration does not exceed one crore rupees: Provided that where the Central Government deems it necessary so to do, it may prescribe such other value, as it deems fit.",
+    "text_type": "verbatim",
+    "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+    "source_name": "India Code (Legislative Department, Government of India)",
+    "source_document": "Consumer Protection Act, 2019.pdf – India Code consolidated text ('Last Updated: 17-9-2021'), 39 pages, SHA-256 414fb1edd9b0f7fbc2839ad92fb2b29ebfa3b557e70e928ab4a535802199e3e7; downloaded by the project owner from India Code (direct fetch from this environment was blocked)",
+    "jurisdiction": "central (all India)",
+    "status": "verify",
+    "status_basis": "In force from 20 July 2020: notification S.O. 2351(E) dated 15 July 2020 (Gazette of India, Extraordinary, Part II, sec. 3(ii)) brought s.2 [except cl. (4), (13), (14), (16), (40)], ss.28-73, s.100 and others into force (footnote 1 to s.1(3) in the official text).",
+    "amendments": "No amendment footnote on this provision in the consolidated text (last updated 17-9-2021). The only amendment shown anywhere in the Act is Act 33 of 2021, s.30 (w.e.f. 4-4-2021), affecting National Commission provisions, not this one. Amendments after 17-9-2021 could not be checked against the live India Code page.",
+    "verification_checks": {
+      "text_verbatim": true,
+      "section_number": true,
+      "amendments": true,
+      "commencement": true,
+      "applicability": false
+    },
+    "verified_on": "2026-11-21",
+    "domains": [
+      "consumer"
+    ],
+    "keywords": [
+      "pecuniary jurisdiction",
+      "one crore",
+      "value of goods",
+      "consideration paid",
+      "limit"
+    ],
+    "notes": "Text verified, but the monetary value in s.34(1) can be changed by rules under its proviso. The current limit depends on the 2021 Jurisdiction Rules, which are NOT verified, so this sub-section is not citable as the current limit."
+  },
+  {
+    "id": "CPA2019-S34-2",
+    "act": "Consumer Protection Act, 2019",
+    "act_number": "Act No. 35 of 2019",
+    "section": "34(2)",
+    "title": "Jurisdiction of District Commission – where to file",
+    "text": "34. Jurisdiction of District Commission.-- (2) A complaint shall be instituted in a District Commission within the local limits of whose jurisdiction,-- (a) the opposite party or each of the opposite parties, where there are more than one, at the time of the institution of the complaint, ordinarily resides or carries on business or has a branch office or personally works for gain; or (b) any of the opposite parties, where there are more than one, at the time of the institution of the complaint, actually and voluntarily resides, or carries on business or has a branch office, or personally works for gain, provided that in such case the permission of the District Commission is given; or (c) the cause of action, wholly or in part, arises; or (d) the complainant resides or personally works for gain.",
+    "text_type": "verbatim",
+    "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+    "source_name": "India Code (Legislative Department, Government of India)",
+    "source_document": "Consumer Protection Act, 2019.pdf – India Code consolidated text ('Last Updated: 17-9-2021'), 39 pages, SHA-256 414fb1edd9b0f7fbc2839ad92fb2b29ebfa3b557e70e928ab4a535802199e3e7; downloaded by the project owner from India Code (direct fetch from this environment was blocked)",
+    "jurisdiction": "central (all India)",
+    "status": "in_force",
+    "status_basis": "In force from 20 July 2020: notification S.O. 2351(E) dated 15 July 2020 (Gazette of India, Extraordinary, Part II, sec. 3(ii)) brought s.2 [except cl. (4), (13), (14), (16), (40)], ss.28-73, s.100 and others into force (footnote 1 to s.1(3) in the official text).",
+    "amendments": "No amendment footnote on this provision in the consolidated text (last updated 17-9-2021). The only amendment shown anywhere in the Act is Act 33 of 2021, s.30 (w.e.f. 4-4-2021), affecting National Commission provisions, not this one. Amendments after 17-9-2021 could not be checked against the live India Code page.",
+    "verification_checks": {
+      "text_verbatim": true,
+      "section_number": true,
+      "amendments": true,
+      "commencement": true,
+      "applicability": true
+    },
+    "verified_on": "2026-11-21",
+    "domains": [
+      "consumer"
+    ],
+    "keywords": [
+      "jurisdiction",
+      "district commission",
+      "where to file",
+      "which district",
+      "resides",
+      "works for gain",
+      "carries on business",
+      "branch office",
+      "cause of action"
+    ]
+  },
+  {
+    "id": "CPA2019-S35-1",
+    "act": "Consumer Protection Act, 2019",
+    "act_number": "Act No. 35 of 2019",
+    "section": "35(1)",
+    "title": "Manner in which complaint shall be made",
+    "text": "35. Manner in which complaint shall be made.--(1) A complaint, in relation to any goods sold or delivered or agreed to be sold or delivered or any service provided or agreed to be provided, may be filed with a District Commission by-- (a) the consumer,-- (i) to whom such goods are sold or delivered or agreed to be sold or delivered or such service is provided or agreed to be provided; or (ii) who alleges unfair trade practice in respect of such goods or service; [...] Provided that the complaint under this sub-section may be filed electronically in such manner as may be prescribed.",
+    "text_type": "verbatim",
+    "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+    "source_name": "India Code (Legislative Department, Government of India)",
+    "source_document": "Consumer Protection Act, 2019.pdf – India Code consolidated text ('Last Updated: 17-9-2021'), 39 pages, SHA-256 414fb1edd9b0f7fbc2839ad92fb2b29ebfa3b557e70e928ab4a535802199e3e7; downloaded by the project owner from India Code (direct fetch from this environment was blocked)",
+    "jurisdiction": "central (all India)",
+    "status": "in_force",
+    "status_basis": "In force from 20 July 2020: notification S.O. 2351(E) dated 15 July 2020 (Gazette of India, Extraordinary, Part II, sec. 3(ii)) brought s.2 [except cl. (4), (13), (14), (16), (40)], ss.28-73, s.100 and others into force (footnote 1 to s.1(3) in the official text).",
+    "amendments": "No amendment footnote on this provision in the consolidated text (last updated 17-9-2021). The only amendment shown anywhere in the Act is Act 33 of 2021, s.30 (w.e.f. 4-4-2021), affecting National Commission provisions, not this one. Amendments after 17-9-2021 could not be checked against the live India Code page.",
+    "verification_checks": {
+      "text_verbatim": true,
+      "section_number": true,
+      "amendments": true,
+      "commencement": true,
+      "applicability": true
+    },
+    "verified_on": "2026-11-21",
+    "domains": [
+      "consumer"
+    ],
+    "keywords": [
+      "file complaint",
+      "complaint",
+      "how to file",
+      "electronic filing",
+      "online filing",
+      "consumer commission"
+    ],
+    "notes": "Excerpt: opening words, clause (a) and the proviso; clauses (b)-(d) and the Explanation omitted ([...])."
+  },
+  {
+    "id": "CPA2019-S39-1",
+    "act": "Consumer Protection Act, 2019",
+    "act_number": "Act No. 35 of 2019",
+    "section": "39(1)",
+    "title": "Findings of District Commission (reliefs)",
+    "text": "39. Findings of District Commission.--(1) Where the District Commission is satisfied that the goods complained against suffer from any of the defects specified in the complaint or that any of the allegations contained in the complaint about the services or any unfair trade practices, or claims for compensation under product liability are proved, it shall issue an order to the opposite party directing him to do one or more of the following, namely:-- (a) to remove the defect pointed out by the appropriate laboratory from the goods in question; (b) to replace the goods with new goods of similar description which shall be free from any defect; (c) to return to the complainant the price, or, as the case may be, the charges paid by the complainant along with such interest on such price or charges as may be decided; (d) to pay such amount as may be awarded by it as compensation to the consumer for any loss or injury suffered by the consumer due to the negligence of the opposite party: Provided that the District Commission shall have the power to grant punitive damages in such circumstances as it deems fit; (e) to pay such amount as may be awarded by it as compensation in a product liability action under Chapter VI; (f) to remove the defects in goods or deficiencies in the services in question; [...]",
+    "text_type": "verbatim",
+    "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+    "source_name": "India Code (Legislative Department, Government of India)",
+    "source_document": "Consumer Protection Act, 2019.pdf – India Code consolidated text ('Last Updated: 17-9-2021'), 39 pages, SHA-256 414fb1edd9b0f7fbc2839ad92fb2b29ebfa3b557e70e928ab4a535802199e3e7; downloaded by the project owner from India Code (direct fetch from this environment was blocked)",
+    "jurisdiction": "central (all India)",
+    "status": "in_force",
+    "status_basis": "In force from 20 July 2020: notification S.O. 2351(E) dated 15 July 2020 (Gazette of India, Extraordinary, Part II, sec. 3(ii)) brought s.2 [except cl. (4), (13), (14), (16), (40)], ss.28-73, s.100 and others into force (footnote 1 to s.1(3) in the official text).",
+    "amendments": "No amendment footnote on this provision in the consolidated text (last updated 17-9-2021). The only amendment shown anywhere in the Act is Act 33 of 2021, s.30 (w.e.f. 4-4-2021), affecting National Commission provisions, not this one. Amendments after 17-9-2021 could not be checked against the live India Code page.",
+    "verification_checks": {
+      "text_verbatim": true,
+      "section_number": true,
+      "amendments": true,
+      "commencement": true,
+      "applicability": true
+    },
+    "verified_on": "2026-11-21",
+    "domains": [
+      "consumer"
+    ],
+    "keywords": [
+      "relief",
+      "refund",
+      "replace",
+      "remove defect",
+      "compensation",
+      "return price",
+      "interest",
+      "punitive damages",
+      "order"
+    ],
+    "notes": "Excerpt: opening words and clauses (a)-(f); clauses (g) onwards omitted ([...])."
+  },
+  {
+    "id": "CPA2019-S69",
+    "act": "Consumer Protection Act, 2019",
+    "act_number": "Act No. 35 of 2019",
+    "section": "69",
+    "title": "Limitation period",
+    "text": "69. Limitation period.--(1) The District Commission, the State Commission or the National Commission shall not admit a complaint unless it is filed within two years from the date on which the cause of action has arisen. (2) Notwithstanding anything contained in sub-section (1), a complaint may be entertained after the period specified in sub-section (1), if the complainant satisfies the District Commission, the State Commission or the National Commission, as the case may be, that he had sufficient cause for not filing the complaint within such period: Provided that no such complaint shall be entertained unless the District Commission or the State Commission or the National Commission, as the case may be, records its reasons for condoning such delay.",
+    "text_type": "verbatim",
+    "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+    "source_name": "India Code (Legislative Department, Government of India)",
+    "source_document": "Consumer Protection Act, 2019.pdf – India Code consolidated text ('Last Updated: 17-9-2021'), 39 pages, SHA-256 414fb1edd9b0f7fbc2839ad92fb2b29ebfa3b557e70e928ab4a535802199e3e7; downloaded by the project owner from India Code (direct fetch from this environment was blocked)",
+    "jurisdiction": "central (all India)",
+    "status": "in_force",
+    "status_basis": "In force from 20 July 2020: notification S.O. 2351(E) dated 15 July 2020 (Gazette of India, Extraordinary, Part II, sec. 3(ii)) brought s.2 [except cl. (4), (13), (14), (16), (40)], ss.28-73, s.100 and others into force (footnote 1 to s.1(3) in the official text).",
+    "amendments": "No amendment footnote on this provision in the consolidated text (last updated 17-9-2021). The only amendment shown anywhere in the Act is Act 33 of 2021, s.30 (w.e.f. 4-4-2021), affecting National Commission provisions, not this one. Amendments after 17-9-2021 could not be checked against the live India Code page.",
+    "verification_checks": {
+      "text_verbatim": true,
+      "section_number": true,
+      "amendments": true,
+      "commencement": true,
+      "applicability": true
+    },
+    "verified_on": "2026-11-21",
+    "domains": [
+      "consumer"
+    ],
+    "keywords": [
+      "limitation",
+      "time limit",
+      "two years",
+      "cause of action",
+      "delay",
+      "condonation",
+      "late",
+      "sufficient cause"
+    ],
+    "notes": "s.69(2) and its proviso allow a late complaint if sufficient cause is shown and reasons for condoning delay are recorded."
+  },
+  {
+    "id": "CPA2019-S100",
+    "act": "Consumer Protection Act, 2019",
+    "act_number": "Act No. 35 of 2019",
+    "section": "100",
+    "title": "Act not in derogation of any other law",
+    "text": "100. Act not in derogation of any other law.--The provisions of this Act shall be in addition to and not in derogation of the provisions of any other law for the time being in force.",
+    "text_type": "verbatim",
+    "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+    "source_name": "India Code (Legislative Department, Government of India)",
+    "source_document": "Consumer Protection Act, 2019.pdf – India Code consolidated text ('Last Updated: 17-9-2021'), 39 pages, SHA-256 414fb1edd9b0f7fbc2839ad92fb2b29ebfa3b557e70e928ab4a535802199e3e7; downloaded by the project owner from India Code (direct fetch from this environment was blocked)",
+    "jurisdiction": "central (all India)",
+    "status": "in_force",
+    "status_basis": "In force from 20 July 2020: notification S.O. 2351(E) dated 15 July 2020 (Gazette of India, Extraordinary, Part II, sec. 3(ii)) brought s.2 [except cl. (4), (13), (14), (16), (40)], ss.28-73, s.100 and others into force (footnote 1 to s.1(3) in the official text).",
+    "amendments": "No amendment footnote on this provision in the consolidated text (last updated 17-9-2021). The only amendment shown anywhere in the Act is Act 33 of 2021, s.30 (w.e.f. 4-4-2021), affecting National Commission provisions, not this one. Amendments after 17-9-2021 could not be checked against the live India Code page.",
+    "verification_checks": {
+      "text_verbatim": true,
+      "section_number": true,
+      "amendments": true,
+      "commencement": true,
+      "applicability": true
+    },
+    "verified_on": "2026-11-21",
+    "domains": [
+      "consumer"
+    ],
+    "keywords": [
+      "other law",
+      "additional remedy",
+      "civil court",
+      "in addition to"
+    ]
+  },
+  {
+    "id": "JR2021-R3",
+    "act": "Consumer Protection (Jurisdiction of the District Commission, the State Commission and the National Commission) Rules, 2021",
+    "act_number": "Rules notified under the Consumer Protection Act, 2019",
+    "section": "Rule 3",
+    "title": "Pecuniary jurisdiction of the District Commission",
+    "text": "",
+    "text_type": "pending",
+    "source_url": "https://consumeraffairs.nic.in/acts-and-rules/consumer-protection",
+    "source_name": "Department of Consumer Affairs, Government of India",
+    "jurisdiction": "central (all India)",
+    "status": "verify",
+    "status_basis": "Pending: Gazette notification number/date to be confirmed",
+    "amendments": "Pending",
+    "verification_checks": {
+      "text_verbatim": false,
+      "section_number": false,
+      "amendments": false,
+      "commencement": false,
+      "applicability": false
+    },
+    "verified_on": null,
+    "domains": [
+      "consumer"
+    ],
+    "keywords": [
+      "pecuniary jurisdiction",
+      "fifty lakh",
+      "two crore",
+      "value",
+      "district commission",
+      "state commission",
+      "national commission"
+    ],
+    "notes": "NOT VERIFIED: official Gazette notification not available in this environment. Until verified, no monetary limit is stated by the app. s.34(1) proviso allows the Central Government to prescribe a value other than one crore."
+  }
+]

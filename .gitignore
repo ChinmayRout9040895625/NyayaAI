@@ -1,0 +1,23 @@
+# dependencies / build
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# secrets: ignore every .env file except the example
+.env
+.env.*
+!.env.example
+
+# assignment brief and unrelated input pack: never commit, move or publish
+Kuku — AI Generalist Assignment (1).pdf
+I Married a Broken Soldier. He was a Duke-scripts (2) (1).zip
+
+# misc
+.vercel
+.DS_Store
+*.log
+
+# official source PDF supplied locally (text is in lib/knowledge/consumer.json with its SHA-256)
+Consumer Protection Act, 2019.pdf
