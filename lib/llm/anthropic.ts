@@ -15,6 +15,9 @@ const EFFORT: Record<NonNullable<GenerateJSONOptions<unknown>["effort"]>, "low" 
   high: "high",
 };
 
+/** Models that accept the server-side refusal fallback ("default" mode). */
+const FALLBACK_MODELS = new Set(["claude-sonnet-5-5", "claude-opus-5-5", "claude-opus-5", "claude-fable-5-2", "claude-fable-5-1"]);
+
 const JSON_ONLY = "\n\nOutput format: respond with ONLY the JSON object described above. No prose before or after it, no Markdown code fences.";
 
 /** Convert SDK errors into the "HTTP nnn" form the app's error messages and retry logic already understand. */
@@ -65,14 +68,23 @@ export class AnthropicProvider implements LLMProvider {
             ];
       let response: Anthropic.Message;
       try {
-        response = await this.client.messages.create({
+        const params = {
           model: this.model,
           max_tokens: 16000,
           system: opts.system + JSON_ONLY,
           messages: turn,
-          thinking: { type: "adaptive" },
+          thinking: { type: "adaptive" as const },
           output_config: { effort: EFFORT[opts.effort ?? "low"] },
-        });
+        };
+        response = FALLBACK_MODELS.has(this.model)
+          ? // Server-side refusal fallback: if this model's safety classifier declines, the API re-runs the
+            // request on a suitable fallback model inside the same call ("default" routes by refusal category).
+            ((await this.client.beta.messages.create({
+              ...params,
+              betas: ["server-side-fallback-2026-07-01"],
+              fallbacks: "default",
+            })) as unknown as Anthropic.Message)
+          : await this.client.messages.create(params);
       } catch (e) {
         throw toProviderError(e);
       }
