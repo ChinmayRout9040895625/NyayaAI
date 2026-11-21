@@ -1,6 +1,6 @@
 # NyayaAI: an AI legal assistant for consumer disputes in India
 
-**Problem 2 (Build an AI Lawyer)** · Prototype: [add Vercel URL] · Code: [add GitHub URL] · Raw outputs: `test-outputs/` · Evaluation: `docs/EVALUATION_REPORT.md`
+**Problem 2 (Build an AI Lawyer)** · Prototype: https://nyayaai-eight.vercel.app · Code: https://github.com/ChinmayRout9040895625/NyayaAI · Raw outputs: `test-outputs/` · Evaluation: `docs/EVALUATION_REPORT.md`
 
 ## 1. Problem choice and scope
 

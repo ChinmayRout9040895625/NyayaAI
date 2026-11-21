@@ -21,3 +21,7 @@ I Married a Broken Soldier. He was a Duke-scripts (2) (1).zip
 
 # official source PDF supplied locally (text is in lib/knowledge/consumer.json with its SHA-256)
 Consumer Protection Act, 2019.pdf
+
+.vercel
+.env*
+!.env.example
